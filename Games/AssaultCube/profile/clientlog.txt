@@ -1,0 +1,42 @@
+######## start logging: 20251206_17.19.43
+parsing commandline argument 1: "--home=profile"
+Using home directory: profile\
+parsing commandline argument 2: "--init"
+writing to file: profile\clientlog.txt
+init: sdl (2.0.14)
+SDL: compiled version 2.0.14, linked version 2.0.12
+init: net (1.3.6)
+init: world (1302)
+init: video: sdl
+init: video: mode
+init: video: misc
+init: gl
+Renderer: NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2 (NVIDIA Corporation)
+Driver: 4.6.0 NVIDIA 581.42
+init: console
+init: sound
+Audio devices: Generic Software
+Sound: Generic Software / Software (Creative Labs Inc.)
+Driver: 1.1
+init: cfg
+could not read "config/favourites.cfg"
+init: models
+init: docs
+init: localconnect
+own IP: 0.0.0.0, censored own IP: 0.0.0.0, --, clock offset -490297 hours -19 minutes
+auth challenge: SERVINFOCHALLENGE<(0) cn: 0 c: 0.0.0.0 (--) s: 0.0.0.0:0 3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da29 st: 0 ct: 29417839 (-952621952)>
+init: mainloop
+could not read "private/authprivate.cfg"
+successfully pinged 0 media servers, 0 failures, 0 disabled
+read map packages\maps\official\ac_sunset.cgz rev 22 (2 milliseconds)
+Sunset Reserve - By R4zor
+loaded textures (38 milliseconds)
+loaded mapmodels (39 milliseconds)
+loaded mapsounds (69 milliseconds)
+game mode is "TDM"
+writing to file: profile\config\init.cfg
+writing to file: profile\config\servers.cfg
+writing to file: profile\config\saved.cfg
+writing to file: profile\config\history
+writing to file: profile\config\mapmodelattributes.cfg
+writing to file: profile\private\entropy.dat
