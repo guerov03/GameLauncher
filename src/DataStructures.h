@@ -77,15 +77,24 @@ public:
     }
 
     void showRelated(string game) {
-        if (edges[game].empty()) {
-            cout << "No recommendations available.\n";
-            return;
-        }
-        cout << "Recommended games:\n";
-        for (auto& g : edges[game]) {
-            cout << " - " << g << "\n";
-        }
+    // check if game exists in graph at all
+    if (edges.find(game) == edges.end()) {
+        cout << "No recommendations available.\n";
+        return;
     }
+
+    // if it exists but no edges
+    if (edges[game].empty()) {
+        cout << "No recommendations available.\n";
+        return;
+    }
+
+    cout << "Recommended games:\n";
+    for (auto& g : edges[game]) {
+        cout << " - " << g << "\n";
+    }
+}
+
 };
 
 #endif

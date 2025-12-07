@@ -139,6 +139,14 @@ games.push_back(Game(
     queue<string> installQueue;
     BST bst;
     Graph graph;
+    // Build graph based on matching genres
+for (int i = 0; i < games.size(); i++) {
+    for (int j = i + 1; j < games.size(); j++) {
+        if (games[i].genre == games[j].genre) {
+            graph.addEdge(games[i].title, games[j].title);
+        }
+    }
+}
 
     for (int i = 0; i < games.size(); i++)
         bst.root = bst.insert(bst.root, games[i].title, i);
