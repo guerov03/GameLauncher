@@ -1,0 +1,22 @@
+[Info]
+name="FL_Norochimaru"
+displayname="Orochimaru"
+versiondate=
+mugenversion=
+author="FeL9/Neon"
+pal.defaults=1,2
+[Files]
+sprite=FL_Norochimaru.sff
+sound=FL_Norochimaru.snd
+anim=FL_Norochimaru.air
+cmd=FL_Norochimaru.cmd
+cns=FL_Norochimaru.cns
+st=FL_Norochimaru.cns
+stcommon=common1.cns
+st2=Rashumon.cns
+pal1=FL_Norochimaru.act
+pal2=FL_Norochimaru.act
+st1=Rashumon.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

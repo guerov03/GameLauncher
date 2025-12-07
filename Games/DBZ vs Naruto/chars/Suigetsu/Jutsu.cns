@@ -1,0 +1,298 @@
+;--------------------------
+;Suirou no Jutsu
+[StateDef 3300]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3300
+poweradd = 0
+sprpriority = 2
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = S40,42
+volume = 250
+channel = -1
+;lowpriority = -1
+freqmul = 1.0
+loop = 0
+pan = 0
+;abspan =
+;ignorehitpause =
+;persistent =
+
+
+[State 3300, VelSet]
+type = VelSet
+trigger1 = AnimElem = 2
+x = 33
+
+[State 3300, 1]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 60
+animtype = hard
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 7, 200
+sparkno = 1
+sparkxy = -10, -26
+hitsound = S200, 4
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = 0
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = 0
+air.hittime = 12
+p1stateno = 3400
+
+[State 3300, ChangeState]
+type = ChangeState
+trigger1 = time = 30
+value = 0
+ctrl = 1
+
+;-------------------------------
+;Suirou no Jutsu Parte 2
+[StateDef 3400]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3400
+poweradd = -1000
+sprpriority = 2
+
+
+
+[State 3400, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = S900, 1
+volume = 250
+
+[State 3400, SuperPause]
+type = SuperPause
+trigger1 = time = 0
+time = 50
+anim = 100
+sound = S7500, 3
+pos = 0, -35
+darken = 1
+p2defmul = 0
+unhittable = 1
+
+
+[State 3400, Helper]
+type = Helper
+trigger1 = time = 40
+helpertype = normal
+stateno = 3500
+pos = 0,0
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 0
+
+[State 3400, end]
+type = ChangeState
+trigger1 = time = 250
+value = 0
+ctrl = 1
+
+;------------------------------------------------------------------------
+;Suirou no Jutsu parte 3
+[StateDef 3500]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3500
+poweradd = 0
+sprpriority = 2
+
+[State 3500, PlaySnd]
+type = PlaySnd
+trigger1 = time = 1
+value = S789,0
+volume = 300
+
+[State 3500, TargetBind]
+type = TargetBind
+trigger1 = time = 1
+time = 100
+pos = 30,0
+ignorehitpause = 1
+
+[State 3500, PlaySnd]
+type = PlaySnd
+trigger1 = ANimElem = 2
+trigger2 = AnimElem = 4
+trigger3 = AnimElem = 6
+trigger4 = AnimElem = 8
+trigger5 = AnimElem = 10
+trigger6 = AnimElem = 12
+trigger7 = AnimElem = 14
+trigger8 = AnimElem = 16
+trigger9 = AnimElem = 18
+trigger10 = AnimElem = 20
+trigger11 = AnimElem = 22
+trigger12 = AnimElem = 24
+trigger13 = AnimElem = 26
+trigger14 = AnimElem = 28
+trigger15 = AnimElem = 30
+trigger16 = AnimElem = 32
+trigger17 = AnimElem = 34
+trigger18 = AnimElem = 36
+trigger19 = AnimElem = 38
+trigger20 = AnimElem = 40
+trigger21 = AnimElem = 42
+value = S3000,3
+
+[State 3500, 1]
+type = HitDef
+trigger1 = ANimElem = 2
+trigger2 = AnimElem = 4
+trigger3 = AnimElem = 6
+trigger4 = AnimElem = 8
+trigger5 = AnimElem = 10
+trigger6 = AnimElem = 12
+trigger7 = AnimElem = 14
+trigger8 = AnimElem = 16
+trigger9 = AnimElem = 18
+trigger10 = AnimElem = 20
+trigger11 = AnimElem = 22
+trigger12 = AnimElem = 24
+trigger13 = AnimElem = 26
+trigger14 = AnimElem = 28
+trigger15 = AnimElem = 30
+trigger16 = AnimElem = 32
+trigger17 = AnimElem = 34
+trigger18 = AnimElem = 36
+trigger19 = AnimElem = 38
+trigger20 = AnimElem = 40
+trigger21 = AnimElem = 42
+attr = S, NA
+damage = 10, 10
+animtype = med
+hitflag = MAF
+priority = 3, Hit
+pausetime = 1, 80
+sparkno = 0
+sparkxy = -10, -26
+hitsound = S200, 7
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = 0
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = 0
+air.hittime = 12
+givepower = 0
+
+
+
+
+
+[State 3500, DestroySelf]
+type = destroyself
+trigger1 = time = 206
+
+;-----------------------------------------------------------------------
+;Defesa
+[Statedef 3600]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 3600
+
+[State 3600, PowerAdd]
+type = PowerAdd
+trigger1 = command = "Suikoudan"
+value = -5
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = S40,41
+volume = 250
+channel = -1
+;lowpriority = -1
+freqmul = 1.0
+loop = 0
+pan = 0
+;abspan =
+;ignorehitpause =
+;persistent =
+
+
+[State 3600, 1]
+type = HitDef
+trigger1 = AnimElem = 9
+trigger2 = AnimElem = 10
+trigger3 = AnimElem = 11
+trigger4 = AnimElem = 12
+trigger5 = AnimElem = 13
+attr = S, NA
+damage = 20
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0,0
+sparkno = S201
+sparkxy = -17, -38
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -2
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -1.4,-3
+air.hittime = 12
+fall=1
+
+[State 3600, end]
+type = ChangeState
+trigger1 = command != "Suikoudan"
+trigger2 = power = 0
+value =3601
+ctrl = 1
+
+[StateDef 3601]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3601
+poweradd = 20
+sprpriority = 2
+
+[State 3601, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1

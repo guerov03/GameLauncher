@@ -1,15 +1,8 @@
-######## start logging: 20251206_16.37.08
+######## start logging: 20251206_16.41.21
 parsing commandline argument 1: "--home=profile"
 Using home directory: profile\
 parsing commandline argument 2: "--init"
-private\entropy.dat not found.
 writing to file: profile\clientlog.txt
-writing to file: profile\config\AC\config\autoexec.cfg
-created config\AC\config\autoexec.cfg from template config\configtemplates.zip
-writing to file: profile\config\AC\config\favourites.cfg
-created config\AC\config\favourites.cfg from template config\configtemplates.zip
-writing to file: profile\config\AC\config\pcksources.cfg
-created config\AC\config\pcksources.cfg from template config\configtemplates.zip
 init: sdl (2.0.14)
 SDL: compiled version 2.0.14, linked version 2.0.12
 init: net (1.3.6)
@@ -28,26 +21,19 @@ Driver: 1.1
 init: cfg
 could not read "config/favourites.cfg"
 init: models
-writing to file: profile\packages\models\pickups\nades\shadows.dat
 init: docs
 init: localconnect
-own IP: 0.0.0.0, censored own IP: 0.0.0.0, --, clock offset -490296 hours -37 minutes
-auth challenge: SERVINFOCHALLENGE<(0) cn: 0 c: 0.0.0.0 (--) s: 0.0.0.0:0 3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da29 st: 0 ct: 29417797 (1682250361)>
+own IP: 0.0.0.0, censored own IP: 0.0.0.0, --, clock offset -490296 hours -41 minutes
+auth challenge: SERVINFOCHALLENGE<(0) cn: 0 c: 0.0.0.0 (--) s: 0.0.0.0:0 3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da29 st: 0 ct: 29417801 (-2055123490)>
 init: mainloop
 could not read "private/authprivate.cfg"
 successfully pinged 0 media servers, 0 failures, 0 disabled
-read map packages\maps\official\ac_arid.cgz rev 29 (2 milliseconds)
-ac_arid by BenWasHere
-loaded textures (44 milliseconds)
-loaded mapmodels (30 milliseconds)
-loaded mapsounds (63 milliseconds)
+read map packages\maps\official\ac_origin.cgz rev 123 (2 milliseconds)
+ac_origin by DaylixX
+loaded textures (46 milliseconds)
+loaded mapmodels (66 milliseconds)
+loaded mapsounds (54 milliseconds)
 game mode is "TDM"
-Welcome to AssaultCube
-Developed by 'Rabid Viper Productions'
-
-Use the below menu to change some necessary settings...
-
-Further help & information can be found in your README which is inside your AssaultCube directory.
 writing to file: profile\config\init.cfg
 writing to file: profile\config\servers.cfg
 writing to file: profile\config\saved.cfg

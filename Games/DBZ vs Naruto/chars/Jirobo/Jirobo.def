@@ -1,0 +1,29 @@
+; Definition file for player
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Jirobo"
+displayname ="Jirobo"
+versiondate =15,03,08
+mugenversion =14,04,2002
+author ="kofelsalvador10th"
+pal.defaults =1
+
+; Files for the player
+[Files]
+cmd     =jirobo.cmd
+cns     =jirobo.cns
+st      =jirobo.cns
+stcommon =jirobo_common.cns
+sprite  =jirobo.sff
+anim    =jirobo.air
+sound  =jirobo.snd
+pal1=jirobo1.act
+pal2=jirobocs1.act
+st1=jirobocs.cns
+
+
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

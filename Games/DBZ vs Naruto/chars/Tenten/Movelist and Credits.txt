@@ -1,0 +1,34 @@
+------- Credits -------
+
+Programmer: -=|Gµ§tävö|=- (gotagz)
+Sprites ripped by: Parkis Pride
+
+------- MoveList ------
+
+ Commands:
+Combo Punch: x, +x, +x
+Combo Kick: a, +a, +a
+Super Combo: b + b + b + b + b...
+Uppercut: down + z, a,b,c,y,x
+Air punch combo: x,+x,+x...
+Air Kick: Y
+AIr Kunai: a
+Pergaminho Attack: z (air)
+Throw Kunai: Z
+Throw Explosive Kunai: Z+Z(fast)
+Shuriken: Y
+Shuriken 2: Y+Y (fast)
+Multiple Shurikens: Down+back+Y (energy 350)
+Multiple Kunai: Donw+back+z
+Explosive Multiple Kunai: Down+back+z+z
+Chakra Charge: x+y
+Teleport: Down/Hold Down + A
+Grab: Hold Back + X
+Kawarimi: C (when hit) 
+
+Specials:
+
+Lee: Energy level 3, Down + Forward + Z
+Neji: Energy level 2, Down +Forward + Y
+Gai: Energy level 1, Down + Forward + A
+Soshoryu: Energy level 3, Down + forward + X 

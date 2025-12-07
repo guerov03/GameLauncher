@@ -1,0 +1,31 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "V-Shino"
+displayname = "Shino"
+versiondate = 22/07/10
+mugenversion = 04,14,2002
+author = "Veron"
+pal.defaults = 1,2
+
+[Files]
+sprite = V-Shino.sff
+anim = V-Shino.air
+sound = V-Shino.snd
+cmd = V-Shino.cmd
+cns = V-Shino.cns
+stcommon = common1.cns
+st = V-Shino.cns
+st1 = Fx.cns
+st2 = Specials.cns
+st3 = Bunshin.cns
+st4 = Helpers.cns
+pal1 = V-Shino.act
+pal2 = V-Shino.act
+
+[Arcade]
+;intro.storyboard = 
+;ending.storyboard = 

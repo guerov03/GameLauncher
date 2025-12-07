@@ -1,0 +1,21 @@
+
+[Info]
+name = "DBZ vs Naruto M.U.G.E.N (Hi-Res)"
+author = "RistaR87"
+localcoord = 640,480
+
+[SceneDef]
+spr = final.sff
+[Scene 0]
+fadein.time = 80
+fadeout.time = 30
+clearcolor = 0,0,0
+layerall.pos = 0,0
+layer0.anim = 0
+bgm = DBK_Short.mp3
+bgm.loop = 0 
+end.time = 400
+[Begin Action 0]
+0,1, 0,0, 1000
+
+

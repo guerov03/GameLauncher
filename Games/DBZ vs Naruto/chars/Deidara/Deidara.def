@@ -1,0 +1,20 @@
+[Info]
+name="Deidara"
+displayname="Deidara"
+versiondate=16-09-07
+mugenversion=06,14,2003
+author="Anjel"
+pal.defaults=1,2
+[Files]
+sprite=dei.sff
+sound=dei.snd
+anim=dei.air
+cmd=dei.cmd
+cns=dei.cns
+st=dei.cns
+stcommon=common.cns
+pal1=dei.act
+pal2=orange.act
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

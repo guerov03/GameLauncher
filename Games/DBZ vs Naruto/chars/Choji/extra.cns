@@ -1,0 +1,47 @@
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;Punch
+[Statedef 201]
+type    = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 200
+poweradd = 0
+sprpriority = 2
+
+[State 200, 1]
+type = HitDef
+trigger1 = time = 1
+attr = S, NA
+damage = 23, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 12
+sparkno = S4520
+sparkxy = -10, -38
+hitsound = S100, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 10
+ground.velocity = -.5,0
+airguard.velocity = -.5,0
+air.type = High
+air.velocity = -.5,0
+air.hittime = 12
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = time = 1
+value = 250, 6
+
+[State 200, 7]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1

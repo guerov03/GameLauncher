@@ -1,0 +1,142 @@
+;-----
+;=============================================================================
+;Defense Pein ------
+;=============================================================================
+;-----
+;
+;-----------------------------------------------------------------------------
+[Statedef 4000]
+type = S
+movetype = I
+physics = S
+ctrl = 0
+Anim = 4000
+
+[State 3000, VarSet]
+type = ParentVarSet
+trigger1 = 1
+v = 9
+value = 1
+
+[State 3000, VarSet]
+type = VarSet
+trigger1 = 1
+v = 9
+value = 1
+
+[State 3000, Turn]
+type = Turn
+triggerall = var(9) = 1
+trigger1 = p2bodydist x < -55
+persistent = 1
+
+[State 3000, ChangeState]
+type = ChangeState
+trigger1 = P2Life > 0
+trigger1 = StateType != A
+trigger1 = Movetype != H
+trigger1 = random <= 150
+trigger1 = p2bodydist x > 10 & random > 300
+value = 4020
+
+[State 3000, ChangeState]
+type = ChangeState
+trigger1 = P2Life > 0
+trigger1 = StateType != A
+trigger1 = Movetype != H
+trigger1 = random <= 150
+trigger1 = p2bodydist x <= 50 & random > 300
+value = 4050
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+
+;---------------------------------------------------------------------------
+; Walk
+[Statedef 4020]
+type    = S
+physics = S
+sprpriority = 0
+
+[State 3020, 1]
+type = VelSet
+trigger1 = random <= 300 & p2bodydist x >= 50
+x = 4
+
+[State 3020, 2]
+type = VelSet
+trigger1 = random <= 300 & p2bodydist x <= 50
+x = -4
+
+[State 3020, 3]
+type = ChangeAnim
+triggerall = vel x > 0
+trigger1 = Anim != 4020 && Anim != 5
+trigger2 = Anim = 5 && AnimTime = 0
+value = 4020
+
+[State 3020, 4]
+type = ChangeAnim
+triggerall = vel x < 0
+trigger1 = Anim != 4021 && Anim != 5
+trigger2 = Anim = 5 && AnimTime = 0
+value = 4021
+
+[State 3020, ChangeState]
+type = ChangeState
+trigger1 = p2bodydist x < 50
+value = 4000
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+;-----------------------------------------------------------------------------
+[Statedef 4050]
+type = S
+movetype = A
+physics = S
+ctrl = 0
+Anim = 4050
+
+[State 0, Explod]
+type = Explod
+trigger1 = AnimElem = 4
+anim = 4051
+ID = 4051
+pos = 1,-40
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+removetime = -2
+scale = 1,1
+sprpriority = 1
+removeongethit = 0
+
+[State 0, PowerAdd]
+type = PowerAdd
+trigger1 = 1
+value = 5
+
+[State 0, TargetPowerAdd]
+type = TargetPowerAdd
+trigger1 = 1
+value = -5
+
+[State 3020, ChangeState]
+type = ChangeState
+trigger1 = p2bodydist x > 50
+value = 4000
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+
+

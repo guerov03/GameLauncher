@@ -1,0 +1,92 @@
+;Sabaku Sousou
+[Statedef 8000]
+type = S
+movetype = A
+physics = S
+juggle = 1
+velset = 0,0
+ctrl = 0
+anim = 8000
+poweradd = 0
+sprpriority = 2
+
+[State 8000, sousou];êÖ
+type = Helper
+trigger1 = AnimElem = 1
+helpertype = normal
+postype = p2
+pos = 0,0
+stateno = 8010
+ownpal = 1
+id = 8000
+keyctrl = 0
+persistent = 1
+
+[State 8000, 4]
+type = changestate
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+
+[Statedef 8010]
+type    = A
+movetype= A
+physics = N
+juggle  = 1
+poweradd =0
+ctrl = 0
+velset = 0,0
+anim = 8010
+sprpriority = 4
+
+[state 8010,0]
+type = posset
+trigger1 = time = 0
+y = 0
+
+[state 8010,1]
+type = HitDef
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 3
+trigger3 = AnimElem = 4
+trigger4 = AnimElem = 5
+trigger5 = AnimElem = 6
+attr = S, NA
+damage = 80, 80
+getpower = -300
+animtype = Light
+p2stateno = 5000
+hitflag = MAF
+priority = 3, Hit
+pausetime = 10, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 100
+ground.velocity = -0
+airguard.velocity = -0.0,-0.0
+air.type = High
+air.velocity = -0,-0
+air.hittime = 12
+
+[State 8010,2]
+type = VarRandom
+trigger1 = time = 0
+v = 19
+range = -80,80
+
+[state 8010,0]
+type = destroyself
+trigger1 = animtime = 0
+
+;----------------------------------------------------------------
+
+ 
+
+
+

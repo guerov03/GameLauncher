@@ -1,0 +1,184 @@
+Name:Air Chidori
+Beginne Aktion:6661 Z 10
+
+NAME:0
+BEGINNE AKTION:1093
+
+Name:0
+Beginne Aktion:7689  Z 5
+
+[State -1, Air Chidori]
+type = ChangeState
+value = 6661
+Triggerall = command = "b"
+Triggerall = command != "holddown"
+triggerall = var(0) = 1
+trigger1 = statetype = A
+trigger1 = ctrl
+
+[Command]
+name = "b"
+command = b
+time = 1
+
+[Command]
+name = "holddown"
+command = /$D
+time = 1
+
+[Statedef 6661]
+type    = A
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 7689
+poweradd = -100
+sprpriority = 1
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 4
+value = 4,0
+volume = 800
+
+[State 0, Explod]
+type = Explod
+triggerall = command = "holdb"
+trigger1 = animelem = 4
+anim = 30012
+ID = 30012
+pos = -20,-50
+postype = p1  ;p2,front,back,left,right
+scale = 1,1
+sprpriority = 0
+bindtime = -2
+
+[State 0, Explod]
+type = Explod
+triggerall = command = "holdb"
+trigger1 = animelem = 4
+anim = 30013
+ID = 30013
+pos = -20,-50
+postype = p1  ;p2,front,back,left,right
+scale = 1,1
+sprpriority = 0
+bindtime = -2
+
+[State 0, Explod]
+type = Explod
+triggerall = command = "holdb"
+trigger1 = animelem = 5
+anim = 30016
+ID = 30016
+pos = -20,-50
+postype = p1  ;p2,front,back,left,right
+scale = 1,1
+sprpriority = 0
+bindtime = -2
+
+[State 0, Explod]
+type = Explod
+triggerall = command = "holdb"
+trigger1 = animelem = 6
+anim = 30015
+ID = 30015
+pos = -20,-50
+postype = p1  ;p2,front,back,left,right
+scale = 1,1
+sprpriority = 0
+bindtime = -2
+
+[State 0, Explod]
+type = Explod
+triggerall = command = "holdb"
+trigger1 = animelem = 5
+anim = 30014
+ID = 30014
+pos = -20,-50
+postype = p1  ;p2,front,back,left,right
+scale = 1,1
+sprpriority = 0
+bindtime = -2
+
+[State 0, Explod]
+type = Explod
+triggerall = command = "holdb"
+trigger1 = animelem = 4
+anim = 1093
+ID = 1093
+pos = -20,-50
+postype = p1  ;p2,front,back,left,right
+scale = 1,1
+sprpriority = 2
+bindtime = -2
+
+[State 0, EnvShake]
+type = EnvShake
+trigger1 = animelem = 3
+time = 40
+freq = 60
+ampl = -4
+phase = 90
+
+[state 0]
+type =allpalfx
+trigger1 = time = 25
+time = 2
+add = 200,200,256
+mul = 200,200,256
+sinadd = 200,200,256,150
+invertall = 0
+color = 256
+persistent = 0
+
+[state 0]
+type =allpalfx
+trigger1 = time = 30
+time = 2
+add = 200,200,256
+mul = 200,200,256
+sinadd = 200,200,256,150
+invertall = 0
+color = 256
+persistent = 0
+
+[state 0]
+type =allpalfx
+trigger1 = time = 35
+time = 2
+add = 200,200,256
+mul = 200,200,256
+sinadd = 200,200,256,150
+invertall = 0
+color = 256
+persistent = 0
+
+[state 0]
+type =allpalfx
+trigger1 = time = 40
+time = 2
+add = 200,200,256
+mul = 200,200,256
+sinadd = 200,200,256,150
+invertall = 0
+color = 256
+persistent = 0
+
+[State 1500]
+type = SuperPause
+trigger1 = time = 1
+time = 40
+movetime = 40
+supermove = 40
+anim = 9999
+darken = 0
+unhittable = 1
+
+[State 200, 5]
+type = ChangeState
+trigger1 = command != "holdb"
+value = 6719
+ctrl = 1

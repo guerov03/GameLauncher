@@ -1,0 +1,65 @@
+------- Credits -------
+
+Programmer: gotagz
+
+Sprites ripped by: Hakumei & some sprites by: Shink
+
+------- MoveList ------
+
+Commands:
+
+Punch Combo: x, x, x
+
+Punch Combo #2: b, b
+
+Kick Combo: a, a
+
+Low Punch: hold down + a
+
+Low Punch: hold down + x
+
+Air punch combo: x,+x,+x...
+
+Air Kick: a
+ 
+AIr Kunai Forward: y
+
+Air Kunai down: hold down + y
+
+Throw Kunai: y
+
+Throw Low Kunai: Hold Down + y
+
+Throw Explosive Kunai: down, back + y
+
+Chakra Charge: x+y
+
+Teleport: c (power >= 50), hold back + c (to teleport backward)
+
+Air teleport: c (power >= 50),  hold back + c (to teleport backward)
+
+Grab: Hold Back + x
+
+Counter: down, back + b
+
+Air Dash: 2x forward (fast) while at air (power >= 50)
+
+Run + Punch: 2x forward (fast) + x
+
+
+Specials:
+
+Run + Kick: Power level >= 500, Down + Forward + x
+
+Fumma Shuriken: Power level >= 1000, Down, Back + a
+
+Shinteshin no Jutsu: Energy level 3, Down, Forward + a 
+
+
+x = x
+y = y
+z = z
+a = a
+b = b
+c = c
+s = s

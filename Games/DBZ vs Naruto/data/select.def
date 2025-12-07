@@ -1,0 +1,488 @@
+
+;============================================
+;DBZ vs Naruto M.U.G.E.N (Hi-Res) by RistaR87
+;============================================
+
+
+;============================================================
+;
+;    IF YOU ARE VIEWING THIS FILE WITH NOTEPAD, PLEASE
+;                    MAXIMIZE YOUR WINDOW
+;
+;============================================================
+
+
+;-----------------------------------------------------------------
+[Characters]
+ ;Insert characters here
+ ;Use the format:
+ ;    charname, stagefilename
+ ;
+ ;eg. For a player with filename "kfm",
+ ;    and stage filename "stages/mybg.def"
+ ;type:
+ ;    kfm, stages/mybg.def
+ ;
+ ;If you want to load a different def file, you can enter it
+ ;as a directory plus the def file. This example loads up
+ ;chars/kfm/alt-kfm.def:
+ ;    kfm/alt-kfm.def, stages/mybg.def
+ ;
+ ;If you put "random" as the stagefilename, then a random stage will
+ ;be selected for that player. eg.
+ ;    kfm, random
+ ;
+ ;Optional parameters may follow on the same line, separated
+ ;by commas. Each parameter has the form:
+ ;    paramname = paramvalue
+ ;where paramname is the name of the parameter type, and
+ ;paramvalue is the value to assign that parameter.
+ ;The optional parameters are:
+ ;
+ ; - music
+ ;   Set the paramvalue to the name of the music file to use
+ ;   as the BGM for that character. This overrides the bgmusic
+ ;   parameter in the stage's .def file, so you can re-use the
+ ;   same stage for multiple characters, but have a different
+ ;   BGM playing for each person.
+ ;
+ ; - includestage
+ ;   Set the paramvalue to 0 to avoid including this stage
+ ;   in the stage select list (in VS, training modes, etc)
+ ;
+ ; - order
+ ;   Set the paramvalue to the ordering priority to give the
+ ;   character. Valid values are from 1 to 10. A smaller value
+ ;   means you will fight the character sooner. You will never
+ ;   fight an order 2 character before an order 1 character,
+ ;   and never an order 3 character before an order 2 one.
+ ;   For example, you might want to set your boss character
+ ;   to have order=3. The default order value is 1 if you omit
+ ;   this param. See *.maxmatches under [Options] for how to
+ ;   limit the number of matches per order priority.
+ ;
+ ;   Some examples:
+ ;        kfm, stages/mybg.def, includestage=0
+ ;        kfm, stages/mybg.def, music=sound/song.mp3
+ ;        kfm, stages/mybg.def, music=sound/song.mp3, includestage=0
+ ;        kfm, stages/mybg.def, order=3
+ ;
+ ;You can also add a randomize icon to the select screen. To do
+ ;this, put the word "randomselect" on a line of its own, with no
+ ;extra parameters.
+
+
+
+; INSERT YOUR FAVORITE, REGULAR, SECRET, AND CPU ONLY CHARACTERS WHERE
+; IT SAYS SO.
+
+;----------------------------Line 1
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Goku, stages/tenkaichiHR.def, order=2
+Vegeta, stages/Final_Battle_HR.def, order=1
+-
+-
+-
+-
+;----------------------------Line 2
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Goku SSJ2, stages/Desert-Battle.def, order=3
+Goku Legend SSJ, stages/Destroyed_Namek.def, order=2
+Vegeta SSJ, stages/City_Destroyed.def, order=2
+Vegeta SSJ2, stages/City_Destroyed.def, order=2
+-
+-
+-
+;----------------------------Line 3
+-
+-
+-
+-
+-
+-
+-
+-
+Gohan, stages/dbz_kame_house.def, order=1
+Gohan SSJ2, stages/Fight_Field.def, order=2
+Mystic Gohan, stages/Confrontation_train.def, order=3
+Trunks, stages/CityDestroyed_Night_Rain.def, order=1
+Trunks SSJ2, stages/Confrontation_train.def, order=2
+Trunks Armor, stages/Time_Chamber_HR.def, order=2
+-
+-
+;----------------------------Line 4
+-
+-
+-
+-
+-
+-
+-
+Krillin, stages/Nameku.def, order=1
+Krillin Z, stages/Confrontation_train.def, order=2
+Yamcha, stages/Confrontation_train.def, order=1
+Tien, stages/tenkaichiHR.def, order=1
+Chiaotzu, stages/karintemple.def, order=1
+Goten SSJ kid, stages/City_Night_HR.def, order=1
+Trunks SSJ kid, stages/City_Night_HR.def, order=1
+Gotenks SSJ, stages/Time_Chamber_HR.def, order=2
+-
+;----------------------------Line 5
+-
+-
+-
+-
+-
+-
+Goku Oozaru, stages/Fight_Field.def, order=1
+Goku kid, stages/karintemple.def, order=1
+Master Roshi, stages/dbz_kame_house.def, order=1
+Jackie Chun, stages/tenkaichiHR.def, order=1
+Giran, stages/rocky_mountain.def, order=1
+Taopai, stages/rocky_mountain.def, order=1
+King Piccolo, stages/Volcano-GelboPlanetHR.def, order=2
+Piccolo, stages/Kamis_Lookout.def, order=1
+Dende, stages/Nameku.def, order=1
+Pikkon, stages/Fight_Field.def, order=2
+;----------------------------Line 6
+-
+-
+-
+-
+-
+-
+Frieza All Forms, stages/Namekusein.def, order=2
+Frieza, stages/Destroyed_Namek.def, order=2
+Cooler, stages/Volcano-GelboPlanetHR.def, order=3
+Ginyu, stages/Namekusein.def, order=1
+Recoome, stages/Nameku.def, order=1
+Jeice, stages/Namekusein.def, order=1
+Guldo, stages/Nameku.def, order=1
+Saibaman, stages/Desert-Battle.def, order=1
+Raditz, stages/raditz_arrived.def, order=1
+Nappa, stages/raditz_arrived.def, order=1
+;----------------------------Line 7
+-
+-
+-
+-
+Naruto, stages/NinjaAcademy.def, order=1
+Sasuke, stages/chuunin.def, order=1
+-
+Dr. Gero, stages/Destruction_HR.def, order=1
+Android 18, stages/Destruction_HR.def, order=2
+Android 17, stages/Destruction_HR.def, order=2
+Android 16, stages/CityDestroyed_Night_Rain.def, order=1
+Cell 1st Form, stages/CityDestroyed_Night_Rain.def, order=2
+Cell 2nd Form, stages/Desert-Battle.def, order=2
+Cell, stages/CELL_GAMES.def, order=3
+Cell Jr, stages/CELL_GAMES.def, order=2
+-
+;----------------------------Line 8
+-
+-
+-
+Naruto Kyuubi teen, stages/TrainingArea.def, order=3
+Naruto teen, stages/Ichiraku_Ramen_Shop.def, order=2
+Sasuke teen, stages/Orochi_Lair.def, order=2
+Sasuke CS2 teen, stages/Orochi_Lair.def, order=3
+-
+Janemba, stages/Volcano-GelboPlanetHR.def, order=3
+Supreme Kai, stages/PlanetaKaioshin.def, order=2
+Dabura, stages/Desert-Battle.def, order=3
+Majin Buu, stages/PlanetaKaioshin.def, order=2
+Super Buu, stages/KAIOH.def, order=4
+Kid Buu, stages/KAIOH.def, order=4
+-
+-
+;----------------------------Line 9
+-
+-
+Sakura, stages/CherryBlossoms.def, order=1
+Sakura teen, stages/Bridge_Night_HR.def, order=2
+Tsunade, stages/Konoha_Outskirts.def, order=1
+Jiraiya, stages/Konoha_Outskirts.def, order=1
+Kakashi, stages/Grass.def, order=1
+Kakashi Kid, stages/forest2.def, order=1
+-
+Garlic Jr, stages/Kamis_Lookout.def, order=2
+Bojack, stages/Nuevo_vegita2.def, order=3
+Zangya, stages/Nuevo_vegita2.def, order=2
+Broly, stages/Nuevo_vegita2.def, order=3
+-
+-
+-
+;----------------------------Line 10
+-
+Neji, stages/chuunin.def, order=1
+Neji teen, stages/Grass.def, order=2
+Tenten, stages/CherryBlossoms2.def, order=1
+Tenten teen, stages/Bridge_Night_HR.def, order=2
+Rock Lee, stages/Preliminar.def, order=1
+Rock Lee teen, stages/snd6_k.def, order=2
+Gai, stages/snd6_k.def, order=1
+Yamato, stages/Grass.def, order=1
+-
+Bardock, stages/raditz_arrived.def, order=1
+Turles, stages/Final_Battle_HR.def, order=1
+-
+-
+-
+-
+;----------------------------Line 11
+Kiba, stages/Preliminar.def, order=1
+Shino, stages/narutobattlefield.def, order=1
+Hinata, stages/CherryBlossoms2.def, order=1
+Ino, stages/CherryBlossoms.def, order=1
+Shikamaru, stages/chuunin.def, order=1
+Choji, stages/NinjaAcademy.def, order=1
+Konohamaru, stages/Ichiraku_Ramen_Shop.def, order=1
+Sai, stages/narutobattlefield.def, order=2
+Haku, stages/ZabuzaStage.def, order=1
+Zabuza, stages/ZabuzaStage.def, order=1
+-
+-
+-
+-
+-
+-
+;----------------------------Line 12
+Temari, stages/backyard.def, order=1
+Temari teen, stages/SandVillage.def, order=2
+Kankuro, stages/backyard.def, order=1
+Kankuro teen, stages/SandVillage.def, order=2
+Gaara, stages/cataract.def, order=1
+Gaara Shukaku, stages/cataract.def, order=1
+Gaara teen, stages/SandVillage.def, order=2
+Suigetsu, stages/House_Waterfall_HR.def, order=2
+Jugo, stages/House_Waterfall_HR.def, order=2
+Karin, stages/House_Waterfall_HR.def, order=2
+-
+-
+-
+-
+-
+-
+;----------------------------Line 13
+-
+Tayuya, stages/Forest.def, order=1
+Jirobo, stages/Forest.def, order=1
+Kidomaru, stages/Forest.def, order=1
+Sakon, stages/Forest.def, order=1
+Kimimaro, stages/TrainingArea.def, order=2
+Kabuto, stages/Orochi.def, order=1
+Kabutomaru, stages/Orochi.def, order=2
+Orochimaru, stages/Orochi.def, order=3
+-
+-
+-
+-
+-
+-
+-
+;----------------------------Line 14
+-
+-
+Pein, stages/Konoha_Destroyed.def, order=3
+Konan, stages/Akatsukis_Cave.def, order=2
+Itachi, stages/Uchiha_Hideout.def, order=3
+Kisame, stages/TrainingArea.def, order=2
+Kakuzu, stages/Konoha_Street_Destroyed.def, order=2
+Hidan, stages/Konoha_Street_Destroyed.def, order=2
+-
+-
+-
+-
+-
+-
+-
+-
+;----------------------------Line 15
+-
+-
+-
+Sasori, stages/Akatsukis_Cave.def, order=2
+Deidara, stages/TrainingArea.def, order=3
+Tobi, stages/akatsukiforest.def, order=2
+Zetsu, stages/akatsukiforest.def, order=2
+-
+-
+-
+-
+-
+-
+-
+-
+-
+;----------------------------Line 16
+-
+-
+-
+-
+Yondaime, stages/forest2.def, order=1
+Madara, stages/Uchiha_Hideout.def, order=3
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+;----------------------------Line 17
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+;----------------------------Line 18
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+;----------------------------Line 19
+-
+-
+-
+-
+Naruto Sage, stages/Konoha_Destroyed.def, order=3
+-
+-
+-
+-
+-
+Goku SSJ3, stages/dbz_kame_house.def, order=0
+-
+-
+-
+-
+-
+
+;--------------
+[ExtraStages]
+ ;Put extra stages here. They will be available in VS and Watch modes.
+ ;For example, you can insert "stages/mybg.def".
+
+stages/tenkaichiHR.def
+stages/City_Destroyed.def
+stages/Nuevo_vegita2.def
+stages/Time_Chamber_HR.def
+stages/raditz_arrived.def
+stages/Volcano-GelboPlanetHR.def
+stages/SB2-snowy_aurora_borealis.def
+stages/Destruction_HR.def
+stages/Nameku.def
+stages/Final_Battle_HR.def
+stages/Desert-Battle.def
+stages/CherryBlossoms2.def
+stages/CherryBlossoms.def
+stages/Bridge_Night_HR.def
+stages/chuunin.def
+stages/narutobattlefield.def
+stages/Zen.def
+stages/CityDestroyed_Night_Rain.def
+stages/Confrontation_train.def
+stages/Namekusein.def
+stages/City_Night_HR.def
+stages/Destroyed_Namek.def
+stages/House_Waterfall_HR.def
+stages/CELL_GAMES.def
+stages/karintemple.def
+stages/Fight_Field.def
+stages/dbz_kame_house.def
+stages/rocky_mountain.def
+stages/Kamis_Lookout.def
+stages/PlanetaKaioshin.def
+stages/KAIOH.def
+stages/NinjaAcademy.def
+stages/TrainingArea.def
+stages/Ichiraku_Ramen_Shop.def
+stages/Orochi_Lair.def
+stages/Orochi.def
+stages/Forest.def
+stages/forest2.def
+stages/Grass.def
+stages/Konoha_Outskirts.def
+stages/Preliminar.def
+stages/snd6_k.def
+stages/ZabuzaStage.def
+stages/backyard.def
+stages/cataract.def
+stages/SandVillage.def
+stages/Konoha_Destroyed.def
+stages/Uchiha_Hideout.def
+stages/Konoha_Street_Destroyed.def
+stages/akatsukiforest.def
+stages/Akatsukis_Cave.def
+stages/
+stages/
+stages/
+stages/
+stages/
+stages/
+stages/
+stages/
+stages/
+
+
+
+
+
+
+;---------------------------------------------------------------------
+[Options]
+ ;Here you set the maximum number of matches to fight before game ends
+ ;in Arcade Mode. The first number is the number of matches against
+ ;characters with order=1, followed by order=2 and order=3 respectively.
+ ;For example, for 4,3,1 you will fight up to 4 randomly-picked
+ ;characters who have order=1, followed by 3 with order=2 and 1 with
+ ;order=3.
+arcade.maxmatches = 5,4,2,1
+             
+
+ ;Maximum number of matches to fight before game ends in Team Mode.
+ ;Like arcade.maxmatches, but applies to Team Battle.
+team.maxmatches = 5,4,2,1
+

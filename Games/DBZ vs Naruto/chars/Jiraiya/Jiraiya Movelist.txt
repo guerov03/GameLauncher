@@ -1,0 +1,25 @@
+Beta Jiraiya
+Movelist
+Start=Change Button Style
+
+Default
+A=Low Punch
+B=Medium Punch
+C=Heavy Punch
+X=Jizou Needle
+Y=Throw Kunai
+Z=Grab&Throw
+Down+Z=Teleport
+Air+A= Multiple Punch
+Air+B=Air Kick
+Down,Foward+A=Light Rasengan
+Down,Foward+B=Heavy Rasengan
+Down,Foward+c=Katon Gamayuendan
+
+Button Mashing Special Key
+
+B=Light Rasengan
+Down+B=Heavy Rasengan
+c=Katon Gamayuendan
+
+

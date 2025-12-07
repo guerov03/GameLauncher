@@ -1,0 +1,119 @@
+;==========-----credits-----===============
+
+;Stage by Berto
+;Se você não achou esse Stage no NUF4 ou em algum local POSTADO por mim
+;Denuncie http://animemugen.ucoz.com proucure por Berto e me manda uma PM ^^
+
+;Stage Ripped by Tyler from Naruto SND 6
+
+;==========------stage------===============
+[Info]
+name = "Orochimaru's Lair"
+
+[Camera]
+startx =0
+starty =0
+boundleft = -100
+boundright = 117
+boundhigh = 0
+boundlow = 0
+verticalfollow = .8
+floortension = 0
+tension = 50
+
+[PlayerInfo]
+;p1
+p1startx = -85       
+p1starty = 0         
+p1startz = 0         
+p1facing = 1           
+
+;p2
+p2startx = 85
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+leftbound  = -1000 
+rightbound =  1000 
+topbound  =  0    
+botbound  =  0    
+
+[Scaling]
+topz     = 0       
+botz     = 50      
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15   
+screenright = 15  
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 210
+autoturn = 1
+resetBG =1
+
+;--------------------------------------------------------
+[Shadow]
+intensity = 30
+color = 16,81,33
+yscale = .2
+fade.range = 0,0
+
+;--------------------------------------------------------
+[Reflection]
+intensity = 0
+
+[Music]
+bgmusic = sound/Orochimaru Fight.mp3
+bgvolume = 255
+;--------------------------------------------------------
+[BGdef]
+spr = stages/Orochi.sff
+debugbg = 0
+
+[BG 1]
+type  = normal
+spriteno = 0, 1
+layerno = 0      
+start =  -300,25
+delta = 1, 1
+mask  = 0     
+
+[BG enemy]
+type  = Anim
+spriteno = 4,0
+start = -3,123 
+delta = 1, 1
+mask  = 0 
+actionno = 4 
+
+[BG enemy]
+type  = Anim
+spriteno = 4,0
+start = -196, 123
+delta = 1, 1
+mask  = 0 
+actionno = 4
+
+[BG enemy]
+type  = Anim
+spriteno = 4,0
+start = 188, 123
+delta = 1, 1
+mask  = 0 
+actionno = 4
+
+
+[Begin Action 0]
+0,1,0,0,7    
+
+[Begin Action 4]
+4,0,0,0,7
+4,1,0,0,7
+4,2,0,0,7
+4,3,0,0,7

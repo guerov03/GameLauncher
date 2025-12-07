@@ -1,0 +1,22 @@
+[Info]
+name 	     ="Hyuuga Neji"
+displayname  ="Neji teen"
+versiondate  =25.12.2007
+mugenversion =06,14,2003
+author 	     ="Shinzui Uindo"
+pal.defaults =1,2
+
+[Files]
+sprite	 =NejiHyuuga.sff
+sound	 =NejiHyuuga.snd 
+anim	 =NejiHyuuga.air
+cmd	 =NejiHyuuga.cmd
+cns	 =NejiHyuuga.cns
+st	 =NejiHyuuga.cns
+stcommon =common1.cns
+pal1=NejiHyuuga.act
+pal2=NejiHyuuga2.act
+
+[Arcade]
+intro.storyboard  =
+ending.storyboard = ..\data\final.def

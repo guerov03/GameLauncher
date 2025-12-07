@@ -1,0 +1,65 @@
+------- Credits -------
+
+Programador: gotagz
+
+Sprites ripados por: Hakumei & alguns sprites por: Shink
+
+------- MoveList ------
+
+Comandos:
+
+Combo de socos: x, x, x
+
+Combo de Socos #2: b, b
+
+Combo de chutes: a, a
+
+Soco abaixado: seguro para baixo + a
+
+Socoabaixado #2: segura para baixo + x
+
+Combo de socos no ar: x,+x,+x...
+
+Chute no ar: a
+ 
+Jogar Kunai no ar pra frente: y
+
+Jogar Kunai no ar pra baixo: segura para baixo + y
+
+Jogar Kunai: y
+
+Jogar Kunai abaixado: segura para baixo + y
+
+Jogar Kunai explosiva: baixo, trás + y
+
+Chakra Charge: x+y
+
+Teleport: c (power >= 50), segura para trás + c (para teleportar para trás)
+
+Teleport no ar: c (power >= 50),  segura para trás + c (para teleportar para trás)
+
+Agarrão: segura para trás + x
+
+Counter: baixo, trás + b
+
+Dash no ar: 2x pra frente (rápido) enquanto no ar (power >= 50)
+
+Corre + Soco: 2x forward (rápido) + x
+
+
+Especiais:
+
+Correr + Chute: Power level >= 500, Baixo, frente + x
+
+Fumma Shuriken: Power level >= 1000, Baixo, trás + a
+
+Shinteshin no Jutsu: Energy level 3, Baixo, frente + a 
+
+
+x = x
+y = y
+z = z
+a = a
+b = b
+c = c
+s = s

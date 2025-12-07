@@ -1,0 +1,23 @@
+[Info]
+name="HSuigetsu"
+displayname="Suigetsu"
+versiondate=15,06,2008
+mugenversion=14,04,2001
+author="Jefferson Gimenez"
+pal.defaults=1,2
+[Files]
+sprite=HSuigetsu.sff
+sound=HSuigetsu.snd
+anim=HSuigetsu.air
+cmd=HSuigetsu.cmd
+cns=HSuigetsu.cns
+st=HSuigetsu.cns
+stcommon=Common.cns
+pal1=HSuigetsu.act
+pal2=HSuigetsu.act
+st1=Bunshin.cns
+st2=Super.cns
+st3=Jutsu.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

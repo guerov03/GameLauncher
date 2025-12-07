@@ -1,0 +1,29 @@
+; ‚±‚±‚ÉƒLƒƒƒ‰î•ñ‚ğ‘‚¢‚Ä‚­‚¾‚³‚¢
+[Info]
+name ="Sasuke"
+displayname ="Sasuke"
+versiondate =2,20,2005
+mugenversion =11,20,2005
+author ="hyuga"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =sasuke.cmd
+cns     =sasuke.cns
+st      =sasuke.cns
+stcommon =common1.cns 
+sprite  =sasuke.sff
+anim    =sasuke.air
+sound   =sasuke.snd
+pal1=s.act
+pal2=s.act
+st1=-3.cns
+st2=jump.cns
+st3=power.cns
+st4=striker.cns
+st5=away.cns
+st6=airdash.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

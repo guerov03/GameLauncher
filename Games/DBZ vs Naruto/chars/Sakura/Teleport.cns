@@ -1,0 +1,52 @@
+;---------------------------------------------------------------------------
+;Teleport Foward
+[Statedef 2]
+type    = A
+movetype= A
+physics = S
+juggle  = 8
+velset = 0,0
+poweradd= 200
+ctrl = 0
+anim = 2
+
+
+[State 2, 1]
+type = PosAdd
+trigger1 = AnimElem = 7
+y = -60
+x = 100
+
+
+[State 2, 2]
+type = changestate
+trigger1 = animtime = 0
+value = 50
+ctrl = 1
+
+;----------------------------------------
+;Teleport Back
+[Statedef 3]
+type    = A
+movetype= A
+physics = S
+juggle  = 8
+velset = 0,0
+poweradd= 200
+ctrl = 0
+anim = 2
+
+
+[State 3, 1]
+type = PosAdd
+trigger1 = AnimElem = 7
+y = -60
+x = -100
+
+
+[State 3, 2]
+type = changestate
+trigger1 = animtime = 0
+value = 50
+ctrl = 1
+

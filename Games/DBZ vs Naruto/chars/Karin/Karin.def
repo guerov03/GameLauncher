@@ -1,0 +1,27 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name ="BurningUpKarin"
+displayname ="Karin"
+versiondate =16/09/2010
+mugenversion = 
+author ="Samuns"
+pal.defaults =1,2
+
+[Files]
+sprite =Karin.sff
+anim =Karin.air
+sound =Karin.snd
+cmd =Karin.cmd
+cns =Karin.cns
+stcommon =common1.cns
+st =Karin.cns
+pal1=Karin.act
+pal2=Karin.act
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard =  ..\data\final.def

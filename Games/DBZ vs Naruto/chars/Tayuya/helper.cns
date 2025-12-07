@@ -1,0 +1,2022 @@
+;---------------------------------------------------------------------------
+; kuchiyose no jutsu (hyper)
+; CNS difficulty: medium
+; Description: Tayuya summon the demons to perform attacks.
+; All the helper use projectile instead of hitdef parameter in order to avoid
+; helper bugs and more compatibility for all kind of fighters.
+; the nothitby parameters avoid a lot bugs too, because any helper do not have
+; their own gethit parameters (states 5000-5700).
+[Statedef 2600]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 2600
+ctrl = 0
+sprpriority = 3
+
+[State 2600, PowerAdd]
+type = PowerAdd
+trigger1 = time = 0
+value = -1000
+
+[State 2600, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 1500, 3
+
+[State 2600, summon]
+type = explod
+trigger1 = AnimElem = 16
+anim = 4010
+pos = -60, 0
+sprpriority = 4
+id = 4010
+trans = add1
+
+[State 2600, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 12
+value = 3000, 2
+
+[State 2600, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 16
+value = 3000, 1
+
+[State 2600, Demons]
+type = Helper
+trigger1 = AnimElem = 18
+stateno = 2610
+pos = -60, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "kuchiyose-no-jutsu"
+ID = 2610
+
+;activate once per round.
+[State 2600, VarSet]
+type = VarSet
+trigger1 = animelem = 17
+v = 5
+value = 1
+
+[State 2600, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demons
+[Statedef 2610]
+type = A
+movetype = A
+physics = N
+anim = 2410
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2610, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2455
+projanim = 2455
+projhitanim = 2455
+projremanim = 2455
+projcancelanim = 2455
+projremove = 0
+projremovetime = 76
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2610 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2610, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2610, DestroySelf]
+type = DestroySelf
+trigger1 = time = 76
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute
+[Statedef 2200]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2600, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2600, Demon 1]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2615) = 0
+stateno = 2210
+pos = 0, 0 
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demon1"
+ID = 2615
+
+[State 3051, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 1
+[Statedef 2210]
+type = A
+movetype = A
+physics = N
+anim = 2420
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2615, Turn]
+type = Turn
+trigger1 = time = 0
+
+[State 1000, 2]
+type = PosAdd
+trigger1 = time = 0
+x = p2dist X - 40 
+
+[State 2615, Projectile]
+type = Projectile
+trigger1 = p2movetype = A
+ProjID = 2425
+projanim = 2425
+projhitanim = 2425
+projremanim = 2425
+projcancelanim = 2425
+projremove = 0
+projremovetime = 40
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 0,-30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -2.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2615 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2615, DestroySelf]
+type = DestroySelf
+trigger1 = time = 40
+
+[State 2615, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2211
+
+;---------------------------------------------------------------------------
+;Helper State Demon 1 Attack
+[Statedef 2211]
+type = A
+movetype = A
+physics = N
+anim = 2421
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2616, EnvShake]
+type = EnvShake
+trigger1 = time = 0
+time = 30
+ampl = 10
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = 200, 7
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 30
+value = 3000, 0
+
+[State 2616, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2426
+projanim = 2426
+projhitanim = 2426
+projremanim = 2426
+projcancelanim = 2426
+projremove = 0
+projremovetime = 90
+velocity = 0
+projhits = 1
+projsprpriority = 3
+projpriority = 7
+offset = 5, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = Hard
+hitflag = MAFP
+guardflag = MA
+pausetime = 0, 30
+sparkno = 0 
+sparkxy = 38, -10
+hitsound = -1  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 45
+ground.velocity = -2.9
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 0
+fall.recover = 0
+fall.recovertime = 60
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 95
+
+[State 2615, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2212
+
+;---------------------------------------------------------------------------
+;Helper State Demon 1 - End of State
+[Statedef 2212]
+type = A
+movetype = A
+physics = N
+anim = 2422
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 38
+
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 2
+[Statedef 2220]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2660, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2660, Demon 2]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2630) = 0
+stateno = 2221
+pos = 60, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demon2"
+ID = 2630
+
+[State 2660, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 2
+[Statedef 2221]
+type = A
+movetype = A
+physics = N
+anim = 2430
+velset = 0, 0 
+juggle = 0
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2615, Turn]
+type = Turn
+trigger1 = time = 0
+
+[State 1000, 2]
+type = PosAdd
+trigger1 = time = 0
+x = p2dist X - 20 
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = 3000, 0
+
+[State 2620, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2435
+projanim = 2435
+projhitanim = 2435
+projremanim = 2435
+projcancelanim = 2435
+projremove = 0
+projremovetime = 120
+velocity = 0
+projhits = 1
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = hard
+hitflag = MAFP
+guardflag = MA
+pausetime = 0, 60
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -.5, -11.5
+air.velocity = -.5, -11.5
+air.juggle = 0
+fall = 1
+fall.recover = 0
+fall.recovertime = 60
+
+[State 2620 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2620, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2620, DestroySelf]
+type = DestroySelf
+trigger1 = time = 120
+
+[State 2620, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2222
+
+;---------------------------------------------------------------------------
+;Helper State Demon 2 - End of State
+[Statedef 2222]
+type = A
+movetype = A
+physics = N
+anim = 2436
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 18
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 3
+[Statedef 2230]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2670, Demon 3]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2675) = 0
+stateno = 2231
+pos = -10, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demon3"
+ID = 2675
+
+[State 2670, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 3
+[Statedef 2231]
+type = A
+movetype = A
+physics = N
+anim = 2440
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2615, Turn]
+type = Turn
+trigger1 = time = 0
+
+[State 1000, 2]
+type = PosAdd
+trigger1 = time = 0
+x = p2dist X - 20 
+
+[State 2675, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 3
+value = 3000, 0
+
+[State 2675, Projectile]
+type = Projectile
+trigger1 = p2movetype = A
+ProjID = 2445
+projanim = 2445
+projhitanim = 2445
+projremanim = 2445
+projcancelanim = 2445
+projremove = 0
+projremovetime = 68
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -2.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2675 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2675, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2675, DestroySelf]
+type = DestroySelf
+trigger1 = time = 70
+
+[State 2675, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2232
+
+;---------------------------------------------------------------------------
+;Helper State Demon 3 Attack
+[Statedef 2232]
+type = A
+movetype = A
+physics = N
+anim = 2441
+velset = 0, 0 
+juggle = 0
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = 3000, 0
+
+[State 2616, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2446
+projanim = 2446
+projhitanim = 2446
+projremanim = 2446
+projcancelanim = 2446
+projremove = 0
+projremovetime = 60
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0, 30
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200, 7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -2.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2620 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 185
+
+[State 2620, 2]
+type = ChangeState
+trigger1 = time = 30 
+value = 2233
+
+;---------------------------------------------------------------------------
+;Helper State Demon 3 - End of State
+[Statedef 2233]
+type = A
+movetype = A
+physics = N
+anim = 2447
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 8
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 4
+[Statedef 2240]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2670, Demons 4]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2685) = 0
+stateno = 2241
+pos = -10, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demons4"
+ID = 2685
+
+[State 2670, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 4
+[Statedef 2241]
+type = A
+movetype = A
+physics = N
+anim = 2450
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2615, Turn]
+type = Turn
+trigger1 = time = 0
+
+[State 1000, 2]
+type = PosAdd
+trigger1 = time = 0
+x = p2dist X + 20 
+
+[State 2675, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 3
+value = 3000, 0
+
+[State 2675, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2455
+projanim = 2455
+projhitanim = 2455
+projremanim = 2455
+projcancelanim = 2455
+projremove = 0
+projremovetime = 120
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0, 30
+sparkno = 0 
+sparkxy = 30, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -2.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 0
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2675 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2675, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2675, DestroySelf]
+type = DestroySelf
+trigger1 = time = 130
+
+[State 2675, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2242
+
+;---------------------------------------------------------------------------
+;Helper State Demon 4 - End of State
+[Statedef 2242]
+type = A
+movetype = A
+physics = N
+anim = 2460
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 12
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 6
+;PseudoGhosts Projectile
+[Statedef 2250]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 6
+value = 1500, 1
+
+[State 2696, Projectile]
+type = Projectile
+trigger1 = AnimElem = 6
+ProjID = 4000
+projanim = 4000
+projhitanim = 4000
+projremanim = 4000
+projcancelanim = 4000
+projremove = 0
+projremovetime = 30
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 300, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFPD
+guardflag = MA
+pausetime = 0, 30
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = S3000, 1
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -2.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 0
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+down.hittime = 18
+down.bounce = 1
+down.velocity = -1.5,-1.5
+givepower = -500
+
+[State 2670, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute
+[Statedef 2650]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2600, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2600, Demon 1]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2615) = 0
+stateno = 2615
+pos = -60, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demon1"
+ID = 2615
+
+[State 3051, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 1
+[Statedef 2615]
+type = A
+movetype = A
+physics = N
+anim = 2420
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2615, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2425
+projanim = 2425
+projhitanim = 2425
+projremanim = 2425
+projcancelanim = 2425
+projremove = 0
+projremovetime = 40
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 0,-30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2615 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2615, DestroySelf]
+type = DestroySelf
+trigger1 = time = 40
+
+[State 2615, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2616
+
+;---------------------------------------------------------------------------
+;Helper State Demon 1 Attack
+[Statedef 2616]
+type = A
+movetype = A
+physics = N
+anim = 2421
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2616, EnvShake]
+type = EnvShake
+trigger1 = time = 0
+time = 30
+;freq = 9
+ampl = 10
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = 200, 7
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 30
+value = 3000, 0
+
+[State 2616, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2426
+projanim = 2426
+projhitanim = 2426
+projremanim = 2426
+projcancelanim = 2426
+projremove = 0
+projremovetime = 90
+velocity = 0, 0
+projhits = 1
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = hard
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = -1
+sparkxy = 50, -30
+hitsound = -1  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 43
+ground.velocity = -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 0
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 95
+
+[State 2615, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2617
+
+;---------------------------------------------------------------------------
+;Helper State Demon 1 - End of State
+[Statedef 2617]
+type = A
+movetype = A
+physics = N
+anim = 2422
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 38
+
+
+;---------------------------------------------------------------------------
+; Smash Kung Fu Upper (hyper)
+; CNS difficulty: medium
+; Description: This is very similar to KFM's Strong and Light Kung Fu Uppers.
+;     There is just one HitDef, for a screen-shaking hit. The envshake
+;     parameters are used to make this effect. You can find out more about
+;     each parameter in the CNS documentation.
+;     The fall.recover parameter is set at 0, meaning that p2 cannot recover
+;     from the fall by entering his recovery command (for KFM, that is x+y).
+;     This gives the attacking KFM a chance to follow up with another attack,
+;     such as the Fast Kung Fu Palm.
+;     Note that there is a ChangeState controller used to make KFM change to
+;     a success state if he hits. The success state has KFM hold his arm
+;     up longer for a dramatic effect.
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 2
+[Statedef 2660]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2660, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2660, Demon 2]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2630) = 0
+stateno = 2630
+pos = 60, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demon2"
+ID = 2630
+
+[State 2660, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 2
+[Statedef 2630]
+type = A
+movetype = A
+physics = N
+anim = 2430
+velset = 0, 0 
+juggle = 0
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = 3000, 0
+
+[State 2620, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2435
+projanim = 2435
+projhitanim = 2435
+projremanim = 2435
+projcancelanim = 2435
+projremove = 0
+projremovetime = 120
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = hard
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,30
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -.5, -11.5
+air.velocity = -.5, -11.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.recovertime = 60
+
+[State 2620 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2620, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2620, DestroySelf]
+type = DestroySelf
+trigger1 = time = 120
+
+[State 2620, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2631
+
+;---------------------------------------------------------------------------
+;Helper State Demon 2 - End of State
+[Statedef 2631]
+type = A
+movetype = A
+physics = N
+anim = 2436
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 18
+
+
+;---------------------------------------------------------------------------
+; Smash Kung Fu Upper (hyper)
+; CNS difficulty: medium
+; Description: This is very similar to KFM's Strong and Light Kung Fu Uppers.
+;     There is just one HitDef, for a screen-shaking hit. The envshake
+;     parameters are used to make this effect. You can find out more about
+;     each parameter in the CNS documentation.
+;     The fall.recover parameter is set at 0, meaning that p2 cannot recover
+;     from the fall by entering his recovery command (for KFM, that is x+y).
+;     This gives the attacking KFM a chance to follow up with another attack,
+;     such as the Fast Kung Fu Palm.
+;     Note that there is a ChangeState controller used to make KFM change to
+;     a success state if he hits. The success state has KFM hold his arm
+;     up longer for a dramatic effect.
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 3
+[Statedef 2670]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+juggle = 15
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2670, Demon 3]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2675) = 0
+stateno = 2675
+pos = -10, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demon3"
+ID = 2675
+
+[State 2670, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 3
+[Statedef 2675]
+type = A
+movetype = A
+physics = N
+anim = 2440
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2675, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 3
+value = 3000, 0
+
+[State 2675, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2445
+projanim = 2445
+projhitanim = 2445
+projremanim = 2445
+projcancelanim = 2445
+projremove = 0
+projremovetime = 68
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2675 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2675, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2675, DestroySelf]
+type = DestroySelf
+trigger1 = time = 70
+
+[State 2675, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2676
+
+;---------------------------------------------------------------------------
+;Helper State Demon 3 Attack
+[Statedef 2676]
+type = A
+movetype = A
+physics = N
+anim = 2441
+velset = 0, 0 
+juggle = 15
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2616, VelSet]
+type = VelSet
+trigger1 = time = 60
+x = 3
+
+[State 2616, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = 3000, 0
+
+[State 2616, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2446
+projanim = 2446
+projhitanim = 2446
+projremanim = 2446
+projcancelanim = 2446
+projremove = 0
+projremovetime = 60
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200, 7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 15
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2616, Projectile]
+type = Projectile
+trigger1 = time = 60
+ProjID = 2446
+projanim = 2446
+projhitanim = 2446
+projremanim = 2446
+projcancelanim = 2446
+projremove = 0
+projremovetime = 120
+velocity = 3
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 50, -30
+hitsound = s200, 7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 15
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2620 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 185
+
+[State 2620, 2]
+type = ChangeState
+trigger1 = time = 180
+value = 2677
+
+;---------------------------------------------------------------------------
+;Helper State Demon 3 - End of State
+[Statedef 2677]
+type = A
+movetype = A
+physics = N
+anim = 2447
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 8
+
+
+
+
+;---------------------------------------------------------------------------
+; Smash Kung Fu Upper (hyper)
+; CNS difficulty: medium
+; Description: This is very similar to KFM's Strong and Light Kung Fu Uppers.
+;     There is just one HitDef, for a screen-shaking hit. The envshake
+;     parameters are used to make this effect. You can find out more about
+;     each parameter in the CNS documentation.
+;     The fall.recover parameter is set at 0, meaning that p2 cannot recover
+;     from the fall by entering his recovery command (for KFM, that is x+y).
+;     This gives the attacking KFM a chance to follow up with another attack,
+;     such as the Fast Kung Fu Palm.
+;     Note that there is a ChangeState controller used to make KFM change to
+;     a success state if he hits. The success state has KFM hold his arm
+;     up longer for a dramatic effect.
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 4
+[Statedef 2680]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2670, Demons 4]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2685) = 0
+stateno = 2685
+pos = -10, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "demons4"
+ID = 2685
+
+[State 2670, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 4
+[Statedef 2685]
+type = A
+movetype = A
+physics = N
+anim = 2450
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2675, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 3
+value = 3000, 0
+
+[State 2675, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2455
+projanim = 2455
+projhitanim = 2455
+projremanim = 2455
+projcancelanim = 2455
+projremove = 0
+projremovetime = 120
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 30, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 0
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2675 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2675, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2675, DestroySelf]
+type = DestroySelf
+trigger1 = time = 130
+
+[State 2675, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2686
+
+;---------------------------------------------------------------------------
+;Helper State Demon 4 - End of State
+[Statedef 2686]
+type = A
+movetype = A
+physics = N
+anim = 2460
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 12
+
+
+
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 5
+;PseudoGhosts
+[Statedef 2690]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2670, PseudoGhosts]
+type = Helper
+trigger1 = AnimElem = 5 && NumHelper(2695) = 0
+stateno = 2695
+pos = -10, 0
+postype = p1
+helpertype = normal
+keyctrl = 0
+ownpal = 1
+name = "PseudoGhosts"
+ID = 2695
+
+;activate once per round.
+[State 2690, VarSet]
+type = VarSet
+trigger1 = Time = 0
+v = 6
+value = 1
+
+[State 2670, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Helper State Demon 4
+[Statedef 2695]
+type = A
+movetype = A
+physics = N
+anim = 2400
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2695, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 3
+value = 3000, 0
+
+[State 2695, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2455
+projanim = 2455
+projhitanim = 2455
+projremanim = 2455
+projcancelanim = 2455
+projremove = 0
+projremovetime = 38
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 30, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2695 , 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2695, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2695, DestroySelf]
+type = DestroySelf
+trigger1 = time = 40
+
+[State 2695, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2696
+
+;---------------------------------------------------------------------------
+;Helper State Demon 5
+[Statedef 2696]
+type = A
+movetype = A
+physics = N
+anim = 2405
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2696, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 3
+value = 3000, 0
+
+[State 2696, Projectile]
+type = Projectile
+trigger1 = time = 0
+ProjID = 2406
+projanim = 2406
+projhitanim = 2406
+projremanim = 2406
+projcancelanim = 2406
+projremove = 0
+projremovetime = 48
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 0, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFP
+guardflag = MA
+pausetime = 0,12
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = s200,7  
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 8
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+
+[State 2696, 4]
+type = ReversalDef
+trigger1 = 1
+reversal.attr = SCA, NA, SA, HA
+hitsound = S130, 1
+pausetime = 12, 12
+sparkno = 0
+priority = 7
+envshake.time = 12
+envshake.ampl = 10
+
+[State 2696, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2696, DestroySelf]
+type = DestroySelf
+trigger1 = time = 50
+
+[State 2696, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 2697
+
+;---------------------------------------------------------------------------
+;Helper State Demon 5 - End of State
+[Statedef 2697]
+type = A
+movetype = A
+physics = N
+anim = 2460
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 0
+
+[State 2615, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 2616, DestroySelf]
+type = DestroySelf
+trigger1 = time = 12
+
+;---------------------------------------------------------------------------
+;Makyou No Ran Attack Flute Attack 6
+;PseudoGhosts Projectile
+[Statedef 2700]
+type    = S
+movetype= A
+physics = S
+anim = 2610
+velset = 0, 0 
+ctrl = 0
+poweradd = 0
+sprpriority = 3
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 1000, 0
+
+[State 2670, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 6
+value = 1500, 1
+
+[State 2696, Projectile]
+type = Projectile
+trigger1 = AnimElem = 6
+ProjID = 4000
+projanim = 4000
+projhitanim = 4000
+projremanim = 4000
+projcancelanim = 4000
+projremove = 0
+projremovetime = 30
+velocity = 0
+projhits = 3
+projmisstime = 60
+projsprpriority = 3
+projpriority = 7
+offset = 150, 0
+attr = SCA, NA
+damage = 100, 20
+priority = 7,hit
+animtype = DiagUp
+hitflag = MAFPD
+guardflag = MA
+pausetime = 0, 30
+sparkno = 0 
+sparkxy = 0, -30
+hitsound = S3000, 1
+guardsound = s130,0 
+ground.type = High
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -5.5, -5.5
+air.velocity = -5.5, -5.5
+air.juggle = 0
+fall = 1
+fall.recover = 0
+fall.revovertime = 60
+down.hittime = 18
+down.bounce = 1
+down.velocity = -1.5,-1.5
+givepower = -500
+
+[State 2670, 2]
+type = ChangeState
+trigger1 = Time = 120
+value = 0
+ctrl = 1

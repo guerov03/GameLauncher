@@ -1,0 +1,35 @@
+; Definition file for KabutoNFB
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Kabutomaru"
+displayname ="Kabutomaru"
+versiondate =05,23,2006
+mugenversion =
+author ="Madara"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =K.cmd
+cns     =K.cns
+st      =K.cns
+stcommon =common1.cns
+sprite  =K.sff
+anim    =K.air
+;sound   =K.snd
+sound=
+pal1=Kabuto.act
+pal2=Kabuto.act
+st1=Proj.cns
+st2=Proj.cns
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

@@ -1,0 +1,69 @@
+; Binshins
+
+;-------------------------------------------------
+[Statedef 15000]
+type    = S
+movetype= I
+physics = S
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 705
+
+[State 0, VarSet]
+type = VarSet
+trigger1 = !time
+v = 15    ;fv = 10
+value = 0
+
+[State 0, VarSet]
+type = VarSet
+trigger1 = !time
+v = 16   ;fv = 10
+value = 0
+
+[State 0, VarSet]
+type = VarSet
+trigger1 = !time
+v = 20   ;fv = 10
+value = 0
+
+[State 210, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = !time
+value = 3000,2
+volume = 0
+;-------------------------------------------------
+[Statedef 15001]
+type    = S
+movetype= I
+physics = S
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 706
+
+[State 0, VarSet]
+type = VarSet
+trigger1 = !time
+v = 15    ;fv = 10
+value = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = !animtime
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = !time
+value = 3000,2
+volume = 0
+

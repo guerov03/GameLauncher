@@ -1,0 +1,584 @@
+;----------------------------------------------------------------------------
+;第２０弾ステージ・・・※Ｄ４専用
+;[静かな一時]
+;Author = YUSUKE
+;****************************************************************************
+;改変・転載は禁止という事で、お願い致します。
+;動画などへの使用は、このサイトアドレスを晒さなければＯＫです。
+;****************************************************************************
+;The 20th creation
+;[Quiet Time]
+;
+;Author = YUSUKE
+;http://freett.com/stages/
+;http://yusuke8.blog.shinobi.jp/
+;----------------------------------------------------------------------------
+;更新日・・2010/01/24
+
+[Info]
+name		= "Cherry Blossoms HR"
+
+[Camera]
+startx		= 0
+starty		= 0
+boundleft	= -210
+boundright	= 210
+boundhigh	= -160
+boundlow	= 0
+verticalfollow	= 1
+floortension	= 60
+tension		= 40
+
+[PlayerInfo]
+p1startx	= -70
+p1starty	= 0
+p1startz	= 0
+p1facing	= 1
+p2startx	= 70
+p2starty	= 0
+p2startz	= 0
+p2facing	= -1
+
+leftbound	= -1000
+rightbound	= 1000
+topbound	= 0
+botbound	= 0
+
+[Scaling]
+topz		= 0
+botz		= 50
+topscale	= 1
+botscale	= 1.2
+
+[Bound]
+screenleft	= 15
+screenright	= 15
+
+[StageInfo]
+zoffset		= 210
+autoturn	= 1
+resetBG		= 0
+HIres		= 1
+
+[Shadow]
+color		= 38,38,38
+yscale		= .05
+fade.range	= -100,-50
+
+[Music]
+bgmusic		= sound/i said im maruto.mp3
+bgvolume	= 255
+
+[BGdef]
+spr		= CherryBlossoms.sff
+debugbg		= 0
+
+[BG 1_6]
+type		= normal
+spriteno	= 1,6
+start		= 0, 240
+delta		= 0.3, 2.3
+mask		= 1
+
+[BG 1_8]
+type		= normal
+spriteno	= 1,8
+start		= 0, 240
+delta		= .9, 2.2
+mask		= 1
+
+[BG 1_5]
+type		= normal
+spriteno	= 1,5
+start		= 0, 240
+delta		= 1.1, 2.2
+mask		= 1
+
+[BG 1_4]
+type		= normal
+spriteno	= 1,4
+start		= 0, 240
+delta		= 1.2, 2.2
+mask		= 1
+
+[BG 1_3]
+type		= normal
+spriteno	= 1,3
+start		= 0, 240
+delta		= 1.25, 2.2
+mask		= 1
+
+[BG 1]
+type		= parallax
+spriteno	= 1,0
+start		= 0, 240
+delta		= 1.3, 2
+mask		= 1
+xscale		= .1,.1759
+
+[BG 1_1]
+type		= normal
+spriteno	= 1,1
+start		= 0, 240
+delta		= 1.4, 2
+mask		= 1
+
+[BG 1_2]
+type		= normal
+spriteno	= 1,2
+start		= 20, 240
+delta		= 2.2, 2.2
+mask		= 1
+
+[BG 1_2]
+type		= normal
+spriteno	= 1,2
+start		= 20, 240
+delta		= 2.2, 2.2
+mask		= 1
+layerno		= 1
+trans		= add1
+
+[BG 1_7]
+type		= normal
+spriteno	= 1,7
+start		= 45, 240
+delta		= 2, 2.2
+mask		= 1
+
+[BG 1_7]
+type		= normal
+spriteno	= 1,7
+start		= 45, 240
+delta		= 2, 2.2
+mask		= 1
+layerno		= 1
+trans		= add1
+
+[BG 2]
+type		= anim
+actionno	= 11
+start		= 45,50
+delta		= 2.2,2.2
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 11
+
+[BGCtrlDef 11]
+CtrlID		= 11
+loopTime	= 400
+
+[BGCtrl 11]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 11]
+type		= velset
+time		= 0
+x		= -0.5
+y		= 1
+
+[BG 2]
+type		= anim
+actionno	= 11
+start		= -40,0
+delta		= 2.2,2.2
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 12
+
+[BGCtrlDef 12]
+CtrlID		= 12
+loopTime	= 500
+
+[BGCtrl 12]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 12]
+type		= velset
+time		= 0
+x		= -.3
+y		= 1
+
+[BG 2]
+type		= anim
+actionno	= 12
+start		= 180,80
+delta		= 2.1,2.1
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 13
+
+[BGCtrlDef 13]
+CtrlID		= 13
+loopTime	= 550
+
+[BGCtrl 13]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 13]
+type		= velset
+time		= 0
+x		= -.3
+y		= 1
+
+[BG 2]
+type		= anim
+actionno	= 12
+start		= 150,0
+delta		= 2.1,2.1
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 14
+
+[BGCtrlDef 14]
+CtrlID		= 14
+loopTime	= 900
+
+[BGCtrl 14]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 14]
+type		= velset
+time		= 0
+x		= -.5
+y		= 0.5
+
+[BG 2]
+type		= anim
+actionno	= 12
+start		= 350,-300
+delta		= 2.1,2.1
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 15
+
+[BGCtrlDef 15]
+CtrlID		= 15
+loopTime	= 1600
+
+[BGCtrl 15]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 15]
+type		= velset
+time		= 0
+x		= -.5
+y		= 0.5
+
+[BG 2]
+type		= anim
+actionno	= 14
+start		= 550,-300
+delta		= 2,2
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 16
+
+[BGCtrlDef 16]
+CtrlID		= 16
+loopTime	= 1600
+
+[BGCtrl 16]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 16]
+type		= velset
+time		= 0
+x		= -.5
+y		= 0.5
+
+[BG 2]
+type		= anim
+actionno	= 14
+start		= 550,-50
+delta		= 2,2
+mask		= 1
+sin.x		= 0, 150
+id		= 16
+
+[BGCtrlDef 16]
+CtrlID		= 16
+loopTime	= 1600
+
+[BGCtrl 16]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 16]
+type		= velset
+time		= 0
+x		= -.5
+y		= 0.5
+
+[BG 2]
+type		= anim
+actionno	= 14
+start		= 700,0
+delta		= 2.2,2.2
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 17
+
+[BGCtrlDef 17]
+CtrlID		= 17
+loopTime	= 700
+
+[BGCtrl 17]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 17]
+type		= velset
+time		= 0
+x		= -.8
+y		= 0.7
+
+[BG 2]
+type		= anim
+actionno	= 15
+start		= -200,0
+delta		= 2.2,2.2
+layerno		= 1
+mask		= 1
+sin.x		= 0, 150
+id		= 18
+
+[BGCtrlDef 18]
+CtrlID		= 18
+loopTime	= 700
+
+[BGCtrl 18]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 18]
+type		= velset
+time		= 0
+x		= -.7
+y		= 0.6
+
+[BG 2]
+type		= anim
+actionno	= 15
+start		= -200,-250
+delta		= 2.1,2.1
+mask		= 1
+sin.x		= 0, 150
+id		= 18
+
+[BGCtrlDef 18]
+CtrlID		= 18
+loopTime	= 700
+
+[BGCtrl 18]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 18]
+type		= velset
+time		= 0
+x		= -.7
+y		= 0.6
+
+[BG 2]
+type		= anim
+actionno	= 16
+start		= 0,-150
+delta		= 1.65,1.8
+mask		= 1
+sin.x		= 10, 160
+id		= 20
+
+[BGCtrlDef 20]
+CtrlID		= 20
+loopTime	= 650
+
+[BGCtrl 20]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 20]
+type		= velset
+time		= 0
+x		= -.2
+y		= 1
+
+[BG 2]
+type		= anim
+actionno	= 16
+start		= -150,-250
+delta		= 1.65,1.8
+mask		= 1
+sin.x		= 10, 160
+id		= 20
+
+[BGCtrlDef 20]
+CtrlID		= 20
+loopTime	= 650
+
+[BGCtrl 20]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 20]
+type		= velset
+time		= 0
+x		= -.2
+y		= 1
+
+[BG 2]
+type		= anim
+actionno	= 16
+start		= -150,-600
+delta		= 1.5,1.8
+mask		= 1
+sin.x		= 10, 160
+id		= 21
+
+[BGCtrlDef 21]
+CtrlID		= 21
+loopTime	= 1200
+
+[BGCtrl 21]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 21]
+type		= velset
+time		= 0
+x		= -.2
+y		= 1
+
+[BG 2]
+type		= anim
+actionno	= 16
+start		= 500,-650
+delta		= 1.5,1.8
+mask		= 1
+sin.x		= 10, 160
+id		= 21
+
+[BGCtrlDef 21]
+CtrlID		= 21
+loopTime	= 1200
+
+[BGCtrl 21]
+type		= posset
+time		= 0
+x		= 0
+y		= 1
+
+[BGCtrl 21]
+type		= velset
+time		= 0
+x		= -.2
+y		= 1
+
+[Begin Action 11]
+2,0, 0,0, 10
+2,1, 0,0, 10
+2,2, 0,0, 10
+2,3, 0,0, 10
+2,4, 0,0, 10
+2,5, 0,0, 10
+2,6, 0,0, 10
+2,5, 0,0, 10
+2,4, 0,0, 10
+2,3, 0,0, 10
+2,2, 0,0, 10
+2,1, 0,0, 10
+
+[Begin Action 12]
+2,0, 0,0, 7
+2,1, 0,0, 7
+2,2, 0,0, 7
+2,3, 0,0, 7
+2,4, 0,0, 7
+2,5, 0,0, 7
+2,6, 0,0, 7
+2,5, 0,0, 7
+2,4, 0,0, 7
+2,3, 0,0, 7
+2,2, 0,0, 7
+2,1, 0,0, 7
+
+[Begin Action 14]
+2,0, 0,0, 15
+2,1, 0,0, 15
+2,2, 0,0, 15
+2,3, 0,0, 15
+2,4, 0,0, 15
+2,5, 0,0, 15
+2,6, 0,0, 15
+2,5, 0,0, 15
+2,4, 0,0, 15
+2,3, 0,0, 15
+2,2, 0,0, 15
+2,1, 0,0, 15
+
+[Begin Action 15]
+2,0, 0,0, 20
+2,1, 0,0, 20
+2,2, 0,0, 20
+2,3, 0,0, 20
+2,4, 0,0, 20
+2,5, 0,0, 20
+2,6, 0,0, 20
+2,5, 0,0, 20
+2,4, 0,0, 20
+2,3, 0,0, 20
+2,2, 0,0, 20
+2,1, 0,0, 20
+
+[Begin Action 16]
+2,0, 0,0, 13
+2,1, 0,0, 13
+2,2, 0,0, 13
+2,3, 0,0, 13
+2,4, 0,0, 13
+2,5, 0,0, 13
+2,6, 0,0, 13
+2,5, 0,0, 13
+2,4, 0,0, 13
+2,3, 0,0, 13
+2,2, 0,0, 13
+2,1, 0,0, 13

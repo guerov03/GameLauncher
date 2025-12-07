@@ -1,0 +1,152 @@
+================================================================
+=::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::=
+=::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::=
+=::::::::::::::::::::::::::::::  ::::::::::::::::::::::::::::::=
+=::::::::::::::::::::::::::          ::::::::::::::::::::::::::=
+=::::::::::::::::::::::                  ::::::::::::::::::::::=
+=::::::::::::::::::        =========         ::::::::::::::::::=
+=::::::::::::::       ==================         ::::::::::::::=
+=::::::::::         ======================           ::::::::::=
+=::::::             ====              ====               ::::::=
+=::                 =      =========     =                   ::=
+=::::::             ======================               ::::::=
+=::::::::::         ======================           ::::::::::=
+=::::::::::::::       ==================         ::::::::::::::=
+=::::::::::::::::::        =========         ::::::::::::::::::=
+=::::::::::::::::::::::                  ::::::::::::::::::::::=
+=::::::::::::::::::::::::::            ::::::::::::::::::::::::=
+=::::::::::::::::::::::::::::::    ::::::::::::::::::::::::::::=
+=::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::=
+=::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::=
+================================================================
+
+~~~~~~~~~>>> INTRODUÇÃO <<<~~~~~~~~~
+
+maito Gai (05-04-2008)
+update: 01-08-2008
+
+PS: as datas estão no formato americado: primeiro mês, depois dia, depois ano.
+
+criador: PR-kun
+
+web site: http://pr.ucoz.com
+
+
+~~~~~~~~~>>>  CREDITOS  <<<~~~~~~~~~
+
+pelos sprites, creditos a yondy-hokage,unknownkid, neimad, guimus, hyperlon, Strictgamer e {_RAFAEL_}.
+
+pelos sons, creditos a kamui_ninja, Griever80, hyperlon e alguns outros sons retirados do site 
+flash kit (http://www.flashkit.com/soundfx/)
+e alguns sons retirados do kung fu man...
+
+dê creditos se usar, não publique sem minha autorização
+
+~~~~~~~~~>>> O QUE MODIFIQUEI? <<<~~~~~~~~~
+
+-os hit sparks e alguns outros efeitos
+-os sons
+-adicionei novos golpes
+-alguns comandos
+-a inteligência artificial
+-entre outros detalhes...
+
+~~~~~~~~~>>> MOVELIST <<<~~~~~~~~~
+
+===================================================
+BÁSICOS
+===================================================
+
+y+b (pressione y+b) - power charge (power<=2980)
+
+Back,a                      - teleport pra trás
+Forwards,a                  - teleport pra frente
+
+enter                       - taunt
+
+down, up                    - super jump
+
+forwards, back, a / b       - esquiva
+
+===================================================
+GOLPES
+===================================================
+
+a,a,a,a                     - combo
+a,a,b                       - combo2 (p2 distance x<=50)
+x                           - kunai
+y                           - ataque forte
+
+a (abaixado)                - golpe abaixado
+b (abaixado)                - chute pra cima
+x (abaixado)                - kunai abaixado
+
+a (no alto)                 - ataque no alto
+b (no alto)                 - socos no alto
+x (no alto)                 - kunai no alto
+Down,x (no alto)               - kunai no alto para baixo
+Down,a (no alto)               - soco no alto para baixo
+
+Forwards,x ou Back,x        - kunai explosiva
+Forwards,b                  - ataque forte2
+
+Forwards,b (no alto)        - chute no alto
+
+Forwards,Forwards,a         - slash!
+
+===================================================
+SUB-SPECIAIS
+===================================================
+
+Forwards,Forwards,b         - dinamic entry!!!
+ - depois de 15 "game-ticks" aperte "baixo" para o gai fazer o golpe fatal e levar o inimigo pro chão
+
+down,Forwards,a             - konoha sempuu
+
+down,Forwards,a (no alto)   - konoha sempuu no alto
+ -depois de 22 "game-ticks" aperte "baixo" para o gai fazer o golpe fatal e levar o inimigo pro chão
+
+down,Back,a (no alto)       - super chute no alto
+
+down,Forwards,x             - combo de shuriken e kunai explosiva
+
+down,F,Back                 - arremessar o nunchaku
+-quando acertar o p2 o nunchaku fica no chão...você não vai poder fazer mais nenhum ataque que envolva o nunchaku
+enquanto o nunchaku estiver no chão.
+para pegar o nunchaku de volta, basta chegar perto dele
+
+down,back,y                 - hit counter
+-espere o inimigo te acertar, caso ele acerte o gai irá fazer contra ataque arremessando o p2
+
+===================================================
+SPECIAIS
+===================================================
+
+down,Forwards,down,Forwards
+,a                          - konoha daisenkou!!!
+ - power>=1000
+
+down,Back,a                 - jinen no rûru (pressione a para carregar) / combo de pedras (se estiver transformado)
+-power >=1000
+
+Forwards,Down,Back,down,forwards,a/b - super combo para o alto!!
+-power>=500
+
+Back,Forwards,a/b (no alto) - esmaga chão! XD
+-power>=500
+
+down,Back,down,Back,a       - gai combo / azakujaku (se estiver transformado)
+-power >= 2000
+
+down,Back,A+B               - sexto portal transformação
+-life <=500
+
+~~~~~~~~~>>> AGRADEÇIMENTOS <<<~~~~~~~~~
+
+masashi kishimoto, por criar Naruto e todos os personagens (inclusive o Gai)
+
+equipe do jogo "naruto ninja concil 3" pelos sprites
+
+a galera da PDM por acompanhar meu trabalho e dar dicas para melhorar
+
+e a você por baixar e testar o char

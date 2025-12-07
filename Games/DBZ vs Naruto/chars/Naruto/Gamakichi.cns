@@ -1,0 +1,124 @@
+ ;------------------------------------------------------------
+;invocando Gamakichi
+[StateDef 10014]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 8500
+poweradd = 0
+sprpriority = 2
+
+[State 10014, SuperPause]
+type = SuperPause
+trigger1 = time = 1
+time = 174
+anim = 102
+sound = S7500,3
+pos = 0, -25
+darken = 1
+p2defmul = 0
+movetime = 174
+poweradd = 0
+unhittable = 1
+
+[State 10014, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 8
+value = S8500,0
+
+[State 10014, 3]
+type = Explod
+trigger1 = AnimElem = 23
+anim = 1214
+pos = 0,20
+sprpriority = 30
+postype = p1
+bindtime = 1
+ignorehitpause = 1
+persistent = 0
+
+
+[State 10014,1]
+type = helper
+trigger1 = AnimElem = 23
+name = "helper1"
+id = 10015
+pos = 60,0
+postype = p1
+stateno = 10015
+helpertype = normal
+ownpal = 1
+keyctrl = 0
+
+[State 10014, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 10016
+ctrl = 0
+
+;------------------------------------------------------------
+;Gamakichi chegando
+[StateDef 10015]
+type    = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 10015
+sprpriority = 1
+poweradd = 0
+
+[State 10015, 2]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 100,6
+volume = 250
+
+[State 10015, 2]
+type = PlaySnd
+trigger1 = time = 200
+value = 120,4
+volume = 250
+
+[State 10015,1]
+type = Explod
+trigger1 = time = 195
+anim = 199
+id = 191
+pos = 0,10
+postype = p1
+sprpriority = 9
+supermovetime = 45
+ownpal = 1
+
+[State 10015, DestroySelf]
+type = DestroySelf
+trigger1 = time = 200
+
+;------------------------------------------------------------
+;Gamakichi naruto bravo
+[StateDef 10016]
+type    = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 1
+anim = 10016
+
+[State 10015, 2]
+type = PlaySnd
+trigger1 = AnimElem = 4
+value = 100,9
+volume = 250
+
+[State 10016, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+

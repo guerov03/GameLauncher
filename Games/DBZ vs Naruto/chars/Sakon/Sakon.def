@@ -1,0 +1,29 @@
+; Definition file for player
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Sakon & Ukon"
+displayname ="Sakon"
+versiondate =15,04,08
+mugenversion =14,04,2002
+author ="kofelsalvador10th"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =sakon.cmd
+cns     =sakon.cns
+st      =sakon.cns
+stcommon =sakon_common.cns
+sprite  =sakon.sff
+anim    =sakon.air
+sound  =sakon.snd
+pal1=sakon1.act
+pal2=sakoncs.act
+st1=sakoncs.cns
+st2=sakoncs.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

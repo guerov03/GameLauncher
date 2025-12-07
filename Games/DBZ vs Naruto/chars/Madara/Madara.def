@@ -1,0 +1,21 @@
+[Info]
+name="SHMadara'O"
+displayname="Madara"
+versiondate=
+mugenversion=
+author="Shikaa and Orhan"
+pal.defaults=1,2
+[Files]
+sprite=SHMadara'O.sff
+sound=SHMadara'O.snd
+anim=SHMadara'O.air
+cmd=SHMadara'O.cmd
+cns=SHMadara'O.cns
+st=SHMadara'O.cns
+stcommon=common1.cns
+pal1=SHMadara'O.act
+pal2=SHMadara'O.act
+st1=bunshin.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

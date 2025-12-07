@@ -3,7 +3,7 @@
 #include <vector>
 #include <windows.h>
 #include <shellapi.h>
-
+#include <algorithm>
 #include "Game.h"
 #include "DataStructures.h"
 
@@ -50,6 +50,43 @@ void launchGame(const string& path) {
     }
 }
 
+void sortByNewest(vector<Game>& games) {
+    vector<pair<int,int>> temp;  
+    for (int i = 0; i < games.size(); i++) {
+        temp.push_back({games[i].year, i});
+    }
+
+    // sort newest first
+    sort(temp.begin(), temp.end(), [](auto& a, auto& b) {
+        return a.first > b.first;
+    });
+
+    cout << "\nGames (newest to oldest):\n";
+    for (auto& p : temp) {
+        cout << games[p.second].year << " - "
+             << games[p.second].title 
+             << " (" << games[p.second].genre << ")\n";
+    }
+}
+
+void sortByOldest(vector<Game>& games) {
+    vector<pair<int,int>> temp;
+    for (int i = 0; i < games.size(); i++) {
+        temp.push_back({games[i].year, i});
+    }
+
+    // sort oldest first
+    sort(temp.begin(), temp.end(), [](auto& a, auto& b) {
+        return a.first < b.first;
+    });
+
+    cout << "\nGames (oldest to newest):\n";
+    for (auto& p : temp) {
+        cout << games[p.second].year << " - "
+             << games[p.second].title 
+             << " (" << games[p.second].genre << ")\n";
+    }
+}
 
 
 int main() {
@@ -85,6 +122,18 @@ games.push_back(Game(
         2012,
         "Horror"
     ));
+    games.push_back(Game(
+        "DBZ vs Naruto",
+        "./Games/DBZ vs Naruto/DBZ vs Naruto.exe",
+        2003,
+        "Action"
+    ));
+    games.push_back(Game(
+        "CatMario",
+        "./Games/CatMario/CatMario.exe",
+        2007,
+        "Platformer"
+    ));
 
     stack<string> history;
     queue<string> installQueue;
@@ -99,11 +148,11 @@ games.push_back(Game(
         cout << "1. View all games\n";
         cout << "2. Launch a game\n";
         cout << "3. Search for a game\n";
-        cout << "4. View sorted list\n";
+        cout << "4. Sort A-Z\n";
         cout << "5. Recommendations\n";
         cout << "6. Play history\n";
-        cout << "7. Queue install\n";
-        cout << "8. View install queue\n";
+        cout << "7. Sort newest to oldest\n";
+        cout << "8. Sort oldest to newest\n";
         cout << "0. Exit\n";
         cout << "Choose: ";
 
@@ -130,10 +179,7 @@ games.push_back(Game(
                 cout << "Invalid index.\n";
             }
         }
-
-        // =======================
-        // UPDATED SEARCH FUNCTION
-        // =======================
+        
         else if (choice == 3) {
             string t;
             cout << "Enter title: ";
@@ -177,24 +223,15 @@ games.push_back(Game(
         }
 
         else if (choice == 7) {
-            string t;
-            cout << "Enter title: ";
-            cin >> t;
-            installQueue.push(t);
+            sortByNewest(games);
         }
-
         else if (choice == 8) {
-            if (installQueue.empty()) cout << "Queue empty.\n";
-            else {
-                cout << "\nInstall queue:\n";
-                queue<string> temp = installQueue;
-                while (!temp.empty()) {
-                    cout << temp.front() << "\n";
-                    temp.pop();
-                }
-            }
+            sortByOldest(games);
+        }
+        else {
+            cout << "Invalid choice.\n";
         }
     }
-
+    
     return 0;
 }

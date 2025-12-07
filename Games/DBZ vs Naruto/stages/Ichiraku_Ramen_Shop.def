@@ -1,0 +1,124 @@
+Creator: Jerrydrizzt
+Email: Jerrydrizzt@Gmail.com
+Msn: Jerrydrizzt@Hotmail.com
+Contact Me: Im Usually on Mfg or Naruto Mugen at Least once a day you Can Contact me there if you have to ^^
+;--------------------------------------------------------
+; Definition of KFM's stage
+; *** denotes values you should change/check for each stage.
+; The term "background" is used to mean both backgrounds and foregrounds.
+
+;--------------------------------------------------------
+[Info]
+name = "Ichiraku Ramen Shop"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+
+boundleft = -175
+boundright = 150
+boundhigh = -150
+boundlow = 0  
+verticalfollow = .5
+floortension = 1
+tension = 60
+
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound = 1000
+topbound  =  0
+botbound  =  0
+
+;--------------------------------------------------------
+[Scaling]
+topz  = 0
+botz  = 50
+topscale = 1
+botscale = 1.2
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 4
+screenright = 4
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 215
+autoturn = 1
+resetBG = 1
+
+;--------------------------------------------------------
+[Shadow]
+intensity = 260
+color = 0,0,0
+yscale = 0.4
+fade.range = -400,100
+
+;--------------------------------------------------------
+[Reflection]
+intensity=
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/naruto_fight.mp3
+bgvolume = 255
+
+;--------------------------------------------------------
+[BGDef]
+spr = Ichiraku_Ramen_Shop.sff
+debugbg = 
+
+;--------------------------------------------------------
+[BG Floor]
+type  = normal
+spriteno = 0,1
+start = 0, 181
+delta = .5,.5
+xscale = 1, 1.75
+yscalestart = 100
+yscaledelta = 1.2
+mask = 0
+
+
+[BG Floor]
+type  = normal
+spriteno = 0,2
+start = 0,181
+delta = .5,.5
+xscale = 1, 1.75
+yscalestart = 100
+yscaledelta = 1.2
+mask = 0
+
+
+[BG Floor]
+type  = normal
+spriteno = 0,3
+start = 0, 181
+delta = .5,.5
+xscale = 1, 1.75
+yscalestart = 100
+yscaledelta = 1.2
+mask = 0
+
+[BG Floor]
+type  = normal
+spriteno = 0,0
+start = 0, 181
+delta = 1,1
+xscale = 1, 1.75
+yscalestart = 100
+yscaledelta = 1.2
+mask = 1

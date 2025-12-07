@@ -1,0 +1,15 @@
+; Configure some options here.
+
+[Statedef -2]
+
+[State -2, Config change weapon button]
+type = Null
+trigger1 = var(43) := 1337 ;When 0, you have to press C+Z to change weapon
+;If more than 0, you need to press start, I prefer presing start.
+;Also when you need to press start (more than 0 in value) you cant taunt.
+
+[State -2, Fatality]
+type = Null
+trigger1 = var(54) := 1337 ;Zabuza have a fatality animation (Zabuza dies that is)
+;against some characters. When having 0 it will be deactivated, when more than 0
+;it will be activated. Read more in the Read me file.

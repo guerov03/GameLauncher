@@ -1,0 +1,13 @@
+[Statedef 1234]
+type = S
+movetype = A
+physics = C
+velset = 0,0
+ctrl = 0
+anim = 12345
+juggle = 1
+sprpriority = 2
+poweradd = 20
+
+[State 1234, 0]
+type = Projectile

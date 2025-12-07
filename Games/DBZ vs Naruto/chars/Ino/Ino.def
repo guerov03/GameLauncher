@@ -1,0 +1,22 @@
+[Info]
+name="gzino"
+displayname="Ino"
+versiondate=16/09/2008
+mugenversion=
+author="gotagz"
+pal.defaults=1,2
+
+[Files]
+sprite=gzino.sff
+sound=gzino.snd
+anim=gzino.air
+cmd=gzino.cmd
+cns=gzino.cns
+st=gzino.cns
+stcommon=common1.cns
+pal1=gzino.act
+pal2=gzino2.act
+st1=especiais.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

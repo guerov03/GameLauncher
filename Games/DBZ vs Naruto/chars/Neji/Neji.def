@@ -1,0 +1,28 @@
+; ‚±‚±‚ÉƒLƒƒƒ‰î•ñ‚ğ‘‚¢‚Ä‚­‚¾‚³‚¢
+[Info]
+name ="Nezi"
+displayname ="Neji"
+versiondate =2,20,2005
+mugenversion =11,20,2005
+author ="hyuga"
+pal.defaults =6,3,4,2
+
+; Files for the player
+[Files]
+cmd     =nezi.cmd
+cns     =nezi.cns
+st      =nezi.cns
+stcommon =common.cns 
+sprite  =nezi.sff
+anim    =nezi.air
+sound   =nezi.snd
+pal1=n.act
+st1=-3.cns
+st2=jump.cns
+st3=power.cns
+st4=striker.cns
+st5=away.cns
+st6=airdash.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

@@ -1,0 +1,197 @@
+
+;---------------------------------------------------------------------------
+; Effect
+[Statedef 9500]
+type    = S                      ;State-type: S-stand, C-crouch, A-air, L-liedown
+movetype= A                      ;Move-type: A-attack, I-idle, H-gethit
+physics = S                      ;Physics: S-stand, C-crouch, A-air
+juggle  = 1                      ;Number of air juggle points move takes
+;Commonly-used controllers:
+velset = 0,0                     ;Set velocity (x,y) (Def: no change)
+ctrl = 0                         ;Set ctrl (Def: no change)
+anim = 9510                      ;Change animation (Def: no change)
+poweradd = 0                    ;Power to add (Def: 0)
+sprpriority = 0                  ;Set p1's sprite layering priority to 2 (in front)
+
+[State 0, Helper]
+type = Helper
+trigger1 = time = 1
+helpertype = normal ;player
+name = "efek"
+ID = 9999
+stateno = 9999
+pos = 0,0
+postype = p1    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 0
+supermovetime = 99
+pausemovetime = 99
+size.xscale = 1
+size.yscale = .01
+
+[State 1510, AngleDraw]
+type = AngleDraw
+trigger1 = time >= 2
+scale = 1, fvar(11)
+
+[State 1510, VarSet]
+type = VarSet
+trigger1 = time = 1
+fv = 11
+value = 0
+
+[State 1510, VarAdd]
+type = VarAdd
+trigger1 = time >= 2 && time <= 7
+fv = 11
+value = 1.6
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = time > 22 && time < 38
+x = .6
+y = 0
+
+[State 0, Trans]
+type = Trans
+trigger1 = time >= 40
+trans = addalpha
+alpha = 256, 256
+
+[State 0, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 1
+value = 9500, 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 43
+
+
+;---------------------------------------------------------------------------
+; Effect
+[Statedef 9510]
+type    = S                      ;State-type: S-stand, C-crouch, A-air, L-liedown
+movetype= A                      ;Move-type: A-attack, I-idle, H-gethit
+physics = S                      ;Physics: S-stand, C-crouch, A-air
+juggle  = 1                      ;Number of air juggle points move takes
+;Commonly-used controllers:
+velset = 0,0                     ;Set velocity (x,y) (Def: no change)
+ctrl = 0                         ;Set ctrl (Def: no change)
+anim = 9500                       ;Change animation (Def: no change)
+poweradd = 0                    ;Power to add (Def: 0)
+sprpriority = 0                  ;Set p1's sprite layering priority to 2 (in front)
+
+[State 0, Helper]
+type = Helper
+trigger1 = time = 1
+helpertype = normal ;player
+name = "efek"
+ID = 9999
+stateno = 9999
+pos = 0,0
+postype = p1    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 0
+size.xscale = 1
+size.yscale = .012
+pausemovetime = 999
+supermovetime = 999
+
+[State 1510, AngleDraw]
+type = AngleDraw
+trigger1 = time >= 2
+scale = 1, fvar(11)
+
+[State 1510, VarSet]
+type = VarSet
+trigger1 = time = 1
+fv = 11
+value = 0
+
+[State 1510, VarAdd]
+type = VarAdd
+trigger1 = time >= 2 && time <= 7
+fv = 11
+value = 1.7
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = time > 22 && time < 38
+x = -.8
+y = 0
+
+[State 0, Trans]
+type = Trans
+trigger1 = time >= 40
+trans = addalpha
+alpha = 256, 256
+
+[State 0, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+flag2 = nobardisplay
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 1
+value = 9500, 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 43
+
+;---------------------------------------------------------------------------
+; Effect
+[Statedef 9999]
+type    = S                      ;State-type: S-stand, C-crouch, A-air, L-liedown
+movetype= A                      ;Move-type: A-attack, I-idle, H-gethit
+physics = S                      ;Physics: S-stand, C-crouch, A-air
+juggle  = 1                      ;Number of air juggle points move takes
+;Commonly-used controllers:
+velset = 0,0                     ;Set velocity (x,y) (Def: no change)
+ctrl = 0                         ;Set ctrl (Def: no change)
+anim = 9999                       ;Change animation (Def: no change)
+poweradd = 0                    ;Power to add (Def: 0)
+sprpriority = 0                  ;Set p1's sprite layering priority to 2 (in front)
+
+[State 1510, AngleDraw]
+type = AngleDraw
+trigger1 = time >= 2
+scale = 1, fvar(10)
+
+[State 1510, VarSet]
+type = VarSet
+trigger1 = time = 1
+fv = 10
+value = 0
+
+[State 1510, VarAdd]
+type = VarAdd
+trigger1 = time >= 2 && time <= 7
+fv = 10
+value = 2.6
+
+[State 0, Trans]
+type = Trans
+trigger1 = time >= 38
+trans = addalpha
+alpha = 256, 256
+
+[State 0, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 42
+

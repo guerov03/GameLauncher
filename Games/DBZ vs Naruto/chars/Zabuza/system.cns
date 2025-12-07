@@ -1,0 +1,662 @@
+;------------------------------------------------------------------
+[Statedef 9500]
+type    = S
+movetype= I
+physics = S
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 9999
+
+[State 0, Explod]
+type = Explod
+trigger1 = !time
+anim = 9600
+ID = 9600
+pos = 40,220
+postype = Back  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = -1
+scale = 1,1
+sprpriority = 4
+ontop = 0
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+ignorehitpause = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = time >= 50 && parent, var(45) = 0
+anim = 9500
+ID = 9500
+pos = 80,220
+postype = Back  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 1
+scale = IfElse((parent, var(41) = 1),1.5,1),IfElse((parent, var(41) = 1),1.5,1)
+sprpriority = 5
+ontop = 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+ignorehitpause = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = time >= 40 && parent, var(46) = 0
+anim = 9502
+ID = 9502
+pos = 60,220
+postype = Back  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 1
+scale = IfElse((parent, var(41) = 2),1.5,1),IfElse((parent, var(41) = 2),1.5,1)
+sprpriority = 5
+ontop = 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+ignorehitpause = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = time >= 30 && parent, var(47) = 0
+anim = 9504
+ID = 9504
+pos = 40,220
+postype = Back  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 1
+scale = IfElse((parent, var(41) = 3),1.5,1),IfElse((parent, var(41) = 3),1.5,1)
+sprpriority = 5
+ontop = 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+ignorehitpause = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = time >= 15 && parent, var(48) = 0
+anim = 9506
+ID = 9506
+pos = 20,220
+postype = Back  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 1
+scale = IfElse((parent, var(41) = 4),1.5,1),IfElse((parent, var(41) = 4),1.5,1)
+sprpriority = 5
+ontop = 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+ignorehitpause = 1
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 2
+ignorehitpause = 1
+
+[State 0, AssertSpecial]
+type = AssertSpecial
+trigger1 = 1
+flag = invisible
+ignorehitpause = 1
+;---------------------------------------------------------------
+[Statedef 9501]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 9501
+
+[State 0, PosAdd]
+type = PosAdd
+trigger1 = !time
+x = 10+Random%320
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = !(Pos Y >= 0)
+y = .20
+
+
+[State 0, PosSet]
+type = PosSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+persistent = 0
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = root, Pos X = [pos X -12,Pos X +12]
+trigger1 = root, Pos Y = [Pos Y -0,Pos Y +5]
+value = 9502
+ctrl = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = enemynear, Pos X = [pos X -12,Pos X +12]
+trigger1 = enemynear, Pos Y = [Pos Y -0,Pos Y +5]
+;---------------------------------------------------------------
+[Statedef 9502]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+
+[State 0, ParentVarSet]
+type = ParentVarSet
+trigger1 = !time
+v = 45    ;fv =
+value = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 1
+;---------------------------------------------------------------
+[Statedef 9503]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 9502
+
+[State 0, PosAdd]
+type = PosAdd
+trigger1 = !time
+x = 10+Random%320
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = !(Pos Y >= 0)
+y = .25
+
+
+[State 0, PosSet]
+type = PosSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+persistent = 0
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = root, Pos X = [pos X -5,Pos X +5]
+trigger1 = root, Pos Y = [Pos Y -0,Pos Y +5]
+value = 9504
+ctrl = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = enemynear, Pos X = [pos X -5,Pos X +5]
+trigger1 = enemynear, Pos Y = [Pos Y -0,Pos Y +5]
+;---------------------------------------------------------------
+[Statedef 9504]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+
+[State 0, ParentVarSet]
+type = ParentVarSet
+trigger1 = !time
+v = 46    ;fv =
+value = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 1
+;---------------------------------------------------------------
+[Statedef 9505]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+
+[State 0, ChangeAnim]
+type = ChangeAnim
+trigger1 = 1
+value = 9505
+
+[State 0, PosAdd]
+type = PosAdd
+trigger1 = !time
+x = 10+Random%320
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = !(Pos Y >= 0)
+y = .40
+
+
+[State 0, PosSet]
+type = PosSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+persistent = 0
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = root, Pos X = [pos X -15,Pos X +15]
+trigger1 = root, Pos Y = [Pos Y -0,Pos Y +15]
+value = 9506
+ctrl = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = enemynear, Pos X = [pos X -15,Pos X +15]
+trigger1 = enemynear, Pos Y = [Pos Y -0,Pos Y +15]
+;---------------------------------------------------------------
+[Statedef 9506]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+
+[State 0, ParentVarSet]
+type = ParentVarSet
+trigger1 = !time
+v = 47    ;fv =
+value = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 1
+;---------------------------------------------------------------
+[Statedef 9507]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+
+[State 0, ChangeAnim]
+type = ChangeAnim
+trigger1 = 1
+value = 9507
+
+[State 0, PosAdd]
+type = PosAdd
+trigger1 = !time
+x = 10+Random%320
+
+[State 0, VelAdd]
+type = VelAdd
+trigger1 = !(Pos Y >= 0)
+y = .30
+
+
+[State 0, PosSet]
+type = PosSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+persistent = 0
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+y = 0
+
+[State 0, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+time = 1
+
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = root, Pos X = [pos X -12,Pos X +12]
+trigger1 = root, Pos Y = [Pos Y -0,Pos Y +5]
+value = 9508
+ctrl = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = enemynear, Pos X = [pos X -12,Pos X +12]
+trigger1 = enemynear, Pos Y = [Pos Y -0,Pos Y +5]
+;---------------------------------------------------------------
+[Statedef 9508]
+type    = S
+movetype= I
+physics = N
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+
+[State 0, ParentVarSet]
+type = ParentVarSet
+trigger1 = !time
+v = 48   ;fv =
+value = 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 1
+
+;===============================================================================
+[Statedef -3]
+
+[State -3, Gethit sound]
+type = PlaySnd
+triggerall = time = 1
+triggerall = stateno=5000||stateno=5010||stateno=5020||stateno=5070||stateno=5080
+trigger1 = enemynear, hitdefattr = SCA,SA,HA
+trigger2 = gethitvar(animtype)< 2 && random < 300
+trigger3 = gethitvar(animtype) >= 2 && random < 500
+value = 5000,(random%5)
+volume = 800
+
+
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52
+trigger2 = stateno = 106
+value = 52, 0
+volume = 800
+
+[State -3, Jump Sound]
+type = PlaySnd
+triggerall = Time = 6
+trigger1 = stateno = 40
+value = 40, 0
+volume = 800
+
+[State -3, Run Sound]
+type = PlaySnd
+Triggerall = stateno = 100
+trigger1 = animelem = 3
+trigger2 = animelem = 6
+value = S100,0
+volume = 800
+
+[State -3, Jump dust]
+type = Explod
+trigger1 = stateno = 40 && !animtime && numexplod(40) = 0
+anim = 6002
+ID = 40
+pos = 0,10
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+removetime = -2
+scale = 0.4,0.4
+sprpriority = 0
+ontop = 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+
+[State -3, Jump dust 2]
+type = Explod
+trigger1 = prevstateno = 40 && stateno = 50 && time = 1
+trigger2 = prevstateno = 40 && stateno = 50 && time = 4
+trigger3 = prevstateno = 40 && stateno = 50 && time = 7
+anim = 6003
+ID = 41
+pos = 0,-4
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+removetime = -2
+scale = 0.5,0.5
+sprpriority = 0
+ontop = 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+
+[State -3, Jump land dust]
+type = Explod
+trigger1 = stateno = 52 && time = 1
+trigger2 = stateno = 106 && time = 1
+anim = 6004
+ID = 52
+pos = 0,0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+removetime = -2
+scale = 0.4,0.4
+sprpriority = 0
+ontop = 0
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+
+[State -3, Jump land dust]
+type = Explod
+trigger1 = stateno = 105 && time = 1
+anim = 6005
+ID = 105
+pos = 0,4
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+removetime = -2
+scale = 1,1
+sprpriority = 0
+ontop = 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 0
+
+[State -3, Stop charge sound]
+type = StopSnd
+trigger1 = stateno != 1030 && !ishelper
+channel = 30
+
+[State -3, DisplayToClipboard]
+type = DisplayToClipboard
+trigger1 = 1 && numhelper(15000) != 0
+text = "Weapon var is %d bunshin gethitvar = %d"
+params = var(41), (helper(15000),var(15))
+;--|Weapon System|----------------------------------------------------------
+[State -3, Helper]
+type = Helper
+trigger1 = !time && numhelper(9500) = 0 && !Ishelper(15000)
+helpertype = normal ;player
+name = "Weapon"
+ID = 9500
+stateno = 9500
+pos = 0,0
+postype = Back    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 1
+
+[State -3, Helper]
+type = Helper
+trigger1 = random < 2 && numhelper(9501) = 0 && var(45) = 1 && !Ishelper(15000)
+helpertype = normal ;player
+name = "Kunai Drop"
+ID = 9501
+stateno = 9501
+pos = 0,-250
+postype = Back    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 1
+
+[State -3, Helper]
+type = Helper
+trigger1 = random < 2 && numhelper(9503) = 0 && var(46) = 1 && !Ishelper(15000)
+helpertype = normal ;player
+name = "Shiruken Drop"
+ID = 9503
+stateno = 9503
+pos = 0,-250
+postype = Back    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 1
+
+[State -3, Helper]
+type = Helper
+trigger1 = random < 1 && numhelper(9505) = 0 && var(47) = 1 && !Ishelper(15000)
+helpertype = normal ;player
+name = "Big Shiruken Drop"
+ID = 9505
+stateno = 9505
+pos = 0,-250
+postype = Back    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 1
+
+[State -3, Helper]
+type = Helper
+trigger1 = random < 1 && numhelper(9507) = 0 && var(48) = 1 && !Ishelper(15000)
+helpertype = normal ;player
+name = "Explosive Kunai Drop"
+ID = 9507
+stateno = 9507
+pos = 0,-250
+postype = Back    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 1
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = time = 2 && !Ishelper(15000)
+v = 42    ;fv = 10
+value = 1
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = time = 1 && var(42) != 1 && !Ishelper(15000)
+v = 41
+value = 1
+
+[State -3, VarAdd]
+type = VarAdd
+triggerall = IfElse(var(43) = 0,(command = "c" && command = "z"),command = "s") && !Ishelper(15000)
+trigger1 =  var(41) < 5
+v = 41    ;fv =
+value = 1
+
+[State -3, VarSet]
+type = VarSet
+triggerall = IfElse(var(43) = 0,(command = "c" && command = "z"),command = "s") && !Ishelper(15000)
+trigger1 = var(41) = 5
+v = 41
+value = 1
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = var(41) = 1 && var(45) = 1 && !Ishelper(15000)
+v = 41    ;fv = 10
+value = 2
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = var(41) = 2 && var(46) = 1 && !Ishelper(15000)
+v = 41    ;fv = 10
+value = 3
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = var(41) = 3 && var(47) = 1 && !Ishelper(15000)
+v = 41    ;fv = 10
+value = 4
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = var(41) = 4 && var(48) = 1 && !Ishelper(15000)
+v = 41    ;fv = 10
+value = 1
+
+[State -3, VarSet]
+type = VarSet
+trigger1 = var(48) = 1 && var(45) = 1 && var(46) = 1 && var(47) = 1 && !Ishelper(15000)
+v = 41    ;fv = 10
+value = 0
+
+;[State -3, VarSet]
+;type = VarSet
+;trigger1 = command = "s" && var(45) = 1 && var(46) = 1 && var(47) = 1 && var(48) = 1
+;v = 41
+;value = IfElse(var(41) = 1,2,(IfElse(var(41) = 2,3,(IfElse(var(41) = 3,4,1)))))
+;---|!Weapon  System|--------------------------------------------------------

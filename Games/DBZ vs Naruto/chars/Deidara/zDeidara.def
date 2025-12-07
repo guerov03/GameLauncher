@@ -1,0 +1,19 @@
+[Info]
+name="Deidara"
+displayname="Deidara"
+versiondate=
+mugenversion=
+author="Arsh231 and Playzz"
+pal.defaults=1,2,3,4
+[Files]
+sprite=Deidara.sff
+sound=Deidara.snd
+anim=Deidara.air
+cmd=Deidara.cmd
+cns=Deidara.cns
+st=Deidara.cns
+stcommon=common1.cns
+pal1=Deidara.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

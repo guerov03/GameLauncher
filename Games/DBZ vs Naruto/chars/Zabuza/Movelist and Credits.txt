@@ -1,0 +1,92 @@
+;==|Zabuza|================================================================================================
+
+;==========================================================================================================
+Info:
+Name: Momochi Zabuza
+Author: Anjel
+Created: Meh
+
+;==========================================================================================================
+Special Stuffs about him:
+
+Fatality anim. Look in Config.txt Note that it works with just 3 characters now, Warusuki3's CvsHaohmaru, My Zabuza and my Ds Ichigo.
+Na0 with POTS Nakoruru.
+
+;==========================================================================================================
+Movelist:
+
+Basics:
+
+Stand. A: Light Kick.
+Stand. B: Medium Kick.
+Stand. C: Strong Slash.
+Stand. X: Light Punch.
+Stand. Y: Medium Punch.
+Stand. Z: Strong Slash.
+Stand. A+B: Evade.
+
+
+Crouch. A: Light Kick.
+Crouch. B: Medium Kick.
+Crouch. C: Strong Kick.
+Crouch. X: Light Kick.
+Crouch. Y: Medium Kick.
+Crouch. Z: Strong Slash.
+Crouch. A+B: Evade.
+
+Air. A: Light Kick.
+Air. B: Medium Kick.
+Air. C: Strong Kick.
+Air. X: Light Kick.
+Air. Y: Medium Kick.
+v. Z: Strong Slash.
+
+Stand, Hold B+Y: Power charge.
+
+Special Moves:
+Stand. QCF Punch: Weapon Throw.
+Stand. QCB Punch: Assasin Teleport No Jutsu.
+Stand. QCB Kick: Water Bunshin.
+
+
+Lvl 1 supers:
+Stand. 2 QCF Punch: Ninpuo Kirigakure No Jutsu.
+Stand. 2 QCB Punch: Suiryuudan No Jutsu.
+
+Lvl 2 supers:
+Stand. 2 QCF Kick: Big Fucking Wave Of Doom!
+
+Lvl 3 supers:
+Stand. HCB 2P: Water Prision.
+
+;=========================================================================================================
+QCF: Quarter Cirlce Forward, Press Down then forward.
+QCB: Quarter Cirlce Backward, Press Down then backward.
+HCB: Half Cirlce Backward, Press Forward, Down, Down, Backward.
+2 QCF: Two Half Circle forwards.
+2 QCB: Two Half Circle backwards.
+2P: Two Punches.
+;==========================================================================================================
+Things to add:
+Fix buggs
+;==========================================================================================================
+Credit:
+
+Eye-C for making the awsome sprites.
+Elecbyte For Mugen Engine.
+Cyanide for being best coder ever, and I learned "coding" from his tutorials.
+People At MFG forum writing long read-mes, made me wanna write one to, great inspiration source.
+You! For downloading this char and give feedback, or else!
+K.O.D for the giant wave fx, Eye-c made it but he made it nicer, and animated.
+K.O.D for bugtesting
+H' For some CvS2 Effects
+P.O.T.S for his Cvs2 effects, and just being awsome, helped me with some coding aspects to.
+P.O.T.S again for some Cvs2 Gethit sound data, if can be found on mugenguild.
+Warusuki3 for some Cvs2 effects
+999999999999999999999999999999999999999999999999999999999999999999 for somefeedback.
+Haseo/Greiver80 for some feedback to.
+
+;==========================================================================================================
+Contact:
+Website: www.anjel.smyr.net
+Email: Anjel@smyr.net

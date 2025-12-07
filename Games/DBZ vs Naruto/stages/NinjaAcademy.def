@@ -1,0 +1,142 @@
+;==========-----credits-----===============
+
+;STAGE BY PR-KUN! 
+
+;img stage ripped by >>DoB<<
+;NPc's ripped by yondy-hokage
+;site naruto project for music (www.narutoproject.com)
+;and stage by me...PR-kun
+
+;==========------stage------===============
+[Info]
+name = "Ninja Academy"
+
+[Camera]
+startx =0
+starty =0
+boundleft = -800
+boundright = 550
+boundhigh = -252
+boundlow = 0
+verticalfollow = .8
+floortension = 0
+tension = 50
+
+[PlayerInfo]
+;p1
+p1startx = -85       
+p1starty = 0         
+p1startz = 0         
+p1facing = 1           
+
+;p2
+p2startx = 85
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+leftbound  = -1000 
+rightbound =  1000 
+topbound  =  0    
+botbound  =  0    
+
+[Scaling]
+topz     = 0       
+botz     = 50      
+topscale = 1       
+botscale = 1.2     
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15   
+screenright = 15  
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 205
+autoturn = 1
+resetBG =1
+
+;--------------------------------------------------------
+[Shadow]
+intensity = 30
+color = 16,81,33
+yscale = .2
+fade.range = 0,0
+
+;--------------------------------------------------------
+[Reflection]
+intensity = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/Naruto_TurnOver.mp3
+bgvolume = 255
+loop = 1
+
+[BGdef]
+spr = NinjaAcademy.sff
+debugbg = 0
+
+[BG 1]
+type  = normal
+spriteno = 0, 1
+layerno = 0      
+start= -310, 25
+delta= 0.5,0.5  
+
+[BG 2]
+type  = normal
+spriteno = 1, 0
+layerno = 0
+start =  0,-79
+mask  = 1 
+
+[BG Anim]
+type= anim
+actionno= 3
+layerno= 0
+start=  100,100
+mask=1
+
+[BG Anim]
+type= anim
+actionno= 2
+layerno= 0
+start=  60,85
+mask=1
+
+[BG Anim]
+type= anim
+actionno= 4
+layerno= 0
+start=  -440,120
+mask=1
+
+[Begin Action 0]
+0,1,0,0,7    
+
+[Begin Action 1]
+1,0,0,0,7
+
+[Begin Action 2]
+2,0,0,0,7
+2,1,0,0,7
+2,2,0,0,7
+2,3,0,0,7
+
+[Begin Action 3]
+3,0,0,0,7
+3,1,0,0,7
+3,2,0,0,7
+3,3,0,0,7
+
+[Begin Action 4]
+4,0,0,0,7
+4,1,0,0,7
+4,2,0,0,7
+4,3,0,0,7
+
+
+

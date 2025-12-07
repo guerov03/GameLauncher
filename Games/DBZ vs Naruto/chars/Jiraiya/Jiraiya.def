@@ -1,0 +1,28 @@
+; Player information
+[Info]
+name ="Jiraiya"
+displayname ="Jiraiya"
+versiondate =6,22,2007
+mugenversion =06,14,2003
+author ="Hacker@Han_Hin"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =Jiraiya.cmd
+cns     =Jiraiya.cns
+st      =Jiraiya.cns
+stcommon =common.cns
+sprite  =Jiraiya.sff
+anim    =Jiraiya.air
+sound   =Jiraiya.snd
+pal1=Jiraiya.act
+pal2=Jiraiya.act
+
+
+
+; Arcade mode
+[Arcade]
+intro.storyboard =
+ending.storyboard = ..\data\final.def
+

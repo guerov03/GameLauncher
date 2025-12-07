@@ -1,0 +1,20 @@
+Creditos
+Char Maker: Tidus
+Sprites: Giax
+Sprites Mizu Bunshin: Tidus
+
+Lista de Golpes
+Ataque Normal: A
+Ataque Normal 2: X
+Ataque Normal 3: Baixo, A ou X
+Chakra Charge: A + X
+Teleporte Ataque: C
+Suiton: B
+Suiton: Suirou no Jutsu: Baixo, Traz, A
+Suiton: Daibakufu no Jutsu: Baixo, Frente, A
+Suiton: Suiryudan no Jutsu: Baixo, Frente, X
+Suiton: Mizu Bunshin no Jutsu: Baixo, Frente , B
+Suiton: Suikoudan no Jutsu: Pressione e Segure Y
+Suiton: Suikoudan no Jutsu (Tubarões): Z
+
+

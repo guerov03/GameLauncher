@@ -1,0 +1,463 @@
+;---------------------------------------------------------------------------
+; Sparks
+; Normal spark
+[Statedef 6003]
+type = A
+anim = 6003
+velset = 0,0
+sprpriority = 5
+
+[State 6003, center]
+type = helper
+trigger1 = time = 0
+stateno = 6004
+ID = 6004
+pos = 0,0
+name = "Center Spark"
+postype = p1
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+pausemovetime = 65535
+supermovetime = 65535
+ignorehitpause = 1
+
+[State 6003, center]
+type = helper
+trigger1 = time = 0
+stateno = 6005
+ID = 6005
+pos = 0,0
+name = "Center Spark 2"
+postype = p1
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+pausemovetime = 65535
+supermovetime = 65535
+ignorehitpause = 1
+
+[State 6003, center]
+type = helper
+trigger1 = time = 0
+stateno = 6006
+ID = 6006
+pos = 0,0
+name = "Center Spark 3"
+postype = p1
+size.xscale = 1
+size.yscale = 1
+ownpal = 1
+pausemovetime = 65535
+supermovetime = 65535
+ignorehitpause = 1
+
+[State 6003, particles]
+type = explod
+trigger1 = time < 3
+vel = ceil((-500+random)/50),ceil((-500+random)/50)
+anim = 6007
+ID = 6007
+sprpriority = 5
+postype = p1
+pos = 0,0
+random = 30,30
+facing = -1+(random<500)*2
+removetime = 15
+ownpal = 1
+pausemovetime = 300
+supermovetime = 300
+
+[State 6003, particles]
+type = explod
+trigger1 = time < 3
+vel = ceil((-500+random)/50),ceil((-500+random)/50)
+anim = 6007
+ID = 6007
+sprpriority = 5
+postype = p1
+pos = 0,0
+random = 30,30
+facing = -1+(random<500)*2
+removetime = 15
+ownpal = 1
+pausemovetime = 300
+supermovetime = 300
+
+[State 6003, ModifyExplod]
+type = ModifyExplod
+trigger1 = 1
+ID = 6007
+scale = .15,.15
+trans = addalpha
+alpha = 256-ceil(15*(time)),256
+
+[State 6003, assert]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6003, angle]
+type = angleset
+trigger1 = !time
+value = 15*(random%24)
+
+[State 6003, scale]
+type = angledraw
+trigger1 = time < 15
+scale = .5 +(time*.10), .5-(time*.035)
+
+[State 6003, scale]
+type = angledraw
+trigger1 = time >= 15
+scale = 0,0
+
+[State 6003, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = 256,256
+
+[State 6003, end]
+type = destroyself
+trigger1 = time >= 16
+
+;--------------------------------------------------------------------------
+; Spark Center Fx
+[Statedef 6004]
+type = A
+velset = 0,0
+anim = 6004
+sprpriority = 5
+
+[State 6004, BindToParent]
+type = BindToParent
+trigger1 = 1
+time = 1
+ignorehitpause = 1
+
+[State 6004, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6004, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6004, angle]
+type = angleset
+trigger1 = !time
+value = 15*(random%30)
+
+[State 6004, scale]
+type = angledraw
+trigger1 = 1
+scale = 0 + .030*time,0 + .030*time
+
+[State 6004, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-20*time),256
+
+[State 6004, end]
+type = destroyself
+trigger1 = time >= 12
+
+;---------------------------------------------------------------------------
+; Spark Center Fx 2
+[Statedef 6005]
+type = A
+velset = 0,0
+anim = 6005
+sprpriority = 5
+
+[State 6005, BindToParent]
+type = BindToParent
+trigger1 = 1
+time = 1
+ignorehitpause = 1
+
+[State 6005, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6005, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6005, angle]
+type = angleset
+trigger1 = !time
+value = 15*(random%30)
+
+[State 6005, scale]
+type = angledraw
+trigger1 = 1
+scale = 0 + (.020*time),0 + (.020*time)
+
+[State 6005, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-20*time),256
+
+[State 6005, end]
+type = destroyself
+trigger1 = time >= 12
+
+;----------------------------------------------------------------------------
+; Spark Center Fx 3
+[Statedef 6006]
+type = A
+velset = 0,0
+anim = 6006
+sprpriority = 5
+
+[State 6006, BindToParent]
+type = BindToParent
+trigger1 = 1
+time = 1
+ignorehitpause = 1
+
+[State 6006, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6006, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6006, angle]
+type = angleset
+trigger1 = !time
+value = 15*(random%30)
+
+[State 6006, scale]
+type = angledraw
+trigger1 = 1
+scale = .1 + (.015*time),.1 + (.015*time)
+
+[State 6006, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-21.33*(time)),256
+
+[State 6006, end]
+type = destroyself
+trigger1 = time >= 12
+
+;---------------------------------------------------------------------------
+; Spark Particles
+[Statedef 6007]
+type = A
+velset = 0,0
+anim = 6007
+sprpriority = 5
+
+[State 6007, VelSet]
+type = VelSet
+trigger1 = 1
+x = 4 * random/1000
+y = random
+
+[State 6007, BindToParent]
+type = BindToParent
+trigger1 = 1
+time = 1
+ignorehitpause = 1
+
+[State 6007, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6007, angle]
+type = angleset
+trigger1 = !time
+value = 15*(random%30)
+
+[State 6007, scale]
+type = angledraw
+trigger1 = 1
+scale = .1 + (.015*time),.1 + (.015*time)
+
+[State 6007, trans]
+type = trans
+trigger1 = time <= 4
+trans = addalpha
+alpha = 256,256
+
+[State 6007, trans]
+type = trans
+trigger1 = time > 4
+trans = addalpha
+alpha = ceil(256-32*(time - 4)),256
+
+[State 6007, end]
+type = destroyself
+trigger1 = time >= 12
+
+;----------------------------------------------------------------------------
+; Weapon Hit SFX
+[Statedef 6008]
+type = A
+velset = 0,0
+anim = 6010
+sprpriority = 6
+
+[State 6008, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6008, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6008, scale]
+type = angledraw
+trigger1 = 1
+scale = 1 +(.05*time),1 +(.05*time)
+
+[State 6008, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-15*time),ceil(15*time)
+
+[State 6008, end]
+type = destroyself
+trigger1 = time >= 15
+
+;---------------------------------------------------------------------------
+; Hit Fx
+[Statedef 6011]
+type = A
+velset = 0,0
+anim = 6011
+sprpriority = 6
+
+[State 6011, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6011, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6011, scale]
+type = angledraw
+trigger1 = 1
+scale = 1+(.05*time),1+(.05*time)
+
+[State 6011, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-15*time),ceil(15*time)
+
+[State 6011, end]
+type = destroyself
+trigger1 = time >= 15
+
+;---------------------------------------------------------------------------
+; Hit Fx 2
+[Statedef 6012]
+type = A
+velset = 0,0
+anim = 6012
+sprpriority = 6
+
+[State 6012, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6012, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6012, scale]
+type = angledraw
+trigger1 = 1
+scale = 1+(.05*time),1+(.05*time)
+
+[State 6012, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-15*time),ceil(15*time)
+
+[State 6012, end]
+type = destroyself
+trigger1 = time >= 15
+
+;----------------------------------------------------------------------------
+; Hit Fx 3
+[Statedef 6013]
+type = A
+velset = 0,0
+anim = 6013
+sprpriority = 6
+
+[State 6013, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6013, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6013, scale]
+type = angledraw
+trigger1 = 1
+scale = 1 +(.05*time),1 +(.05*time)
+
+[State 6013, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-15*time),ceil(15*time)
+
+[State 6013, end]
+type = destroyself
+trigger1 = time >= 15
+
+;---------------------------------------------------------------------------
+; Guard Fx
+[Statedef 6002]
+type = A
+velset = 0,0
+anim = 6002
+sprpriority = 5
+
+[State 6002, noshadow]
+type = assertspecial
+trigger1 = 1
+flag = noshadow
+
+[State 6002, turn]
+type = turn
+trigger1 = facing = -1
+
+[State 6002, scale]
+type = angledraw
+trigger1 = 1
+scale = 1 + (.050*time),1 + (.075*time)
+
+[State 6002, trans]
+type = trans
+trigger1 = 1
+trans = addalpha
+alpha = ceil(256-20*time),256
+
+[State 6002, end]
+type = destroyself
+trigger1 = time >= 15

@@ -1,0 +1,39 @@
+; Definition file for ACCloud
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Sakura"
+displayname ="Sakura teen"
+versiondate =08,11,2008
+mugenversion =
+author ="bleed-fast-die-slow"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =BTSSakura.cmd
+cns     =BTSSakura.cns
+st      =BTSSakura.cns
+stcommon =common1.cns
+sprite  =BTSSakura.sff
+anim    =BTSSakura.air
+sound=BTSSakura.snd
+pal1=BTSSakura.act
+pal2=BTSSakura.act
+st1=AI.cns
+
+;pal2   =
+;pal3   =
+;pal4   =
+;pal5   =
+;pal6   =
+;pal7   =
+;pal8   =
+;pal9   =
+;pal10  =
+;pal11  =
+;pal12  =
+[Arcade]
+intro.storyboard=
+ending.storyboard=

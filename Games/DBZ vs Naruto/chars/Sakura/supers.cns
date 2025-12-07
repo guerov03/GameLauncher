@@ -1,0 +1,99 @@
+;Sakura Inner Punch
+[Statedef 9500]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 9500
+ctrl = 0
+sprpriority = 2
+
+[State 9500, Width]
+type = Width
+trigger1 = AnimElemTime(4) >= 0 && AnimElemTime(16) < 0
+value = 5,0
+
+[State 9500, Super 1]
+type = SuperPause
+trigger1 = AnimElem = 1
+pos = 5, -30
+anim = 100
+sound = 20, 0
+poweradd = -1000
+
+[State 9500, Super 2]
+type = AfterImage
+trigger1 = AnimElem = 3
+time = 2
+
+[State 9500, Super 3]
+type = AfterImageTime
+trigger1 = AnimElemTime(2) >= 0
+time = 2
+
+[State 9500, Super 4]
+type = NotHitBy
+trigger1 = AnimElem = 2
+value = , NA, SA, AT
+time = 6
+
+[State 9500, 1]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 0, 2
+
+[State 9500, 2]
+type = HitDef
+trigger1 = Time = 0
+attr = S, HA
+animtype  = Up
+damage    = 155, 12
+getpower  = 0
+priority  = 5
+guardflag = MA
+pausetime = 30,30
+sparkno = 3
+sparkxy = 0,-110
+hitsound   = 5,4
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 26
+ground.hittime  = 26
+ground.velocity = 0,-25
+guard.velocity = -11
+air.velocity = -1.3,-25
+airguard.velocity = -4.5,-5
+envshake.time = 25           ;Parameters for shaking the screen on hit
+envshake.ampl = 7
+envshake.freq = 176
+p2facing = 1                 ;Force p2 to face p1 on hit
+fall = 1
+fall.recover = 1             ;Prevent p2 from recovering
+fall.damage = 70             ;p2 will take 70 damage on hitting the ground
+fall.envshake.ampl = 6       ;Parameters for shaking the screen on fall
+fall.envshake.freq = 178
+fall.envshake.time = 15
+mindist = 50,-100            ;Keep p2 a minimum of 50 pixels away from p1, and no higher than 100 pixels up
+maxdist = 100,-10            ;Keep p2 a maximum of 100 pixels away from p1, and no lower than 10 pixels below
+yaccel = .8                  ;Accelerate p2 downwards rapidly
+
+[State 9500, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 9501
+ctrl = 1
+
+;--------------------------------------------------------
+[Statedef 9501]
+type    = S
+movetype= A
+physics = S
+anim = 9501
+
+[State 9501, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;----------------------------------------------------------

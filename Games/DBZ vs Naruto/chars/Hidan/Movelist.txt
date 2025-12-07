@@ -1,0 +1,69 @@
+------- Credits -------
+
+Autor do Char: gotagz
+
+Sprites originais feitas por: Sasori99, editados por mim, e criados novos golpes por mim também.
+
+Agradecimentos especiais para: Pr-Kun - Por me ajudar a testar o char, dar algumas dicas e ajudar com alguns códigos.
+                               
+
+------- MoveList ------
+
+Comandos:
+
+Combo#1 : x, x, x
+
+Combo#2 : a,a,a
+
+Combo#2: b,b
+
+Combo#4: c,c
+
+Dano com a Foice abaixado: baixo + x
+
+Dano com a Foice no ar: x no alto
+ 
+Jogar Kunai no ar pra frente: y
+
+Jogar Kunai no ar pra baixo: segura para baixo + y
+
+Jogar Kunai: y
+
+Chakra Charge: x+y
+
+Teleport: c (power >= 50), segura para trás + c (para teleportar para trás)
+
+Teleport no ar: c (power >= 50),  segura para trás + c (para teleportar para trás)
+
+Agarrão: segura para trás + x
+
+Sumir ao tomar hit: Aperte c enquanto estiver em um stado de dano, power tem que estar maior ou igual a 1000.
+
+
+Especiais:
+
+Jogar a foice: Power >= 300, Baixo, Frente + b
+
+Cortar inimigo com a foice #1: Power >= 1000, Baixo, frente + a
+
+Cortar inimigo com a foice #2: Power >= 2000, Baixo, frente + x
+
+
+Especiais apenas com o estado de Jashin:
+
+Para entrar no estado de Jashin: baixo, frente, baixo, trás e segure c, enquanto nesse estado você perderá chakra constantemente.
+
+Ferir a própria perna acertando o inimigo: Power >= 1000, tem que estar em estado protegido por Jashin, aperte b enquanto segura o c do estado Jashin.
+
+Ferir o peito e atingir o inimigo: power >= 1000, aperte b após ferir a perna.
+
+Foice no próprio peito: power >= 2000, aperte a enquanto segurando z do estado do Jashin.
+
+
+x = x
+y = y
+z = z
+a = a
+b = b
+c = c
+s = s

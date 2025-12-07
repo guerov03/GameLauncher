@@ -1,0 +1,20 @@
+[Info]
+name="Konohamaru"
+displayname="Konohamaru"
+versiondate=30/04/10
+mugenversion=06,14,2003
+author="Deidara-Rap"
+pal.defaults=1,2
+[Files]
+sprite=Konohamaru(Deidara-Rap).sff
+sound=Konohamaru(Deidara-Rap).snd
+anim=Konohamaru(Deidara-Rap).air
+cmd=Konohamaru(Deidara-Rap).cmd
+cns=Konohamaru(Deidara-Rap).cns
+pal1=Konohamaru.act
+pal2=Konohamaru.act
+st=Konohamaru(Deidara-Rap).cns
+stcommon=common1.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

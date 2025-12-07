@@ -1,0 +1,172 @@
+XaKakuzu by Xandrarre FULL
+
+Combosy
+
+
+---- Normal----
+
+
+hold s - ³adowanie chakry
+hold D,s - stalowa skóra
+
+hold a - atak nitkami 1
+hold D,a - atak nitkami 2
+A,a - air atak 1
+
+b - combo 1
+D,b - combo 2
+A,b - air atak 2
+F,b - szybki atak
+B,b - klony
+b (in hit) - kawarimi*
+
+c - shuriken**
+c,c,c - demoniczny shuriken**
+D,a - teleport
+A,a - air kunai**
+F,a - kunai**
+B,a - eksploduj¹cy kunai***
+
+x - atak 1
+x,x - atak 2
+x,x,x - raiton atak
+D,x - atak 3
+A,x - nitki 1
+F,x (poni¿ej 500 hp) - combo ¿ywio³ów
+B,x - zdjêcie p³aszcza
+
+y - atak 4
+y,y - atak 5
+y,y,y - katon atak
+D,y - atak 6
+A,y - nitki 2
+hold F,y - atak nitkami 3
+B,y - klon, który trzyma przeciwnika, dopóki nie zaczniemy ³adowaæ chakry/nie zostanie trafiony, wybucha po 10 sekundach
+
+z - atak 7
+z,z - atak 8
+z,z,z - suiton atak
+D,z - atak 9
+A,z - fuuton atak
+F,z - przerzucenie przeciwnika
+B,z - atak spod ziemi
+
+
+---- Uncloack ----
+
+
+hold s - ³adowanie chakry
+hold D,s - stalowa skóra
+
+hold a - atak nitkami 1
+hold D,a - atak nitkami 2
+A,a - air atak
+
+b - klony
+D,b - crouch kunai**
+A,b - Accel 3 air atak
+F,b - szybki atak
+B,b - fuuton & katon atak
+b (in hit) - kawarimi*
+
+c - shuriken**
+c,c,c - demoniczny shuriken**
+D,a - teleport
+A,a - air kunai**
+F,a - kunai**
+B,a - eksploduj¹cy kunai***
+
+x - atak 1
+x,x - atak 2
+x,x,x - atak 3
+D,x - crouch atak 1
+D,x,x - crouch atak 2
+D,x,x,x - crouch atak 3
+A,x - nitki 1
+F,x (poni¿ej 500 hp) - combo ¿ywio³ów
+B,x - uwolnienie serc****
+
+y - fuuton atak
+D,y - raiton & katon atak
+A,y - nitki 2
+hold F,x - Ultimate Ninja Storm 2 atak
+B,x - atak nitkami 3
+
+z - wodna tarcza
+D,z - zabranie serca przeciwnikowi (poni¿ej 200 hp, strza³ka do ty³u, aby anulowaæ)
+A,z - fuuton atak
+F,z - super combo (poni¿ej 500 hp)
+B,z - podstawienie klona + raiton & katon atak
+
+
+---- 5 Hearts Mode ----
+
+
+hold s - ³adowanie chakry
+hold D,s - stalowa skóra
+
+a - fuuton 1
+D,a - fuuton 2
+A,a - fuuton 3
+F,a - fuuton 4
+D,F,a - fuuton 5
+B,a - fuuton 6
+D,B,a - fuuton 7
+F+B,a - fuuton 8 (fuuton, atsugai)
+
+b - katon 1
+D,b - katon 2
+A,b - katon 3
+F,b - katon 4
+D,F,b - katon 5
+B,b - katon 6
+D,B,b - katon 7
+F+B,b - katon 8 (katon, zukkoku)
+
+c - raiton 1
+D,c - raiton 2
+A,c - raiton 3
+F,c - raiton 4
+D,F,c - raiton 5
+B,c - raiton 6
+D,B,c - raiton 7
+F+B,c - raiton 8 (raiton, gian)
+
+x - atak 1
+x,x - atak 2
+x,x,x - atak 3
+D,x - crouch atak 1
+D,x,x - crouch atak 2
+D,x,x,x - crouch atak 3
+A,x - air kunai**
+F,x - zniszczenie potworka fuuton i ³adowanie hp
+D,F,x - zniszczenie potworka raiton i ³adowanie hp
+B,x - zniszczenie potworka katon i ³adowanie hp
+D,B,x - zniszczenie potworka suiton i ³adowanie hp
+
+y - doton 1
+D,y - doton 2
+A,y - doton 3
+F,y - doton 4
+D,F,y - doton 5
+B,y - doton 6
+D,B,y - doton 7
+F+B,y - doton 8 
+
+z - suiton 1
+D,z - suiton 2
+A,z - suiton 3
+F,z - suiton 4
+D,F,z - suiton 5
+B,z - suiton 6
+D,B,z - suiton 7
+F+B,z - suiton 8 
+
+
+
+hold = przytrzymaj
+*Kawarimi jest automatyczne powy¿ej 3800 chakry
+**Odbija siê od œciany/broni¹cego siê przeciwnika, po odbiciu mo¿e trafiæ
+***Wybucha na œcianie
+****Potwory gin¹, gdy zostanie nam 500 hp (suiton), 400 hp (raiton), 300 hp (katon) i 200 hp (fuuton), 
+gdy wszystkie potworki zgin¹, wracamy automatycznie do formy bez p³aszcza

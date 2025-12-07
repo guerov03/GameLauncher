@@ -1,0 +1,183 @@
+;--------------------------------------------------------
+[Info]
+name = "Konoha Outskirts"
+author = Youkai
+version = 1.0 
+officialwebsite = http://paginas.terra.com.br/lazer/hanyou/
+mugenversion = winmugen
+
+
+;--------------------------------------------------------
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -210
+boundright = 200
+boundhigh = -170
+boundlow = 0
+verticalfollow = 1
+tension = 60
+floortenstion = 10
+
+[PlayerInfo]
+p1startx = -75
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 75
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 210
+zoffsetlink = 30
+autoturn = 1
+resetBG = 0
+
+[Shadow]
+color = 128,128,128
+yscale = .3
+
+[Music]
+bgmusic = sound/main theme.mp3
+bgvolume = 255
+
+[BGdef]
+spr = Konoha_Outskirts.sff
+
+[BG sky]
+type = normal
+spriteno = 0,0
+start = 0,0
+tile = 1,0
+delta = .2,.5
+velocity = -.15
+
+[BG mountains]
+type = normal
+spriteno = 4,0
+start = 0,-20
+layerno = 0
+trans = none
+mask = 1
+delta = 0.3,0.6
+
+[BG montanha2]
+type = normal
+spriteno = 6,0
+start = 0,-20
+layerno = 0
+trans = none
+mask = 1
+delta = 0.6,0.6
+
+-------------------montanha1----------------------
+
+[BG montanha1]
+type = normal
+spriteno = 3,0
+start = 0,-20
+layerno = 0
+trans = none
+mask = 1
+delta = 0.7,0.7
+
+
+[BG névoa]
+type = normal
+spriteno = 10,0
+start = 0,0
+tile = 1,0
+delta = 1,1
+velocity = -.50
+layerno = 1
+mask = 0
+trans = add
+
+
+;--------------------montanha3 -------------------
+
+[BG montanha3]
+type = normal
+spriteno = 2,0
+start = 0,-20
+layerno = 0
+trans = none
+mask = 1
+delta = 0.7,0.7
+
+;--------------------montanha4 -------------------
+
+[BG montanha4]
+type = normal
+spriteno = 23,0
+start = -200,-20
+layerno = 0
+trans = none
+mask = 1
+delta = 0.7,0.7
+
+;-------------- nevoa1 ---------------------------
+
+[BG névoa1]
+type = normal
+spriteno = 11,0
+start = 0,-20
+tile = 1,0
+delta = 1,1
+velocity = -.30
+layerno = 0
+mask = 1
+trans = add
+
+;------------------------------- cerca --------------------------------------------
+
+[BG ground]
+type = normal
+spriteno = 14,0
+start = 0,-20
+layerno = 0
+trans = none
+mask = 1
+delta = 1,1
+
+;------------------------------- chão2 --------------------------------------------
+
+[BG ground]
+type = normal
+spriteno = 13,0
+start = 0,-20
+layerno = 0
+trans = none
+mask = 1
+delta = 1,1
+
+
+;------------------------------- chão --------------------------------------------
+
+[BG ground]
+type = normal
+spriteno = 1,0
+start = 0,-25
+layerno = 0
+trans = none
+mask = 1
+delta = 1,1

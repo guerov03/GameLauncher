@@ -1,0 +1,22 @@
+[Info]
+name="Tenten"
+displayname="Tenten teen"
+versiondate=
+mugenversion=
+author="-=|Gµ§tävö|=- (gotagz), Sprites Ripped by: Parkis Pride"
+pal.defaults=1,2
+[Files]
+sprite=gztenten.sff
+sound=gztenten.snd
+anim=gztenten.air
+cmd=gztenten.cmd
+cns=gztenten.cns
+st=gztenten.cns
+stcommon=common1.cns
+pal1=ftenten.act
+pal2=ftenten.act
+st1=helpers.cns
+st2=
+[Arcade]
+intro.storyboard=
+ending.storyboard=

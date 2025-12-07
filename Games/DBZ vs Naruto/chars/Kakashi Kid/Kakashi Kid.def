@@ -1,0 +1,22 @@
+[Info]
+name="Kakashi"
+displayname="Kid Kakashi"
+versiondate=10-02-07
+mugenversion=06,14,2003
+author="mugenguru"
+pal.defaults=1,2
+[Files]
+sprite=kakashi.sff
+sound=kakashi.snd
+anim=kakashi.air
+cmd=kakashi.cmd
+cns=kakashi.cns
+st=kakashi.cns
+stcommon=common.cns
+pal1=kakashi.act
+pal2=kakashi.act
+st1=Bunshin.cns
+st2=AI.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

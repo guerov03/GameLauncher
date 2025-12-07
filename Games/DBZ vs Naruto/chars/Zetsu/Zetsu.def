@@ -1,0 +1,34 @@
+; Definition file for ZetsuM92
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="ZetsuM92"
+displayname ="Zetsu"
+versiondate =05,23,2006
+mugenversion =
+author ="Mithos1992"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =ZetsuM92.cmd
+cns     =ZetsuM92.cns
+st      =ZetsuM92.cns
+stcommon =common1.cns
+sprite  =ZetsuM92.sff
+anim    =ZetsuM92.air
+sound=
+pal1=ZetsuM92.act
+pal2=ZetsuM92.act
+st1=AI.cns
+st2=bunshin.cns
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard =
+;ending.storyboard =
+[Arcade]
+intro.storyboard=
+ending.storyboard=

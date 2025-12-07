@@ -1,0 +1,22 @@
+[Info]
+name="PRgai"
+displayname="Gai"
+versiondate=05-04-2008
+mugenversion=06,14,2003
+author="PR-kun"
+pal.defaults=1,2
+[Files]
+sprite=PRgai.sff
+sound=PRgai.snd
+anim=PRgai.air
+cmd=PRgai.cmd
+cns=PRgai.cns
+st=PRgai.cns
+stcommon=common.cns
+pal1=PRgai.act
+pal2=PRgai.act
+st1=speciais.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

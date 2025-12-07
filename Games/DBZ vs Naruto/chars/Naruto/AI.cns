@@ -1,0 +1,221 @@
+;---------------------------------------------------------
+;AI code
+[Statedef -3]
+
+[State -3, AI ON]
+type = VarSet
+triggerall = var(50) != 1
+trigger1 = command = "AI1"
+trigger2 = command = "AI2"
+trigger3 = command = "AI3"
+
+var(50) = 1
+
+
+;light punch
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+trigger1 = ctrl = 1
+value = 200
+
+;medium punch
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = Stateno = 200
+trigger1 = movehit = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 220
+
+;heavy punch
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = Stateno = 220
+trigger1 = random <=10
+trigger1 = movehit = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 230
+
+;light kick
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+trigger2 = random <= 600
+trigger1 = ctrl = 1
+trigger2 = stateno = 230
+value = 240
+
+;medium kick
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+trigger1 = movehit = 1
+triggerall = stateno = 240
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 250
+
+;heavy kick
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = Stateno = 250
+trigger1 = movehit = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 260
+
+;kage bunshin
+[State -3]
+type = ChangeState
+triggerall = numhelper(6001) <=16
+triggerall = var(10) = 0
+triggerall = var(50) = 1
+triggerall = StateType = S
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = power >= 1000
+triggerall = P2bodydist X <= 300
+trigger1 = ctrl = 1
+value = 6000
+
+;rendan
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = power >= 1000
+triggerall = P2bodydist X <= 100
+trigger1 = ctrl = 1
+value = 8000
+
+;rasengan
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = power >= 2000
+triggerall = P2bodydist X <= 400
+trigger1 = ctrl = 1
+value = 7500
+
+;kyuubi
+[State -3]
+type = ChangeState
+triggerall = var(10) = 0
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = life <= 100
+trigger1 = ctrl = 1
+value = 31000
+
+;light punch
+[State -3]
+type = ChangeState
+triggerall = var(10) = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+trigger1 = ctrl = 1
+value = 30200
+
+;medium punch
+[State -3]
+type = ChangeState
+triggerall = var(10) = 1
+triggerall = Stateno = 30200
+trigger1 = movehit = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 30220
+
+;heavy punch
+[State -3]
+type = ChangeState
+triggerall = var(10) = 1
+triggerall = Stateno = 30220
+trigger1 = movehit = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 30230
+
+;light kick
+[State -3]
+type = ChangeState
+triggerall = var(10) = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+trigger1 = ctrl = 1
+value = 30201
+
+;medium kick
+[State -3]
+type = ChangeState
+triggerall = var(10) = 1
+trigger1 = movehit = 1
+triggerall = stateno = 30201
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 30202
+
+;heavy kick
+[State -3]
+type = ChangeState
+triggerall = var(10) = 1
+triggerall = Stateno = 30202
+trigger1 = movehit = 1
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 50
+value = 30222
+

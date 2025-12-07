@@ -1,0 +1,20 @@
+[Info]
+name="Cs2  fsasuke299"
+displayname="Sasuke CS2"
+versiondate=
+mugenversion=2008
+author="By Sasuke299"
+pal.defaults=1,2
+[Files]
+sprite=fsasukeAN.sff
+sound=fsasukeAN.snd
+anim=fsasukeAN.air
+cmd=fsasukeAN.cmd
+cns=fsasukeAN.cns
+st=fsasukeAN.cns
+stcommon=common1.cns
+pal1=fsasukeAN.act
+pal2=fsasukeAN.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

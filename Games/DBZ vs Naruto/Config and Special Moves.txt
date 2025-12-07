@@ -1,0 +1,83 @@
+
+
+	DBZ vs Naruto M.U.G.E.N by RistaR87
+	- Configuration and Special Moves -
+
+
+=======================================
+ 1. KEY CONFIG ; Important! Must Read!
+=======================================
+
+	 PLAYER 1			PLAYER 2
+
+ Up	 Up			Up	Pad /
+ Down	 Down			Down	Pad 8
+ Left	 Left			Left	Pad 7
+ Right	 Right			Right	Pad 9
+
+ A	 A			A	Delete
+ B	 S			B	End
+ C	 D			C	PageDown
+
+ X	 Q			X	Insert
+ Y	 W			Y	Home
+ Z	 E			Z	PageUp
+
+ Start	 Enter			Start	Pad 0
+
+
+Note: If you don't like this Configuration go in OPTIONS and change it
+----
+
+
+=========================================
+ 2. SPECIAL MOVES ; Important! Must Read!
+=========================================
+
+Down     = D
+Forward  = F
+Backward = B
+
+
+Note: DON'T FORGET THAT IN THIS GAME A, B and C ARE A, S and D, AND ALSO X, Y and Z ARE Q, W and E !!!
+----
+
+
+-You can find the Special Moves for some chars in their folders in 'Readme.txt' or 'Movelist.txt'
+
+
+-If you don't. This could be helpful:
+
+Energy/Chakra Charge can be any single button (including Start/Enter), or Two Buttons pressed together (A+Q, A+S or S+W).
+
+For Naruto chars Special Moves can be usually done when you have enough of energy and press 'Down + Some Button',
+'Down, Forward + Some Button', 'Down, Backward + Some Button' or Two Buttons pressed together.
+
+For DBZ chars... 'Down,Forward,Down,Forward + Some Button' or 'Down,Backward,Down,Backward + Some Button'
+and also 'Down,Backward,Forward + Some Button' or 'Down,Forward,Backward + Some Button'.
+
+The best way to learn Special Moves is to go to TRAINING mode and practice.
+
+
+==================================
+ 3. CHEATS ; Important! Must Read!
+==================================
+
+- Press 'F1'    - Kill Player2
+- Press 'F2'    - Set both Players' Life to 1
+- Press 'F3'    - Max out both Players' Power
+- Press 'F4'    - Restart the current Round (useful when some Bug occurs)
+- Press 'F5'    - Set the Time to 0, resulting in a Time Over
+- Press 'F12'   - Take a Screenshot of the game
+- Press 'SPACE' - Max out Time, and both Players' Life and Power
+
+
+********************************************************
+
+That's all you need to know. Enjoy and Happy playing! ;) 
+
+********************************************************
+
+
+
+

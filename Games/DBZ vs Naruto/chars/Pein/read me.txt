@@ -1,0 +1,104 @@
+------------------------------------------------------------------------------
+==============================================================================
+
+||||||||    ||||||||||   |||   |||          ||
+|       |   |            |||   || |         ||
+|        |  |            |||   ||  |        ||
+|        |  |            |||   ||   |       ||
+|       |   |            |||   ||    |      ||
+||||||||    ||||||       |||   ||     |     ||
+|           |            |||   ||      |    ||
+|           |            |||   ||       |   ||
+|           |            |||   ||        |  ||
+|           |            |||   ||         | ||
+|           ||||||||||   |||   ||          |||
+
+==============================================================================
+------------------------------------------------------------------------------
+
+Creadits;
+
+Pein - made by me
+=======================
+
+Sprites;
+ 
+- Main Body - based on itachi sprites ripped by Neimad
+- Summoner Pein - based deidora sprites ripped by Neimad
+- Defense Pein - based on kisame sprites rippded by Neimad 
+- Other 3 bodies - based deidora sprites ripped by Neimad 
+- effects/summonings - i don't know who they were made by
+
+=======================
+
+Progams Used
+
+1. Fighter Factory - Virtualtec
+2. AVI Export - Virtualtec
+3. FLV to AVI MPEG WMV 3GP MP4 iPod Converter - AONE Software
+4. Wave Pad Sound Editor - www.nch.com.au/wavepad
+5. And of Course Mugen - Electybyte
+
+========================
+
+Move List
+
+     key
+     ---
+ a = s D = down
+ b = a B = back
+ c = w F = forward
+ x = z U = up
+ y = x s = enter
+ z = q
+
+--------------------
+
+BASICS
+-------
+
+x = stab
+y = kick
+z = none
+a = punch
+b = up punch
+c = none
+s = taunt
+
+a+b = chakara charge
+x+y = throw
+DFa = throw shurikin
+DBa = teleport
+-------------------
+
+COMBOS
+-------
+
+Punch + Slap Combo - aa
+Stab + Slash Combo - xx
+Three Point Combo 1 - axy
+Three Point Combo 2 - axx
+Three Point Combo 3 - xxy
+-------------------
+
+Specials
+---------
+DFx - wind ice palm [power >= 50]
+DFy - extreme speed [power >= 50]
+DFb - rapid fire punch [power >= 50]
+DBb - rinnagon [power >= 1000]
+Dx - summon lobster [power >= 2000]
+Dy - summon Bird [power >= 2000]
+
+Hypers
+-------
+DFDFx - rapid air combo [power >= 2000]
+DFDFy - extreme speed combo [power >= 2000]
+DBDBx - summon king of hell [power = 5000]
+DBDBy - summon Ox [power >= 2000]
+Db - summon summoning and defence pein [power >= 3000] 
+Da - 6 paths of pein strike [power >= 3000] 
+
+==============================================================================
+==============================================================================
+==============================================================================

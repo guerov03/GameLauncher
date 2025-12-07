@@ -1,0 +1,20 @@
+[Info]
+name="DSasori"
+displayname="Sasori"
+versiondate=
+mugenversion=
+author="Twins Cool"
+pal.defaults=1,2
+[Files]
+sprite=DSasori.sff
+sound=DSasori.snd
+anim=DSasori.air
+cmd=DSasori.cmd
+cns=DSasori.cns
+st=DSasori.cns
+stcommon=common1.cns
+pal1=DSasori.act
+pal2=DSasori.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

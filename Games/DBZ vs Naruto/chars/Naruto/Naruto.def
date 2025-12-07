@@ -1,0 +1,32 @@
+; Informação do Char
+[Info]
+name ="Uzumaki Naruto"
+displayname ="Naruto"
+versiondate =14,04,2008
+mugenversion =14,04,2001
+author ="Jefferson Gimenez"
+pal.defaults =1,2
+
+; Arquivos do Char
+[Files]
+cmd     =Naruto.cmd
+cns     =Naruto.cns
+st      =Naruto.cns
+stcommon =common.cns
+sprite  =Naruto.sff
+anim    =Naruto.air
+sound   =Naruto.snd
+pal1=Naruto.act
+pal2=Naruto.act
+st1=AI.cns
+st2=bunshin.cns
+st3=Kyuubi.cns
+st4=Kyuubi.cns
+st5=Gamabunta.cns
+st6=Gamakichi.cns
+
+; Introduções e Finalizações
+[Arcade]
+intro.storyboard =
+ending.storyboard = ..\data\final.def
+

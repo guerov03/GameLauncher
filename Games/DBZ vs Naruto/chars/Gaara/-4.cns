@@ -1,0 +1,61 @@
+;Sand Explodebomb
+[Statedef 7800]
+type = s
+movetype = a
+physics = s
+juggle = 1
+velset = 0,0
+ctrl = 0
+anim = 7800
+poweradd = 0
+sprpriority = 2
+
+[state 7800,0]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger2 = AnimElem = 5
+trigger3 = AnimElem = 6
+trigger4 = animelem = 7
+trigger5 = animelem = 8
+trigger5 = animelem = 9
+trigger6 = animelem = 10
+trigger7 = animelem = 11
+trigger8 = animelem = 12
+trigger9 = animelem = 13
+trigger10 = animelem = 14
+trigger11 = animelem = 15
+attr = s, na
+damage = 60, 50
+getpower = -50
+animtype = Light
+p2stateno = 5000
+hitflag = MAF
+priority = 3, Hit
+pausetime = 10, 10
+sparkno = 0
+sparkxy = -10, -50
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime = 100
+ground.velocity = 0
+airguard.velocity = -0.0,-0.0
+air.type = High
+air.velocity = -0,-0
+air.hittime = 12
+
+[state 7800,1]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+
+
+
+
+
+
+
+

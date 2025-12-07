@@ -1,0 +1,21 @@
+[Info]
+name="Kakashi"
+displayname="Kakashi"
+versiondate=2010
+mugenversion=06,14,2003
+author="Deidara-Rap"
+pal.defaults=1,2
+[Files]
+sprite=Kakashi(Deidara-Rap).sff
+sound=Kakashi(Deidara-Rap).snd
+anim=Kakashi(Deidara-Rap).air
+cmd=Kakashi(Deidara-Rap).cmd
+cns=Kakashi(Deidara-Rap).cns
+st=Kakashi(Deidara-Rap).cns
+stcommon=common1.cns
+st1=bunshin.cns
+pal1=Kakashi.act
+pal2=Kakashi.act
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

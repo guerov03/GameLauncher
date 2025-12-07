@@ -1,0 +1,84 @@
+[Info]
+name = "Naruto Battle Field HR"
+author= "J-X"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -0
+boundright = 0
+boundhigh = -200
+boundlow = 0
+verticalfollow = .4
+floortension = 0
+tension = 50
+
+[PlayerInfo]
+p1startx = -140
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 150
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 0.6
+botscale = 0.8
+
+[Bound]
+screenleft = 50
+screenright = 50
+
+[StageInfo]
+zoffset = 200
+autoturn = 1
+resetBG = 1
+Hires = 1
+
+[Shadow]
+intensity=128
+color=2,5,5
+yscale=.4
+fade.range = -400,-100
+
+[Music]
+bgmusic = sound/Track32.mp3
+bgvolume = 0
+
+[BGdef]
+spr = narutobattlefield.sff
+debugbg = 0
+
+[BG background]
+type = normal
+spriteno = 0,2
+layerno = 0
+start = 0,0
+delta = 2,2
+trans = none
+mask = 1
+window = 0,0,639,479
+windowdelta = 0,0
+
+
+
+[BG floor]
+type = normal
+spriteno = 0,0
+layerno = 0
+start = 0,0
+delta = 2,2
+trans = none
+mask = 1
+window = 0,0,639,479
+windowdelta = 0,0
+
+

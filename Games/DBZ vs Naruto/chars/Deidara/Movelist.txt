@@ -1,0 +1,57 @@
+;==|Deidara|============================================================================================================================================
+
+;===============================================================================================================================================================
+Info:
+
+Name: Deidara
+Author: Anjel
+Created: Sixtenth September 2007
+
+;===============================================================================================================================================================
+Special Stuffs about him:
+He's clay Explode.
+
+He got a weapon system, you press start to change your weapon, when you are out of any weapon, they shuld randmly drop from the sky.
+
+;===============================================================================================================================================================
+Movelist:
+S = Stand
+A = Air
+
+Basics:
+
+S A: Light Punch.
+S B: Strong Punch ;Its Not really a Punch, He just throws some clay that explodes infront of him, this make opponent fall when hit.
+S X: Medium Punch.
+S Y: Clay Uppercut. ;He throws clay into the ground, that explodes, it has the force of a uppercut, altso make you fall.
+A+X: Evade.
+Any button when hit: Kavamari, requires 500 power
+
+A A: Weapon throw.
+A X: Weapon throw. 
+A B: Weapon throw.
+A Y: Weapon throw.
+
+Special Moves:
+Down Forward X or Y: Throws CLay birds
+Down Back X or Y: Throws Spiders that follows the opponent, you can detonate them
+Down Back A or B: Throws Weapon
+Down Forward A or B: Teleport
+Hold B+Y:Chakra charge.
+
+Supers/hypers:
+Down Forward, Down forward X or Y: 3in1, Deidara throws 3 Clay birds.
+Down Forward, Down Backward X or Y: Big Super Clay Bomb
+;===============================================================================================================================================================
+Things to add:
+Fix buggs
+;===============================================================================================================================================================
+Credit:
+Neimad for ripping The Deidara sprites.
+Elecbyte For Mugen Engine.
+Cyanide for being best coder ever, and I learned "coding" from his tutorials.
+Me For being teh L337z0rz and relesing another char!
+People At MFG forum writing long read-mes, made me wanna write one to.
+You! For downloading this char and give feedback, Or else!
+Cyanide Again for Bugtesting
+K.O.D for hitsparks and super Fx, they pwn dude.

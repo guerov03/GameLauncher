@@ -1,0 +1,36 @@
+; Definition file for Tayuya
+; Contains all the filenames needed for the character
+; There are include alternative CNS and CMD with AI activation code (by default).
+; Removal if you having problems with AI.
+
+; Player information
+[Info]
+name ="Tayuya"
+displayname ="Tayuya"
+versiondate =04,10,2007
+mugenversion =04,14,2002
+author ="Kofelsalvador10th"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+;cmd     = tayuya.cmd            ;Command set
+;cns     = tayuya.cns            ;Constants
+cmd     =tayuya-AI.cmd
+cns     =tayuya-AI.cns
+st      =tayuya-AI.cns
+;st      = tayuya.cns            ;States
+stcommon =tayuya_common.cns
+sprite  =tayuya.sff
+anim    =tayuya.air
+sound   =tayuya.snd
+pal1=tayuya.act
+pal2=tayuyacs.act
+st1=helper.cns
+st2=tayuyacs.cns
+st3=tayuyacs.cns
+
+; Arcade mode
+[Arcade]
+intro.storyboard = 
+ending.storyboard = 

@@ -1,0 +1,29 @@
+; Player information
+[Info]
+name ="Sakura"       
+displayname ="Sakura" 
+versiondate =13,09,2005    
+mugenversion =04,14,2002  
+author ="Kaitsu-Gohan"        
+pal.defaults =1,2
+
+; Sakura's files
+[Files]
+cmd     =Sakura.cmd   
+cns     =Sakura.cns   
+st      =Sakura.cns    
+sprite  =Sakura.sff  
+anim    =Sakura.air 
+sound   =Sakura.snd  
+stcommon=
+pal1=Sakura.act
+pal2=Sakura.act
+st1=selfstate.cns
+st2=combos.cns
+st3=attacks.cns
+st4=projectiles.cns
+st5=teleport.cns
+st6=supers.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

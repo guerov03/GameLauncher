@@ -1,0 +1,350 @@
+; 3. Extra Info
+; -------------- 
+; This is not a extra information about state -1, skip this part if you are not
+; interested.
+; The following lines are the helpers`ID, varset conrollers.etc. 
+; Useful to explore more easily and AI variables optimization.
+; 
+; Helpers ID
+; NumHelper(2610) = 0 ; summon demons first time. Label name: "kuchiyose-no-jutsu".
+; NumHelper(2615) = 0 ; summon demon 1 with stick. Label name: "demon1".
+; NumHelper(2630) = 0 ; summon demon 2 without hands(mummy). Label name: "demon2".
+; NumHelper(2675) = 0 ; summon demon 3 with blades in both hands. Label name: "demon3".
+; NumHelper(2685) = 0 ; summon demons serving as a defence shield. Label name: "demons4".
+; NumHelper(2695) = 0 ; demons summon snakes ghosts. Label name: "PseudoGhosts".
+;
+; Projectiles ID
+; NumProjID(4000) = 0 ; snake ghost. Label name: "PseudoGhosts". 
+;
+; VarSets Variables.
+; -----------------
+; Before procedure, there are two diferents variables from the diferentes versions of states.
+; normal - from normal to curse seal - curse seal (enter+any button) in select screen.
+; the code are; n1 for normal states.
+; 		n1tocs2 to the second one.
+;		cstransf for the last one.
+;
+; var(5) = 1  ; activate once per round. from summon state (kuchiyose no jutsu (hyper)).
+; var(6) = 1  ; activate once per round. from PseudoGhosts Summon state [Statedef 2690].
+; var(7) = 1  ; Only n1tocs2 can access.
+; var(8) = 1  ; Blink Player White from power up states.
+; var(9) = 1  ; Keep Player Blink Yellow from power up state.
+; var(10) = 1 ; Reduce Power By 10 from power up state.
+; var(11) = 1 ; Active special moves only if chakra is ON.
+; var(12) = 1 ; Turn Chakra Off in n1,n1tocs2 and cstransf.
+; var(13) = 1 ; Turn Chakra Off from curse seal states in [Statedef 3100] ;Mateki: Mugen Onsa.
+; var(14) = 1 ; Turn Chakra Off from [Statedef 3310].
+; var(7) != 1 ; Neither n1 nor cstransf can access.
+
+; The following varsets stops in state -2.
+; var(8) = -2
+; var(9) = -2
+; var(10) = -2
+; var(11) = -2
+; var(12) = -2 ;<= DEPRECATED in this version
+; var(13) = -2 ;<= DEPRECATED in this version
+; var(14) = -2 ;<= DEPRECATED in this version
+
+;---------------------------------------------------------------------------
+; KeyCtrl Helper method 
+; The VarSet Parameters has been changed in order to avoid confusion between 
+; varsets already exist in some states.
+; (Credit to ANMC, Bagaliao, and FlowaGirl for the basic helper method concept.)
+;
+;------------------
+; AI Activation Helper State - Primary Version
+; (Credit to YongMing for the basic HitPause bugfix concept.)
+;
+; var(21) - First tick button activation prevention.
+; var(22) - Used for pause/superpause and custom state check, basically.
+; var(23) - (Super/)Pause & custom state-triggered dir detection disabler.
+; var(24) - Persistent direction command detection enabler (due to 2002.04.14).
+; var(29) - AutoTurn bug fixer.
+; parent's var(57) - Parent's GameTime var, for pause and custom state check.
+; parent's var(58) - Parent's primary AI variable.
+;
+; The code in this state is mostly simply copy/pasteable.
+; But if you're using different indices for the parent's variables,
+; or if you change your character's basic commands' names, you'll
+; of course need to change the code in this state accordingly.
+
+[StateDef 9741]
+type = S
+movetype = I
+physics = N
+anim = 9741
+ctrl = 0
+
+[State 9741, Safety]; Just in case your opponent is very poorly coded.
+type = SelfState
+trigger1 = !IsHelper
+value = 5050
+
+[State 9741, UglyHack]
+type = VarSet
+trigger1 = !var(21)
+var(22) = 2
+
+[State 9741, PauseCheck]
+type = VarSet
+trigger1 = GameTime > Parent,var(57)
+trigger2 = !(Parent,Alive)
+trigger3 = RoundState != 2
+trigger4 = Parent,var(58)
+trigger5 = var(23):=0
+var(22) = (var(23):=1)+(var(24):=0)
+
+[State 9741, Facing]
+type = Turn
+trigger1 = var(29):=(Facing != Parent,Facing)
+trigger1 = !(var(24):=0)
+
+[State 9741, DirTurnOnAI]
+type = ParentVarSet
+triggerall = !(var(23) || var(29))
+trigger1 = Parent,command = "holdfwd"
+trigger2 = Parent,command = "holdback"
+trigger3 = Parent,command = "holdup"
+trigger4 = Parent,command = "holddown"
+trigger5 = !(var(24):=1)
+var(58) = var(24)
+
+[State 9741, DirTurnOffAI]
+type = ParentVarSet
+triggerall = !var(23)
+triggerall = Parent,var(58)
+trigger1 = command = "holdfwd"
+trigger1 = Parent,command = "holdfwd"
+trigger2 = command = "holdback"
+trigger2 = Parent,command = "holdback"
+trigger3 = command = "holdup"
+trigger3 = Parent,command = "holdup"
+trigger4 = command = "holddown"
+trigger4 = Parent,command = "holddown"
+var(58) = var(24):=0
+
+[State 9741, ButtonTurnOnAI]
+type = ParentVarSet
+triggerall = !var(22)
+trigger1 = Parent,command = "a"
+trigger2 = Parent,command = "b"
+trigger3 = Parent,command = "c"
+trigger4 = Parent,command = "x"
+trigger5 = Parent,command = "y"
+trigger6 = Parent,command = "z"
+trigger7 = Parent,command = "start"
+var(58) = 1
+
+[State 9741, ButtonTurnOffAI]
+type = ParentVarSet
+triggerall = !var(22)
+trigger1 = command = "a"
+trigger1 = Parent,command = "a"
+trigger2 = command = "b"
+trigger2 = Parent,command = "b"
+trigger3 = command = "c"
+trigger3 = Parent,command = "c"
+trigger4 = command = "x"
+trigger4 = Parent,command = "x"
+trigger5 = command = "y"
+trigger5 = Parent,command = "y"
+trigger6 = command = "z"
+trigger6 = Parent,command = "z"
+trigger7 = command = "start"
+trigger7 = Parent,command = "start"
+var(58) = -1
+
+[State 9741, UnPauseCheck]
+type = VarSet
+triggerall = var(22)
+trigger1 = Parent,command = "a"
+trigger2 = Parent,command = "b"
+trigger3 = Parent,command = "c"
+trigger4 = Parent,command = "x"
+trigger5 = Parent,command = "y"
+trigger6 = Parent,command = "z"
+trigger7 = Parent,command = "start"
+trigger8 = var(22) = 2
+trigger8 = var(22):=0
+var(22) = 2
+
+[State 9741, Goodbye]
+type = DestroySelf
+triggerall = var(21):=1
+trigger1 = Parent,var(58)
+trigger2 = !(Parent,Alive)
+trigger3 = RoundState != 2
+
+
+;------------------
+; AI Activation Helper State - Compatibly Partnered Version
+;
+; var(21) - First tick activation prevention
+; var(22) - Used for pause/superpause and custom state check, basically.
+; var(23) - (Super/)Pause & custom state-triggered dir detection disabler.
+; var(24) - Hitpause check.
+; var(25) - No button on previous tick.
+; var(26) - Any dir on this tick.
+; var(27) - Any button on this tick.
+; var(28) - Matching partner button detected.
+; var(29) - AutoTurn bug fixer.
+; var(30)- Buffered dir detection disabler.
+; parent's var(57) - Parent's GameTime var, for pause and custom state check.
+; parent's var(58) - Parent's primary AI variable.
+;
+; The code in this state is mostly simply copy/pasteable.
+; But if you're using different indices for the parent's variables,
+; or if you change your character's basic commands' names, you'll
+; of course need to change the code in this state accordingly.
+
+[StateDef 9742]
+type = S
+movetype = I
+physics = N
+anim = 9741
+ctrl = 0
+
+[State 9742, Safety]; Just in case your opponent is very poorly coded.
+type = SelfState
+trigger1 = !IsHelper
+value = 5050
+
+[State 9742, UglyHack]
+type = VarSet
+trigger1 = !var(21)
+var(22) = var(23):=2
+
+[State 9742, PauseCheck]
+type = VarSet
+trigger1 = GameTime > Parent,var(57)
+trigger2 = !(Parent,Alive)
+trigger3 = RoundState != 2
+trigger4 = Parent,var(58)
+trigger5 = var(21)
+trigger5 = var(23):=0
+var(22) = var(23):=1
+
+[State 9742, Facing]
+type = Turn
+trigger1 = var(29):=(Facing != Parent,Facing)
+
+[State 9742, ParentDirCheck]
+type = VarSet
+trigger1 = Parent,command = "holdfwd"
+trigger2 = Parent,command = "holdback"
+trigger3 = Parent,command = "holdup"
+trigger4 = Parent,command = "holddown"
+trigger5 = var(26):=0
+var(26) = 1
+
+[State 9742, BufferCheck]
+type = VarSet
+trigger1 = var(23) || var(24) || var(30)
+var(30) = var(26)
+
+[State 9742, ParentButtonCheck]
+type = VarSet
+trigger1 = Parent,command = "a"
+trigger2 = Parent,command = "b"
+trigger3 = Parent,command = "c"
+trigger4 = Parent,command = "x"
+trigger5 = Parent,command = "y"
+trigger6 = Parent,command = "z"
+trigger7 = Parent,command = "start"
+trigger8 = var(27):=0
+var(27) = 1
+
+[State 9742, SameButtonCheck]
+type = VarSet
+triggerall = var(27)
+triggerall = !var(22)
+triggerall = NumPartner
+trigger1 = Parent,command = "a"
+trigger1 = Partner,command = "a"
+trigger2 = Parent,command = "b"
+trigger2 = Partner,command = "b"
+trigger3 = Parent,command = "c"
+trigger3 = Partner,command = "c"
+trigger4 = Parent,command = "x"
+trigger4 = Partner,command = "x"
+trigger5 = Parent,command = "y"
+trigger5 = Partner,command = "y"
+trigger6 = Parent,command = "z"
+trigger6 = Partner,command = "z"
+trigger7 = Parent,command = "start"
+trigger7 = Partner,command = "start"
+trigger8 = var(28):=0
+var(28) = 1
+
+[State 9742, DirTurnOnAI]
+type = ParentVarSet
+trigger1 = var(26)
+trigger1 = !(var(29) || var(30))
+var(58) = 1
+
+[State 9742, DirTurnOffAI]
+type = ParentVarSet
+triggerall = var(26)
+triggerall = !var(23)
+triggerall = Parent,var(58)
+trigger1 = command = "holdfwd"
+trigger1 = Parent,command = "holdfwd"
+trigger2 = command = "holdback"
+trigger2 = Parent,command = "holdback"
+trigger3 = command = "holdup"
+trigger3 = Parent,command = "holdup"
+trigger4 = command = "holddown"
+trigger4 = Parent,command = "holddown"
+var(58) = 0
+
+[State 9742, ButtonTurnOnAI]
+type = ParentVarSet
+trigger1 = var(25) && var(27)
+trigger1 = !(var(22) || var(28))
+var(58) = 1
+
+[State 9742, ButtonTurnOffAI]
+type = ParentVarSet
+triggerall = var(27)
+triggerall = !(var(22) || var(28))
+trigger1 = command = "a"
+trigger1 = Parent,command = "a"
+trigger2 = command = "b"
+trigger2 = Parent,command = "b"
+trigger3 = command = "c"
+trigger3 = Parent,command = "c"
+trigger4 = command = "x"
+trigger4 = Parent,command = "x"
+trigger5 = command = "y"
+trigger5 = Parent,command = "y"
+trigger6 = command = "z"
+trigger6 = Parent,command = "z"
+trigger7 = command = "start"
+trigger7 = Parent,command = "start"
+var(58) = -1
+
+[State 9742, UnPauseCheck]
+type = VarSet
+triggerall = var(22)
+triggerall = !var(24)
+trigger1 = var(27)
+trigger2 = var(22) = 2
+trigger2 = var(22):=0
+var(22) = 2
+
+[State 9742, Goodbye]
+type = DestroySelf
+trigger1 = Parent,var(58)
+trigger2 = !(Parent,Alive)
+trigger3 = RoundState != 2
+
+[State 9742, HitPauseCheck]
+type = VarSet
+trigger1 = var(26) || var(27)
+trigger2 = !(Parent,HitPauseTime)
+var(24) = Parent,HitPauseTime
+
+[State 9742, Delay]
+type = VarSet
+trigger1 = var(21):=1
+var(25) = !var(27)

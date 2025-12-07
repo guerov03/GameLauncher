@@ -1,0 +1,20 @@
+[Info]
+name="Rock Lee"
+displayname="Rock Lee teen"
+versiondate=
+mugenversion=06,14,2003
+author="Shimori"
+pal.defaults=1,2
+[Files]
+sprite=RockLee.sff
+sound=RockLee.snd
+anim=RockLee.air
+cmd=RockLee.cmd
+cns=RockLee.cns
+st=RockLee.cns
+stcommon=common1.cns
+pal1=RockLee.act
+pal2=Blue.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

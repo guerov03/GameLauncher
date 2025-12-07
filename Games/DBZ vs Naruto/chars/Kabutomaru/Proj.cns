@@ -1,0 +1,249 @@
+;------------------------------------------
+; Kunai Throw
+; CNS difficulty: medium
+[Statedef 1234]
+type    = S
+movetype= A
+physics = S
+juggle  = 15
+poweradd= 85
+velset = 0,0
+anim = 1234
+ctrl = 0
+sprpriority = 2
+
+[State 1234, 1]
+type = AfterImage
+triggerall = var(40) = 0
+trigger1 = time = 0
+trigger1 = numhelper(250) != 1
+time = 26
+length = 20
+palcolor = 256
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 50,10,25
+palmul = .65,.65,.75
+timegap = 1
+trans = add1
+
+[State 1234, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = S200,1
+volume = 20
+channel = -1
+;lowpriority = -1
+freqmul = 1.0
+loop = 0
+pan = 0
+;abspan =
+;ignorehitpause =
+;persistent =
+
+
+[State 1234, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = normal
+pos = 12,-0
+postype = p1
+stateno = 12345
+ownpal = 1
+
+[State 1234, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Kunai
+; CNS difficulty: medium
+[Statedef 12345]
+type    = S
+movetype= A
+physics = N
+juggle = 15
+airjuggle = 15
+poweradd= 0
+velset = 8,0
+anim = 12345
+ctrl = 0
+sprpriority = 0
+
+[State 12345, 2]
+type = hitdef
+triggerall = var(40) = 0
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 2
+trigger3 = AnimElem = 3
+attr = S, SP
+hitflag = MAF
+getpower = 25
+givepower = 25
+animtype  = hard
+damage  = 20,4
+guardflag = MA
+pausetime = 0,10
+sparkno = S10000
+sparkxy = -10,-15
+hitsound   = S1234,0
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 9
+ground.velocity = -2,0
+air.velocity = -4,-2
+air.fall = 1
+
+[State 12345, 3]
+type = AfterImage
+triggerall = var(40) = 0
+trigger1 = time = 0
+time = 15
+length = 5
+palcolor = 256
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 255,108,69 
+palpostbright = 0,0,0
+paladd = 50,10,25
+palmul = .65,.65,.75
+timegap = 1
+trans = add1
+
+[State 12345, 4]
+type = destroyself
+trigger1 = time = 35
+
+;-----------------------------------------------------------------
+; Kunai Throw double
+; CNS difficulty: medium
+[Statedef 1235]
+type    = S
+movetype= A
+physics = S
+juggle  = 15
+airjuggle = 15
+poweradd= 85
+velset = 0,0
+anim = 1235
+ctrl = 0
+sprpriority = 0
+
+[State 1235, 1]
+type = AfterImage
+triggerall = var(40) = 0
+trigger1 = time = 0
+trigger1 = numhelper(250) != 1
+time = 26
+length = 10
+palcolor = 256
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 50,10,25
+palmul = .65,.65,.75
+timegap = 1
+trans = add1
+
+[State 1235, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = S200,1
+volume = 20
+channel = -1
+;lowpriority = -1
+freqmul = 1.0
+loop = 0
+pan = 0
+;abspan =
+;ignorehitpause =
+;persistent =
+
+
+[State 1235, 2]
+type = Helper
+triggerall = var(40) = 0
+trigger1 = animelem = 3
+helpertype = normal
+pos = 12,5
+postype = p1
+stateno = 12345
+ownpal = 1
+
+[State 1235, 3]
+type = helper
+triggerall = var(40) = 0
+trigger1 = animelem  = 2
+helpertype = normal
+stateno = 12345
+pos = 10, -6
+
+[State 1235, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Doublekunai
+; CNS difficulty: medium
+[Statedef 12346]
+type    = S
+movetype= A
+physics = N
+juggle  = 15
+poweradd= 0
+velset = 8,0
+anim = 12345
+ctrl = 0
+sprpriority = 0
+
+[State 12346, 2]
+type = hitdef
+triggerall = var(40) = 0
+trigger1 = time = 0
+trigger2 = time = 1
+attr = S, SP
+hitflag = MAF
+getpower = 25
+givepower = 25
+animtype  = hard
+damage  = 10,8
+guardflag = MA
+pausetime = 0,10
+sparkno = S10000
+sparkxy = -10,-15
+hitsound   = S0,3
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 9
+ground.velocity = -2,0
+air.velocity = -4,-2
+air.fall = 1
+
+[State 12346, 3]
+type = AfterImage
+triggerall = var(40) = 0
+trigger1 = time = 0
+time = 15
+length = 5
+palcolor = 256
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 255,108,69 
+palpostbright = 0,0,0
+paladd = 50,10,25
+palmul = .65,.65,.75
+timegap = 1
+trans = add1
+
+[State 12346, 4]
+type = destroyself
+trigger1 = time = 35

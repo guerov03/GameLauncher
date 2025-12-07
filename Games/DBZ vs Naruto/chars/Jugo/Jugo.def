@@ -1,0 +1,20 @@
+[Info]
+name="Ak-Juugo"
+displayname="Jugo"
+versiondate=
+mugenversion=
+author="Akamura"
+pal.defaults=1,2
+[Files]
+sprite=Ak-Juugo.sff
+sound=Ak-Juugo.snd
+anim=Ak-Juugo.air
+cmd=Ak-Juugo.cmd
+cns=Ak-Juugo.cns
+st=Ak-Juugo.cns
+stcommon=common1.cns
+pal1=Ak-Juugo.act
+pal2=Ak-Juugo.act
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

@@ -1,0 +1,51 @@
+;---------------------------------
+;Heal
+[Statedef 3200]
+type = S
+ctrl = 0
+anim = 3200
+velset = 0,0
+
+[State 3200, 1]
+type = PowerAdd
+trigger1 = Time > 0
+trigger1 = Time < 1600
+value = -30
+
+[State 3200, 2]
+type = lifeadd
+trigger1 = time >= 0 
+trigger1 = Time < 1600
+value = 4
+
+[State 3200, 3]
+type = ChangeState
+triggerall = AnimTime = 0
+trigger1 = Command = "Heal"
+value = 3200
+ctrl = 0
+
+[State 3200, 4]
+type = ChangeState
+trigger1 = Command != "Heal"
+value = 3201
+ctrl = 0
+
+[State 3200, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+trigger2 = power < 5
+value = 3201
+ctrl = 0
+;-------------------------------------
+[statedef 3201]
+type = S
+ctrl = 0
+anim = 3201
+
+[state 3201, 1]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0 
+ctrl = 1
+;------------------------------------

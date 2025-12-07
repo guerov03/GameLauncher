@@ -1,0 +1,79 @@
+V-Hawk Sasuke
+edited by V-Nix/asrwgm
+
+Original Creator - Cj2fly
+created by- Teroko-Uchiha
+Sprites by- zxcv11790
+Hit Effect- Neimad
+You all for downloading
+Susanoo sprite - RaizenMG
+Plz Comment on forum -Reymugen.ucoz.com
+It would be nice because I put my all in to this character
+I havent coded any in a while
+
+Move List-
+-----------------------------------------
+W when hit= kawari 
+Jump w= phoenix flower jutsu * thanx to DuShido      
+jump s= jump slash 
+Down z= sword uppercut 
+jump z=downward chidori 
+Down x= katon 
+Jump x= chidori needles 
+a+b= chakra 
+Enter=sharingun wit improved sprites 
+
+
+
+;=====================================================
+
+**I didn't remove the coding with the cloak, I advise you that all the attacks
+  below can only be done effectively when Sasuke doesn't have his cloak on.
+
+
+New edited moves:
+
+- Combo 1 (4 attacks) = x, x, x, x  
+
+- Combo 2 (4 attacks) = a, a, a, a
+
+- Snake Attack = D + a  
+  
+- Chidori Needle (needs 150 power) = y
+
+- Crouching Chidori Needle (needs 150 power) =  D + y
+
+- Sky Beat (needs 1000 power) = b 
+
+- Lightning Blade (needs 1000 power) =  D + b
+
+- Chidori Nagashii (needs at least 25 power) = z (hold z for longer time)
+
+- Floor Nagashii (needs at least 1000 power) = D + z
+
+- Chidori (needs 1000 power) = c (chargeable)
+  *Outcomes are from Lv 0 - 2, damage & outcomes are different on each Lv.
+
+- Black-Out (needs 2000 power) = D + c 
+
+- Double Chidori (needs 2000 power) =  D, F + c
+
+- Chidori Extension (needs 1500 power) = D, F + z
+
+- Kirin (needs 3000 power) =  D, B + z
+
+- MangeKyou Sharingan: Tsukuyomi (needs 1500 power) = D, F + b
+
+- MangeKyou Sharingan: Amaterasu (needs 2000 power) = D, B + b
+
+- Mangekyou Sharingan: Susanoo (needs at least 1 power) = z+c
+  *Power decreases greatly each second, so use wisely. To deactivate just
+   press the command again.
+  |
+  |- Susanoo Punch = a
+  |  
+  |- Susanoo Grab (needs 450 power) = b
+  |
+  |- Susanoo Slam (needs 450 power) = c
+
+

@@ -1,0 +1,28 @@
+; Definition file for player
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="kimimaro"
+displayname ="Kimimaro"
+versiondate =31,11,2007
+mugenversion =04,14,2002
+author ="kofelsalvador10th"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =kimimaro.cmd
+cns     =kimimaro.cns
+st      =kimimaro.cns
+stcommon =kimimaro_common.cns
+sprite  =kimimaro.sff
+anim    =kimimaro.air
+sound  =kimimaro.snd
+pal1=kimimaro.act
+pal2=kimimarocs.act
+st1=kimimarocs.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

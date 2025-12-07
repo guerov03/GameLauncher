@@ -1,0 +1,23 @@
+[Info]
+name="Hidan"
+displayname="Hidan"
+versiondate=25/10/2008
+mugenversion=
+author="gotagz"
+pal.defaults=1,2
+
+[Files]
+sprite=gzhidan.sff
+sound=gzhidan.snd
+anim=gzhidan.air
+cmd=gzhidan.cmd
+cns=gzhidan.cns
+st=gzhidan.cns
+stcommon=common1.cns
+pal1=gzhidan.act
+pal2=gzhidan4.act
+st1=especiais.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

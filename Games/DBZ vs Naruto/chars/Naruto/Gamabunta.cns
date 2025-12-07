@@ -1,0 +1,216 @@
+ ;------------------------------------------------------------
+;invocando Oyabin
+[StateDef 1014]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 8500
+poweradd = 0
+sprpriority = 2
+
+[State 8500, SuperPause]
+type = SuperPause
+trigger1 = time = 1
+time = 174
+anim = 102
+sound = S7500,3
+pos = 0, -25
+darken = 1
+p2defmul = 0
+movetime = 174
+poweradd = -3000
+unhittable = 1
+
+[State 8500, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 8
+value = S8500,0
+
+[State 1014, 3]
+type = Explod
+trigger1 = AnimElem = 23
+anim = 1214
+pos = 0,20
+sprpriority = 30
+postype = p1
+bindtime = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 1014,1]
+type = helper
+trigger1 = AnimElem = 23
+name = "helper1"
+id = 1015
+pos = 0,0
+postype = p1
+stateno = 1015
+helpertype = normal
+ownpal = 1
+keyctrl = 0
+
+[State 1014,1]
+type = helper
+trigger1 = AnimElem = 23
+name = "helper1"
+id = 1017
+pos = 0,0
+postype = p1
+stateno = 1017
+helpertype = normal
+ownpal = 1
+keyctrl = 0
+
+[State 1014, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;------------------------------------------------------------
+;oyabin chegando
+[StateDef 1015]
+type    = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 1015
+sprpriority = 0
+poweradd = -2000
+
+[State 1015, NotHitby]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 1015, 1]
+type = PlaySnd
+trigger1 = AnimElem = 18
+value = 120,0
+volume = 250
+
+[State 1015, 1]
+type = PlaySnd
+trigger1 = AnimElem = 4
+value = 120,3
+volume = 250
+
+[State 1015, 2]
+type = PlaySnd
+trigger1 = AnimElem = 23
+value = 120,4
+volume = 250
+
+[State 1014, 3]
+type = Explod
+trigger1 = AnimElem = 23
+anim = 1214
+pos = 0,20
+sprpriority = 30
+postype = p1
+bindtime = 1
+ignorehitpause = 1
+persistent = 0
+
+[State 1014, 1]
+type = Projectile
+trigger1 = AnimElem = 18
+projanim = 1013
+projhitanim = 1013
+projsprpriority = 30
+projpriority = 9
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+ProjID = 1001
+offset = 80,-90
+velocity = 15, 7
+attr = S, SP
+damage   = 300,300
+getpower = 50,10
+animtype = heavy
+;guardflag = MA
+hitflag = MAFDP
+pausetime = 4,6
+hitsound   = s6, 5
+guardsound = s100,12
+guard.sparkno = S672
+sparkno = S1012
+sparkxy = 35, 20
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 1
+p2stateno = 5050
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 1015, EnvShake]
+type = EnvShake
+trigger1 = AnimElem = 18
+time = 150
+freq = 150
+ampl = -6
+phase = 90
+
+[State 1015, DestroySelf]
+type = DestroySelf
+trigger1 = animelem = 23
+
+;---------------------------------------------------------
+;oyabin  helper invisivel
+[StateDef 1017]
+type    = C
+movetype= A
+physics = C
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 1010
+sprpriority = 1
+
+[State 1017, HitDef]
+type = HitDef
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 2
+trigger3 = AnimElem = 3
+attr = S, NA
+damage = 60, 0
+getpower = 0
+givepower = 14
+animtype = heavy
+guardflag = M
+hitflag = MAF
+;priority = 4, Hit
+pausetime = 1, 20
+guard.sparkno = S675
+sparkno = S670
+sparkxy = -20, -68
+hitsound = S101, 3
+guardsound = S0, 5
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 10
+ground.velocity = -9,-2
+air.velocity = -7,-3
+fall = 1
+fall.recover = 0
+
+[State 1017, DestroySelf]
+type = DestroySelf
+trigger1 = time = 310
+
+;---------------------------------------------------------
+

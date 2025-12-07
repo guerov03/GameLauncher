@@ -1,0 +1,20 @@
+[Info]
+name="Shukaku"
+displayname="Shukaku Gaara"
+versiondate=09/08/09
+mugenversion=
+author="Kyubi_Mugen_Anbu"
+pal.defaults=1,2
+[Files]
+sprite=Shukaku.sff
+sound=shukaku.snd
+anim=Shukaku.air
+cmd=Shukaku.cmd
+cns=Shukaku.cns
+st=Shukaku.cns
+stcommon=common1.cns
+pal1=Shukaku.act
+pal2=Shukaku.act
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

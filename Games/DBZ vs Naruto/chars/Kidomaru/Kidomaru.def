@@ -1,0 +1,21 @@
+[Info]
+name="Kidoumaru"
+displayname="Kidomaru"
+versiondate=10.10.07
+mugenversion=
+author="mel-mel"
+pal.defaults=1,2
+[Files]
+sprite=Kidoumaru.sff
+sound=Kidoumaru.snd
+anim=Kidoumaru.air
+cmd=Kidoumaru.cmd
+cns=Kidoumaru.cns
+st=Kidoumaru.cns
+stcommon=common1.cns
+pal1=Kidoumaru.act
+pal2=spider.act
+st1=
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

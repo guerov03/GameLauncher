@@ -1,0 +1,29 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Kung Fu Man"
+displayname ="Gaara"
+versiondate =04,14,2002
+mugenversion =04,14,2002
+author ="Pheitan"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =gaara1.cmd
+cns     =gaara1.cns
+st      =gaara1.cns
+stcommon =common1.cns
+sprite  =gaara.sff
+anim    =gaara.air
+sound   =gaara1.snd
+pal1=Gaarapalette.act
+pal2=Gaarapalette.act
+st1=240.cns
+st2=-3.cns
+st3=-4.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

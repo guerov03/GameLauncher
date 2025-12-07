@@ -1,0 +1,24 @@
+[Info]
+name="kibaomega"
+displayname="kiba"
+versiondate=
+mugenversion=
+author="danilodass"
+pal.defaults=1,2
+
+[Files]
+sprite=kiba.sff
+sound=kiba.snd
+anim=kiba.air
+cmd=kiba.cmd
+cns=kiba.cns
+st=kiba.cns
+stcommon=common1.cns
+pal1=kiba.act
+pal2=kiba.act
+st1=especial.cns
+st2=
+
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

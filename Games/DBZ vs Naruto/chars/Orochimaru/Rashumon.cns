@@ -1,0 +1,223 @@
+;-|Rashumon|-
+;appear
+[Statedef 666666]
+type = S
+ctrl = 0
+anim = 666666
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 1
+value = S202,0
+volume = 100
+
+[State 0, Explod]
+type = Explod
+trigger1 = animelem = 1
+anim = 66669
+ID = 66669
+pos = 0,0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 24
+supermove = 999
+pausemove = 999
+ontop = 1
+
+[State 192, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 20000
+
+;Stand
+[Statedef 20000]
+movetype = a
+type = S
+physics = S
+velset = 0,0
+sprpriority = 0
+anim = 6666
+
+
+[State 0, HitDef]
+type = HitDef
+trigger1 = animelem = 1
+trigger2 = animelem = 2
+attr = S,NA        ;SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+hitflag = MAF        ;HLAFD+-
+guardflag = MA         ;HLA
+getpower = 0,0
+givepower = 0,0
+;affectteam = E          ;B,E,F
+animtype = light          ;light,medium,hard,back,up,diagup
+air.animtype = light
+;fall.animtype = Back
+priority = 1,Hit   ;Hit,Miss,Dodge
+damage = 1
+pausetime = 0,0
+;guard.pause,0
+sparkno = 0
+guard.sparkno = 0
+hitsound = 0,0
+guardsound = 0,0
+ground.type = High      ;Low,Trip,None
+;air.type = High
+ground.slide = 0
+;guard.slide = 0
+ground.hit = 0
+;guard.hit = 0
+air.hittime = 20
+;guard.ctrl  = 0
+;guard.dist = 320
+;yaccel = 0.5
+ground.velocity = -10,-2
+;guard.velocity = 0
+air.velocity = -10,-2
+;airguard.velocity = 0,0
+;ground.cornerpush.veloff = 0
+;air.cornerpush.veloff = 0
+;down.cornerpush.veloff = 0
+;guard.cornerpush.veloff = 0
+;airguard.cornerpush.veloff = 0
+;airguard.ctrl = 0
+;air.juggle = 0
+;mindist = 0,0
+;maxdist = 0,0
+;snap = 0,0
+sprpriority = 1
+;p1sprpriority = 0;(winmugen only)
+;p2sprpriority = 0;(winmugen only)
+;p1facing = 0
+p1getp2facing = 0
+;p2facing = 1
+;p1stateno = 0
+;p2stateno = 0
+;p2getp1state = 1
+;forcestand = 0
+fall = 0
+;fall.xvelocity = 0
+fall.yvelocity = -4.5
+fall.recover = 1
+fall.recovertime = 4
+fall.damage = 0
+
+
+[State 4000, Turn]
+type = Turn
+trigger1 = animelem = 1 && p2bodydist x < -1
+
+[State 0, HitOverride]
+type = HitOverride
+trigger1 = time = 0 && Random <= 75
+attr = SCA,NT,ST,HT,NA,SA,HA,NP,SP,HP
+slot = 0
+stateno = 22000
+time = -1
+forceair = 0
+
+[State 0, HitOverride]
+type = HitOverride
+trigger1 = time = 0
+attr = SCA,NT,ST,HT,NA,SA,HA,NP,SP,HP
+slot = 1
+stateno = 20300
+time = -1
+forceair = 0
+
+
+
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = RoundState = 3
+value = 22000
+ctrl = 0
+
+
+;---------------------------------------------------------------------------
+;Get Hit
+[Statedef 20300]
+movetype = I
+type = S
+physics = S
+sprpriority = 0
+anim = 66661
+
+
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 1
+value = S202,6
+volume = 100
+channel = -1
+;lowpriority = -1
+freqmul = 1.0
+loop = 0
+pan = 0
+
+[State 0, ChangeState]
+type = ChangeState
+trigger1 = time = 5
+value = 20000
+ctrl = 0
+;anim =
+;ignorehitpause =
+;persistent =
+
+
+;---------------------------------------------------------------------------
+;Dead
+[Statedef 22000]
+movetype = I
+type = S
+physics = S
+sprpriority = 0
+anim = 66662
+
+[State 0, Explod]
+type = Explod
+trigger1 = animelem = 1
+anim = 66669
+ID = 66669
+pos = 0,0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 24
+supermove = 999
+pausemove = 999
+ontop = 1
+
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 10
+value = S202,0
+volume = 0
+channel = -1
+;lowpriority = -1
+freqmul = 1.0
+loop = 0
+pan = 0
+;abspan =
+;ignorehitpause =
+;persistent =
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = time = 15
+;ignorehitpause =
+;persistent =
+
+
+
+

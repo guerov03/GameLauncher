@@ -1,0 +1,33 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name ="XaKakuzu FULL"
+displayname ="Kakuzu"
+versiondate =21.06.2010 
+mugenversion = 
+author ="Xandrarre"
+pal.defaults =1,2
+
+[Files]
+sprite =XaKakuzu.sff
+anim =XaKakuzu.air
+sound =XaKakuzu.snd
+cmd =XaKakuzu.cmd
+cns =XaKakuzu.cns
+stcommon =common1.cns
+st =XaKakuzu.cns
+pal1=XaKakuzu.act
+pal2=XaKakuzu.act
+st1=bunshin.cns
+st2=bunshin2.cns
+st3=Fuuton.cns
+st4=Katon.cns
+st5=Raiton.cns
+st6=Suiton.cns
+
+[Arcade]
+intro.storyboard = 
+ending.storyboard =  ..\data\final.def

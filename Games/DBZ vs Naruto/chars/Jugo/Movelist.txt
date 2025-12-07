@@ -1,0 +1,45 @@
+Movelist
+
+Basic Moves
+
+Combo 1
+A+A+A
+
+Combo 2
+B+B+B
+
+Air Combo
+A+A+A
+
+Axe Hand
+ X
+
+Critical Slam
+ Y
+
+Up Strike
+ Z
+
+Chakra Charge
+Hold C
+
+Specials
+
+Earthquake    (AIR)
+DownForward A
+
+Body Destruction
+DownForward A
+
+Reverse Grab
+DownBack A
+
+Assassin Combo
+DownForward B
+
+
+Asura Strike
+DownForward Z
+
+Mega Axe Hand
+DownBack Z

@@ -1,0 +1,21 @@
+[Info]
+name="VHawkSasuke"
+displayname="Sasuke teen"
+versiondate=05,03,2008
+mugenversion=04,14,2002
+author="cj2fly/V-Nix"
+pal.defaults=1,2
+[Files]
+sprite=HawkSasuke.sff
+sound=sasuke.snd
+anim=HawkSasuke.air
+cmd=HawkSasuke.cmd
+cns=HawkSasuke.cns
+st=HawkSasuke.cns
+stcommon=commonhawk.cns
+pal1=HawkSasuke.act
+pal2=HawkSasuke.act
+st1=AI.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

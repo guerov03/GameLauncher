@@ -1,0 +1,31 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Kabuto"
+displayname ="Kabuto"
+versiondate =05,23,2006
+mugenversion =04,14,2002
+author ="Drago30000"
+pal.defaults =1,2
+
+; Files for the player
+[Files]
+cmd     =Kabuto.cmd
+cns     =Kabuto.cns
+st      =Kabuto.cns
+stcommon =common1.cns
+sprite  =Kabuto.sff
+anim    =Kabuto.air
+sound=
+pal1=Kabuto.act
+pal2=Kabuto.act
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def
+[Arcade]
+intro.storyboard=
+ending.storyboard= ..\data\final.def

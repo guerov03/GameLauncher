@@ -1,0 +1,1711 @@
+;Soshoryu
+[StateDef 340]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 340
+poweradd = -3000
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 10
+value = 100,9
+
+[State 0, Explod]
+type = Explod
+trigger1 = animelem = 6
+anim = 747
+pos = 0,45
+postype = back  ;p2,front,back,left,right
+facing = 1
+bindtime = -1
+removetime = 232
+supermovetime = 232
+pausemovetime = 232
+scale = 1.0,1.1
+sprpriority = -4
+ontop = 0
+ownpal = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = animelem = 5
+anim = 746
+pos = 0,45
+postype = back
+facing = 1
+bindtime = -1
+removetime = 150
+supermovetime = 150
+pausemovetime = 150
+scale = 1.0,1.1
+sprpriority = -4
+ontop = 0
+ownpal = 1
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 6
+value = 510,0
+
+[State 340, 1]
+type = Projectile
+trigger1 = AnimElem = 10
+trigger2 = AnimElem = 11
+trigger3 = AnimElem = 12
+trigger4 = AnimElem = 13
+trigger5 = AnimElem = 14
+trigger6 = AnimElem = 15
+trigger7 = AnimElem = 16
+trigger8 = AnimElem = 17
+trigger9 = AnimElem = 18
+trigger10 = AnimElem = 19
+trigger11 = AnimElem = 20
+trigger12 = AnimElem = 21
+trigger13 = AnimElem = 22
+trigger14 = AnimElem = 23
+trigger15 = AnimElem = 24
+trigger16 = AnimElem = 25
+trigger17 = ANimElem = 26
+trigger18 = AnimElem = 27
+trigger19 = AnimElem = 28
+trigger20 = AnimElem = 29
+trigger21 = AnimElem = 30
+trigger22 = AnimElem = 31
+trigger23 = AnimElem = 32
+trigger24 = AnimElem = 33
+trigger25 = AnimElem = 34
+trigger26 = AnimElem = 35
+trigger27 = ANimElem = 36
+trigger28 = AnimElem = 37
+trigger29 = AnimElem = 38
+palfx.time = 25
+palfx.add =189,165,89
+palfx.sinadd =255,147,147,9
+palFX.mul = 256,256,256
+projanim = 302
+projhitanim = 303
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 40,-8
+velocity = 10
+attr = S, SP
+damage   = 10,5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = S2,0
+sparkxy = 500,500
+guardsound = S2,0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 340, 2]
+type = Projectile
+trigger1 = AnimElem = 10
+trigger2 = AnimElem = 11
+trigger3 = AnimElem = 12
+trigger4 = AnimElem = 13
+trigger5 = AnimElem = 14
+trigger6 = AnimElem = 15
+trigger7 = AnimElem = 16
+trigger8 = AnimElem = 17
+trigger9 = AnimElem = 18
+trigger10 = AnimElem = 19
+trigger11 = AnimElem = 20
+trigger12 = AnimElem = 21
+trigger13 = AnimElem = 22
+trigger14 = AnimElem = 23
+trigger15 = AnimElem = 24
+trigger16 = AnimElem = 25
+trigger17 = ANimElem = 26
+trigger18 = AnimElem = 27
+trigger19 = AnimElem = 28
+trigger20 = AnimElem = 29
+trigger21 = AnimElem = 30
+trigger22 = AnimElem = 31
+trigger23 = AnimElem = 32
+trigger24 = AnimElem = 33
+trigger25 = AnimElem = 34
+trigger26 = AnimElem = 35
+trigger27 = ANimElem = 36
+trigger28 = AnimElem = 37
+trigger29 = AnimElem = 38
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 40,-46
+velocity = 10
+attr = S, SP
+damage   = 5,2
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 340, 2]
+type = Projectile
+trigger1 = AnimElem = 10
+trigger2 = AnimElem = 11
+trigger3 = AnimElem = 12
+trigger4 = AnimElem = 13
+trigger5 = AnimElem = 14
+trigger6 = AnimElem = 15
+trigger7 = AnimElem = 16
+trigger8 = AnimElem = 17
+trigger9 = AnimElem = 18
+trigger10 = AnimElem = 19
+trigger11 = AnimElem = 20
+trigger12 = AnimElem = 21
+trigger13 = AnimElem = 22
+trigger14 = AnimElem = 23
+trigger15 = AnimElem = 24
+trigger16 = AnimElem = 25
+trigger17 = ANimElem = 26
+trigger18 = AnimElem = 27
+trigger19 = AnimElem = 28
+trigger20 = AnimElem = 29
+trigger21 = AnimElem = 30
+trigger22 = AnimElem = 31
+trigger23 = AnimElem = 32
+trigger24 = AnimElem = 33
+trigger25 = AnimElem = 34
+trigger26 = AnimElem = 35
+trigger27 = ANimElem = 36
+trigger28 = AnimElem = 37
+trigger29 = AnimElem = 38
+projanim = 301
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 40,-65
+velocity = 10
+attr = S, SP
+damage   = 5,2
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 340, 1]
+type = Projectile
+trigger1 = AnimElem = 10
+trigger2 = AnimElem = 11
+trigger3 = AnimElem = 12
+trigger4 = AnimElem = 13
+trigger5 = AnimElem = 14
+trigger6 = AnimElem = 15
+trigger7 = AnimElem = 16
+trigger8 = AnimElem = 17
+trigger9 = AnimElem = 18
+trigger10 = AnimElem = 19
+trigger11 = AnimElem = 20
+trigger12 = AnimElem = 21
+trigger13 = AnimElem = 22
+trigger14 = AnimElem = 23
+trigger15 = AnimElem = 24
+trigger16 = AnimElem = 25
+trigger17 = ANimElem = 26
+trigger18 = AnimElem = 27
+trigger19 = AnimElem = 28
+trigger20 = AnimElem = 29
+trigger21 = AnimElem = 30
+trigger22 = AnimElem = 31
+trigger23 = AnimElem = 32
+trigger24 = AnimElem = 33
+trigger25 = AnimElem = 34
+trigger26 = AnimElem = 35
+trigger27 = ANimElem = 36
+trigger28 = AnimElem = 37
+trigger29 = AnimElem = 38
+palfx.time = 25
+palfx.add =189,165,89
+palfx.sinadd =255,147,147,9
+palFX.mul = 256,256,256
+projanim = 302
+projhitanim = 303
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 40,-93
+velocity = 10
+attr = S, SP
+damage   = 10,5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = S2,0
+sparkxy = 500,500
+guardsound = S2,0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 10
+trigger2 = AnimElem = 12
+trigger3 = AnimElem = 14
+trigger4 = AnimElem = 16
+trigger5 = AnimElem = 18
+trigger6 = AnimElem = 20
+trigger7 = AnimElem = 22
+trigger8 = AnimElem = 24
+trigger9 = animelem = 26
+trigger10 = AnimElem = 28
+trigger11 = AnimElem = 30
+trigger12 = AnimElem = 32
+trigger13 = AnimElem = 34
+trigger14 = ANimElem = 36
+trigger15 = AnimElem = 38
+value = S1,14
+
+[State 0, SuperPause]
+type = SuperPause
+trigger1 = animelem = 5
+time = 100
+anim = 340
+unhittable = 1
+
+[State 340, end]
+type = ChangeState
+trigger1 = animtime = 0
+value = 52
+ctrl = 1
+
+;------------------------------------------------------------
+
+;Especial Várias Shurikens
+[StateDef 410]
+type = A
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 410
+poweradd = -2000
+sprpriority = 2
+
+[State 0, PosSet]
+type = PosSet
+trigger1 = animelem = 4
+x = 0
+y = -100
+;ignorehitpause =
+;persistent =
+
+;Shurikens
+[State 410, 2]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 15,-30
+velocity = 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 3]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -15,-30
+velocity = -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 5]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -15,-30
+velocity = -6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 6]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 15,-30
+velocity = 6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 7]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 15,-30
+velocity = 6, -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 8]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -15,-30
+velocity = -6, -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 9]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 5,-30
+velocity = 0, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 10]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 5,-30
+velocity = 0, -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 11]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -30,-30
+velocity = 6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 12]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset =  30,-30
+velocity = -6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 13]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 60,-30
+velocity =  6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 14]
+type = Projectile
+trigger1 = AnimElem = 7
+trigger2 = animelem = 9
+trigger3 = animelem = 11
+trigger4 = animelem = 13
+trigger5 = animelem = 15
+trigger6 = animelem = 17
+trigger7 = animelem = 19
+trigger8 = animelem = 21
+projanim = 306
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset =  -60,-30
+velocity = -6,6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+;Kunais
+[State 410, 2]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 301
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 15,-30
+velocity = 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 3]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 301
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -15,-30
+velocity = -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 5]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 307
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -15,-30
+velocity = -6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 6]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 307
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 15,-30
+velocity = 6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 7]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 309
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 15,-30
+velocity = 6, -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 8]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 309
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -15,-30
+velocity = -6, -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 9]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 310
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 5,-30
+velocity = 0, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 10]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 311
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 5,-30
+velocity = 0, -6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 11]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 307
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = -30,-30
+velocity = 6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 12]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 307
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 30,-30
+velocity = -6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 13]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 307
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset =  60,-30
+velocity = 6, 6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 410, 13]
+type = Projectile
+trigger1 = AnimElem = 8
+trigger2 = animelem = 10
+trigger3 = animelem = 12
+trigger4 = animelem = 14
+trigger5 = animelem = 16
+trigger6 = animelem = 18
+trigger7 = animelem = 20
+projanim = 307
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset =  -60,-30
+velocity = -6,6
+attr = S, SP
+damage = 20, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = 500,500
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 0, Explod]
+type = Explod
+trigger1 = animelem = 6
+anim = 6041
+pos = 0,0
+postype = back  ;p2,front,back,left,right
+facing = 1
+bindtime = -1
+removetime = 305
+supermovetime = 305
+pausemovetime = 305
+scale = 1.5,1.5
+sprpriority = -4
+ontop = 0
+ownpal = 1
+
+[State 410, Explod]
+type = Explod
+trigger1 = animelem = 2
+trigger2 = animelem = 5
+anim = 6000
+removetime = -2
+removeongethit = 1
+bindtime = 1
+pos = 0,0
+ontop = 1
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 8
+value = S1,17
+volume = 255
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = AnimElem = 7
+trigger2 = animelem = 8
+trigger3 = animelem = 9
+trigger4 = animelem = 10
+trigger5 = animelem = 11
+trigger6 = animelem = 12
+trigger7 = animelem = 13
+trigger8 = AnimElem = 14
+trigger9 = animelem = 15
+trigger10 = animelem = 16
+trigger11 = animelem = 17
+trigger12 = animelem = 18
+trigger13 = animelem = 19
+trigger14 = animelem = 20
+value = S1,14
+
+[State 0, SuperPause]
+type = SuperPause
+trigger1 = animelem = 6
+time = 100
+anim = 100
+sound = S100, 9
+unhittable = 1
+
+[State 410,1]
+type = PlaySnd
+trigger1 = animelem = 2
+trigger2 = animelem = 5
+value = 1, 7
+
+[State 410, 8]
+type = GameMakeAnim
+trigger1 = Time = 1
+value = 60 + (sysvar(1) > 5) + (sysvar(1) > 14)
+pos = 0, 0
+under = sysvar(1) <= 14
+
+[State 410, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Especial Shurikens que perseguem
+[StateDef 411]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 412
+poweradd = -2000
+sprpriority = 2
+
+[State 411, X]
+Type = VarSet
+Trigger1 = time%10
+fvar(18) = (EnemyNear(0), Pos X - Pos X) * Facing
+
+[State 411, Y]
+Type = VarSet
+trigger1 = time%10
+fvar(20) = (EnemyNear(0), pos Y - Pos Y)
+
+[State 411, Vector Length]
+Type = VarSet
+trigger1 = time%10
+fvar(22) = Exp(0.5*ln((fvar(18) * fvar(18))+(fvar(20) * fvar(20))))
+
+[State 411, Helper]
+type = Helper
+trigger1 = time = 45
+trigger2 = time = 55
+trigger3 = time = 65
+trigger4 = time = 75
+trigger5 = time = 85
+trigger6 = time = 95
+helpertype = normal ;player
+name = "Varias Shurikens"
+ID = 412
+stateno = 412
+pos = 20,-25
+postype = p1    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 1
+supermove
+pausemove
+
+[State 411, Helper]
+type = Helper
+trigger1 = time = 50
+trigger2 = time = 60
+trigger3 = time = 70
+trigger4 = time = 80
+trigger5 = time = 90
+trigger6 = time = 100
+helpertype = normal ;player
+name = "Varias Shurikens 2"
+ID = 412
+stateno = 412
+pos = 20,-12
+postype = p1    ;p2,front,back,left,right
+facing = 1
+keyctrl = 0
+ownpal = 1
+supermove
+pausemove
+
+[State 0, Explod]
+type = Explod
+trigger1 = animelem = 5
+anim = 6041
+pos = 0,45
+postype = back  ;p2,front,back,left,right
+facing = 1
+bindtime = -1
+removetime = 100
+supermovetime = 100
+pausemovetime = 199
+scale = 1.5,0.5
+sprpriority = -4
+ontop = 0
+ownpal = 1
+
+[State 0, Explod]
+type = Explod
+trigger1 = animelem = 5
+anim = 730
+pos = 160,89
+postype = back
+facing = ifelse(facing = 1, 1,-1)
+bindtime = -1
+removetime = 100
+supermovetime = 100
+pausemovetime = 100
+scale = 0.5,0.5
+sprpriority = -4
+ontop = 1
+ownpal = 1
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 5
+value = S7500,3
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 50
+trigger2 = time = 60
+trigger3 = time = 70
+trigger4 = time = 80
+trigger5 = time = 90
+trigger6 = time = 100
+value = S1,14
+
+[State 411, SuperPause]
+type = SuperPause
+trigger1 = animelem = 5
+time = 100
+anim = 100
+unhittable = 1
+
+[State 411, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;--------------
+
+[StateDef 412]
+type = S
+movetype= A
+physics = S
+juggle  = 3
+velset = 0,0
+ctrl = 0
+anim = 312
+poweradd = 0
+sprpriority = 3
+
+[State 412, VelSet]
+type = VelSet
+trigger1 = 1
+x = (parent, fvar(18)/parent, fvar(22)) * 8.0
+y = (parent, fVar(20)/parent, fvar(22)) * 8.0
+
+[State 412, VelSet]
+type = VelSet
+trigger1 = 1
+trigger1 = p2dist x<=0
+x = 8
+y = 0
+
+[State 412, AngleDraw]
+type = AngleDraw
+trigger1 = 1
+value = time*50
+
+[State 412, AfterImage]
+type = AfterImage
+trigger1 = time = 0
+time = -1
+length = 5
+palcolor = 260
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 120,120,220
+palpostbright = 0,0,0
+paladd = 10,10,25
+palmul = .65,.65,.75
+timegap = 1
+framegap = 1
+trans = add
+
+[State 412, PlaySnd]
+type = PlaySnd
+trigger1 = time = 1
+value = S1000,0
+
+[State 412, 1]
+type = HitDef
+trigger1 = time = 0
+attr = S, NP
+damage = 23,2
+animtype = medium
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 17
+sparkno = S10000
+hitsound   = 5,2
+sparkxy = -20,0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -5
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -4,-3
+air.hittime = 12
+
+[State 412, DestroySelf]
+type = DestroySelf
+trigger1 = time >= 50
+trigger2 = movecontact
+
+;---------------------------------------------------------------
+;Especial kunais
+[StateDef 415]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 412
+poweradd = -1000
+sprpriority = 2
+
+[State 0, Projectile]
+type = Projectile
+trigger1 = time = 45
+trigger2 = time = 55
+trigger3 = time = 65
+trigger4 = time = 75
+trigger5 = time = 85
+trigger6 = time = 95
+projanim = 301
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 20,-20
+velocity = 8
+attr = S, SP
+damage = 10, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = -20,0
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 0, Projectile]
+type = Projectile
+trigger1 = time = 50
+trigger2 = time = 60
+trigger3 = time = 70
+trigger4 = time = 80
+trigger5 = time = 90
+trigger6 = time = 100
+projanim = 301
+projhitanim = 10000
+projpriority = 1
+projheightbound = -240, 100
+projedgebound = 100
+projscreenbound = 100
+projshadow = -1
+offset = 20,-12
+velocity = 8
+attr = S, SP
+damage = 10, 5
+animtype = heavy
+guardflag = MA
+hitflag = MAFDP
+pausetime = 10,10
+hitsound   = 5,2
+sparkxy = -20,0
+guardsound = 6, 0
+ground.type = Low
+ground.slidetime = 25
+ground.hittime  = 25
+ground.velocity = -6
+air.animtype = Back
+air.velocity = -4,-6
+air.juggle = 3
+air.fall = 0
+down.velocity = -4,-6
+down.hittime = 30
+down.bounce = 0
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 5
+value = S7500,3
+
+[State 0, PlaySnd]
+type = PlaySnd
+trigger1 = time = 50
+trigger2 = time = 60
+trigger3 = time = 70
+trigger4 = time = 80
+trigger5 = time = 90
+trigger6 = time = 100
+value = S1,14
+
+[State 411, SuperPause]
+type = SuperPause
+trigger1 = animelem = 5
+time = 100
+anim = 100
+unhittable = 1
+
+[State 415, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1

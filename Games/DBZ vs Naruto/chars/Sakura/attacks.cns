@@ -1,0 +1,387 @@
+[Statedef 1055, combo2]
+type = S
+movetype = A
+physics = S
+velset = 0,0
+ctrl = 0
+sprpriority = 2
+anim = 600
+poweradd = 20
+juggle = 1
+
+[State 1055, 1]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 6,6,6
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 1055,***]
+type = AssertSpecial
+trigger1 = 1
+flag = noautoturn
+
+
+[State 1055, 2]
+type = helper
+trigger1 = AnimElem = 1
+name = "helper1"
+id = 10040
+pos = 0,0
+postype = p1
+stateno = 10040
+helpertype =normal
+ownpal = 1
+keyctrl = 1
+
+[State 1055, 3]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 5
+
+[State 1055, 4]
+type = PlaySnd
+trigger1 = time = 0
+value = 100,1
+
+
+[State 1055, 5]
+type = HitDef
+trigger1 = animelem = 4
+attr = S, NA
+animtype  = light
+damage    = 18
+guardflag = MA
+pausetime = 12,12
+sparkno = S10000
+sparkxy = -5,-20
+hitsound   = S1,1
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 15
+guard.velocity = -0
+ground.velocity = -0,0
+air.velocity = -0,-0
+
+[State 1055, 6]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[Statedef 600]
+type = S
+movetype = A
+physics = S
+juggle = 1
+poweradd = 20
+anim = 600
+ctrl = 0
+velset = 0,0
+sprpriority = 2
+
+[State 600, 1]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 6,6,6
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 600, 2]
+type = PlaySnd
+value = 0, 0
+trigger1 = time = 0
+
+[State 600, 3]
+type = HitDef
+trigger1 = animelem = 3
+damage = 24
+attr = S, NA
+animtype  = light
+guardflag = MA
+superpausetime = 12,12
+sparkno = S10000
+sparkxy = -5,-20
+hitsound   = S1,1
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 10
+ground.hittime  = 15
+ground.velocity = -0.5
+air.velocity = -0.5,-4
+
+[state 600, 4]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+[Statedef 610]
+type = S
+movetype = A
+physics = S
+juggle = 1
+poweradd = 20
+anim = 600
+ctrl = 0
+velset = 0,0
+sprpriority = 2
+
+[State 610, 1]
+type = VelSet
+trigger1 = animelem = 1
+x = 3
+
+[State 610, 2]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 6,6,6
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 610, 3]
+type = HitDef
+trigger1 = animelem = 3
+damage = 24
+attr = S, NA
+animtype  = light
+guardflag = MA
+superpausetime = 12,12
+sparkno = S10000
+sparkxy = -5,-20
+hitsound   = S1,1
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 10
+ground.hittime  = 15
+ground.velocity = -0.5
+air.velocity = -0.5,-4
+
+[state 610, 4]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+[Statedef 620]
+type = S
+movetype = A
+physics = S
+juggle = 1
+poweradd = 20
+anim = 620
+ctrl = 0
+velset = 0,0
+sprpriority = 2
+
+[state 620, 1]
+type = AfterImage
+trigger1 = AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 6,6,6
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 600, 1]
+type = PlaySnd
+value = 0, 0
+trigger1 = time = 0
+
+[State 620, 3]
+type = HitDef
+trigger1 = animelem = 3
+damage = 26
+attr = S, NA
+animtype  = light
+guardflag = MA
+pausetime = 12,12
+sparkno = S10000
+sparkxy = -3,-35
+hitsound   = S1,1
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 10
+ground.hittime  = 15
+ground.velocity = -0.5
+air.velocity = -0.5,-4
+fall = 1
+fall.recover = 0
+
+[state 620, 4]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+
+[Statedef 7800]
+type = S
+movetype = A
+physics = C
+ctrl = 0
+anim = 7800
+velset = 0,0
+juggle = 1
+sprpriority = 2
+poweradd = 20
+
+[State 7800, 0]
+type = PlaySnd
+value = 100, 1
+trigger1 = time = 0
+
+[state 7800, 1]
+type = VelSet
+trigger1 = animelem = 1
+x = 7
+
+[State 7800, 2]
+type = AfterImage
+trigger1 =AnimElem = 1
+palcontrast = 255,108,69
+
+
+[State 7800, 3]
+type = HitDef
+damage = 30
+trigger1 = AnimElem = 4
+attr = S,NA
+animtype  = Medium
+guardflag = MA
+pausetime = 12,12
+sparkno = S10000
+sparkxy = -3,-35
+hitsound   = S1,1
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 15
+guard.velocity = -0
+ground.velocity = -1,-9
+air.velocity = -0,0
+fall = 1
+fall.recover = 0
+
+[State 7800, 4]
+type = ChangeState
+value = 0
+trigger1 = animtime = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------------
+;Airdash
+[Statedef 250]
+type = A
+movetype = A
+physics = A
+juggle = 4
+ctrl = 0
+poweradd = 20
+anim = 9999
+sprpriority = 10
+
+[State 250, 0]
+type = playsnd
+value = 100,1
+trigger1 = time = 0
+channel = 5
+
+[State 250, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = A, NA
+damage = 26
+guardflag = HA
+priority = 3
+pausetime = 8,8
+sparkno = S10000
+sparkxy = -5,-25
+hitsound = S1, 1 
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 15
+ground.velocity = -4
+air.velocity = -2,-3
+;---------------------------------------------------------------------------------
+
+[Statedef 666]
+type = S
+movetype = A
+physics = S
+velset = 0,0
+ctrl = 0
+anim = 666
+sprpriority = 2
+juggle = 1
+poweradd = 30
+
+[State 666, 0]
+type = AfterImage
+length = 10
+trigger1 = animelem = 1
+time = 22
+trans = add1
+timegap = 1
+framegap = 2
+palbright = 6,6,6
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 666, 1]
+type = HitDef
+damage = 35
+trigger1 = animelem = 2
+attr = S,NA
+animtype  = Hard
+guardflag = MA
+pausetime = 12,12
+sparkno = S10000
+sparkxy = -5,-20
+hitsound   = S1,1
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 15
+guard.velocity = -1
+ground.velocity = -2,-0
+air.velocity = -0,0
+fall = 1
+fall.recover = 0
+
+[State 666, 2]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1

@@ -1,0 +1,836 @@
+;---------------------------------------------------------------------------
+; Kiba Helper - Appear
+[StateDef 3000]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3000
+poweradd = 0
+sprpriority = 2
+
+[State 3000, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3000, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3000, PlaySnd]
+type = PlaySnd
+trigger1 = !Time
+value = S1000,0
+volume = 0
+channel = 1
+
+[State 3000, PlaySnd]
+type = PlaySnd
+trigger1 = time = 20
+value = S3001,0
+volume = 255
+channel = 2
+
+[State 3000, end]
+type = ChangeState
+trigger1 = Time = 66
+value = 3001
+ctrl = 1
+
+;----------------------------------------------------------------------------
+; Kiba Helper - Tsuuga Start
+[StateDef 3001]
+type = A
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3001
+poweradd = 0
+sprpriority = 2
+
+[State 3001, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 3002
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Kiba Helper - Tsuuga Spin
+[StateDef 3002]
+type = A
+movetype= A
+physics = S
+juggle  = 2
+velset = 0,0
+ctrl = 0
+anim = 3002
+poweradd = 0
+sprpriority = 2
+
+[State 3002, AfterImage]
+type = AfterImage
+trigger1 = animelem =1
+trigger2 = Animelem =2
+trigger3 = animelem =3
+time = 2
+trans = add1
+timegap = 2
+framegap = 1
+length = 5
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 3002, VelSet]
+type = VelSet
+trigger1 = 1
+x = 4
+y = 0
+
+[State 3002, PlaySnd]
+type = PlaySnd
+trigger1 = animelem =1
+trigger2 = Animelem =2
+trigger3 = animelem =3
+value = S200,1
+volume = 0
+
+[State 3002, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = S3002,0
+volume = 255
+channel = 2
+[State 3002, PlaySnd]
+type = PlaySnd
+trigger1 = time = 0
+value = S3002,0
+volume = 255
+channel = 2
+
+[State 3002, Fx]
+type = helper
+trigger1 = movetype = A && moveguarded && numtarget
+trigger1 = !(target,time)
+helpertype = normal
+stateno = 6002
+ID = 6002
+name = "Guard Fx"
+postype = p1
+pos = 10,-20
+facing = -1
+ownpal = 1
+size.xscale = .5
+size.yscale = .5
+pausemovetime = 9999
+supermovetime = 9999
+ignorehitpause = 1
+
+[State 3002, 1]
+type = HitDef
+trigger1 = AnimElem = 1
+trigger2 = Animelem = 2
+trigger3 = Animelem = 3
+attr = S, NA
+damage = 12,5
+animtype = Hard
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 2, 5
+sparkno = S6022
+guard.sparkno = -1			;Spark anim no (Def: set above)
+sparkxy = -16, -25
+hitsound = S1, 4
+guardsound = S2, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -3
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -3,-1.5
+air.hittime = 12
+getpower = 0
+fall = time > 45
+
+[State 3002, end]
+type = ChangeState
+trigger1 = time >= 60
+value = 3003
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Kiba Helper - Tsuuga End
+[StateDef 3003]
+type = A
+movetype= I
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3003
+poweradd = 0
+sprpriority = 2
+
+[State 3003, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 3004
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Kiba Helper - Dissappear
+[StateDef 3004]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3004
+poweradd = 0
+sprpriority = 2
+
+[State 3004, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3004, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3004, PlaySnd]
+type = PlaySnd
+trigger1 = time = 10
+value = S3001,1
+volume = 255
+channel = 2
+
+[State 3004, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 7
+value = S1000,0
+volume = 0
+channel = 1
+
+[State 3004, DestroySelf]
+type = DestroySelf
+trigger1 = AnimTime = 0
+
+;---------------------------------------------------------------------------
+; Hinata Helper - Appear
+[StateDef 3100]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3100
+poweradd = 0
+sprpriority = 2
+
+[State 3100, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3100, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3100, PlaySnd]
+type = PlaySnd
+trigger1 = !Time
+value = S1000,0
+volume = 0
+channel = 1
+
+[State 3100, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 3
+value = S3100,0
+volume = 255
+channel = 2
+
+[State 3100, ChangeState]
+type = ChangeState
+trigger1 = Animtime = 0
+value = 3101
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Hinata Helper - Running
+[StateDef 3101]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3101
+poweradd = 0
+sprpriority = 2
+
+[State 3101, 1]
+type = HitDef
+trigger1 = AnimElem = 1
+attr = S, NA
+damage = 10,5
+animtype = Light
+guardflag = MA
+hitflag = MF
+priority = 3, Hit
+pausetime = 0, 20
+sparkno = S6022
+guard.sparkno = -1
+sparkxy = -20, -30
+hitsound = S1, 0
+guardsound = S2, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 20
+ground.velocity = 0
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = 0
+air.hittime = 20
+getpower = 0
+ground.cornerpush.veloff = 0
+
+[State 3101, Fx]
+type = helper
+trigger1 = movetype = A && moveguarded && numtarget
+trigger1 = !(target,time)
+helpertype = normal
+stateno = 6002
+ID = 6002
+name = "Guard Fx"
+postype = p1
+pos = 20,-30
+facing = -1
+ownpal = 1
+size.xscale = .5
+size.yscale = .5
+pausemovetime = 9999
+supermovetime = 9999
+ignorehitpause = 1
+
+[State 3101, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3101, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3101, VelSet]
+type = VelSet
+trigger1 = 1
+x = 4.6
+
+[State 3101, PlaySnd]
+type = PlaySnd
+trigger1 = animelem = 2
+trigger2 = animelem = 5
+value = S3101,0
+volume = 255
+
+[State 3101, Turn]
+type = Turn
+trigger1 = p2bodydist X < -20
+
+[State 3101, ChangeState]
+type = ChangeState
+trigger1 = time < 60
+trigger1 = P2BodyDist X < 0
+value = 3102
+ctrl = 1
+[State 3101, ChangeState]
+type = ChangeState
+trigger1 = time >= 60
+value = 3107
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Hinata Helper - 1st Hit
+[StateDef 3102]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3102
+poweradd = 0
+sprpriority = 2
+
+[State 3102, 1]
+type = HitDef
+trigger1 = AnimElem = 5
+attr = S, NA
+damage = 10,5
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 20
+sparkno = S6022
+guard.sparkno = -1
+sparkxy = -20, -30
+hitsound = S1, 0
+guardsound = S2, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 20
+ground.velocity = -2
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -1.4,-3
+air.hittime = 20
+getpower = 0
+ground.cornerpush.veloff = 0
+
+[State 3102, Fx]
+type = helper
+trigger1 = movetype = A && moveguarded && numtarget
+trigger1 = !(target,time)
+helpertype = normal
+stateno = 6002
+ID = 6002
+name = "Guard Fx"
+postype = p1
+pos = 20,-30
+facing = -1
+ownpal = 1
+size.xscale = .5
+size.yscale = .5
+pausemovetime = 9999
+supermovetime = 9999
+ignorehitpause = 1
+
+[State 3102, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3102, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3102, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 1
+value = S3100,1
+volume = 255
+channel = 2
+
+[State 3102, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact > 0
+value = 3103
+ctrl = 1
+[State 3102, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact = 0
+value = 3107
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Hinata Helper - 2nd Hit
+[StateDef 3103]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 2,0
+ctrl = 0
+anim = 3103
+poweradd = 0
+sprpriority = 2
+
+[State 3103, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA
+damage = 12,5
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 20
+sparkno = S6022
+guard.sparkno = -1
+sparkxy = -20, -30
+hitsound = S1, 0
+guardsound = S2, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 20
+ground.velocity = -2
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -1.4,-3
+air.hittime = 20
+getpower = 0
+ground.cornerpush.veloff = 0
+
+[State 3103, Fx]
+type = helper
+trigger1 = movetype = A && moveguarded && numtarget
+trigger1 = !(target,time)
+helpertype = normal
+stateno = 6002
+ID = 6002
+name = "Guard Fx"
+postype = p1
+pos = 20,-30
+facing = -1
+ownpal = 1
+size.xscale = .5
+size.yscale = .5
+pausemovetime = 9999
+supermovetime = 9999
+ignorehitpause = 1
+
+[State 3103, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3103, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3103, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 1
+value = S3100,2
+volume = 255
+channel = 2
+
+[State 3103, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact > 0
+value = 3104
+ctrl = 1
+[State 3103, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact = 0
+value = 3107
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Hinata Helper - 3rd Hit
+[StateDef 3104]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 2,0
+ctrl = 0
+anim = 3104
+poweradd = 0
+sprpriority = 2
+
+[State 3104, 1]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S, NA
+damage = 15,5
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 20
+sparkno = S6022
+guard.sparkno = -1
+sparkxy = -20, -30
+hitsound = S1, 0
+guardsound = S2, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 20
+ground.velocity = -2
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -1.4,-3
+air.hittime = 20
+getpower = 0
+ground.cornerpush.veloff = 0
+
+[State 3104, Fx]
+type = helper
+trigger1 = movetype = A && moveguarded && numtarget
+trigger1 = !(target,time)
+helpertype = normal
+stateno = 6002
+ID = 6002
+name = "Guard Fx"
+postype = p1
+pos = 20,-25
+facing = -1
+ownpal = 1
+size.xscale = .5
+size.yscale = .5
+pausemovetime = 9999
+supermovetime = 9999
+ignorehitpause = 1
+
+[State 3104, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3104, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3104, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 1
+value = S3100,3
+volume = 255
+channel = 2
+
+[State 3104, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact > 0
+value = 3105
+ctrl = 1
+[State 3104, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact = 0
+value = 3107
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Hinata Helper - Upper Hit
+[StateDef 3105]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 2,0
+ctrl = 0
+anim = 3105
+poweradd = 0
+sprpriority = 2
+
+[State 3105, 1]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S, NA
+damage = 20,5
+animtype = Medium
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 5
+sparkno = S6022
+guard.sparkno = -1
+sparkxy = -20, -30
+hitsound = S1, 2
+guardsound = S2, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = 0,-10
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = 0,-10
+air.hittime = 12
+getpower = 0
+ground.cornerpush.veloff = 0
+fall = 1
+fall.recover = 0
+
+[State 3105, Fx]
+type = helper
+trigger1 = movetype = A && moveguarded && numtarget
+trigger1 = !(target,time)
+helpertype = normal
+stateno = 6002
+ID = 6002
+name = "Guard Fx"
+postype = p1
+pos = 20,-35
+facing = -1
+ownpal = 1
+size.xscale = .5
+size.yscale = .5
+pausemovetime = 9999
+supermovetime = 9999
+ignorehitpause = 1
+
+[State 3105, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3105, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3105, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 1
+value = S3100,4
+volume = 255
+channel = 2
+
+[State 3105, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact > 0
+value = 3106
+ctrl = 1
+[State 3105, end]
+type = ChangeState
+trigger1 = AnimTime = 0 && movecontact = 0
+value = 3107
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Hinata Helper - Spin Hit
+[StateDef 3106]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3106
+poweradd = 0
+sprpriority = 2
+
+[State 3106, 1]
+type = HitDef
+trigger1 = AnimElem = 2
+trigger2 = AnimElem = 3
+trigger3 = AnimElem = 4
+trigger4 = AnimElem = 5
+attr = S, NA
+damage = 7,3
+animtype = Hard
+guardflag = -1
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 20
+sparkno = S6022
+sparkxy = -20, -60
+hitsound = S1, 3
+guardsound = S2, 0
+ground.type = High
+ground.slidetime = 20
+ground.hittime  = 20
+ground.velocity = -10
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -10,-3
+air.hittime = 20
+getpower = 0
+ground.cornerpush.veloff = 0
+fall = 1
+fall.recover = 0
+
+[State 3106, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3106, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 1
+
+[State 3106, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 2
+value = S3100,5
+volume = 255
+channel = 2
+
+[State 3106, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 3107
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Hinata Helper - Dissappear
+[StateDef 3107]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 3107
+poweradd = 0
+sprpriority = 2
+
+[State 3107, NotHitBy]
+type = NotHitBy
+trigger1 = 1
+value = SCA,NA,SA,HA,NP,SP,HP,NT,ST,HT
+;value2 = S,NA
+time = 1
+
+[State 3107, PlayerPush]
+type = PlayerPush
+trigger1 = time < 72
+value = 1
+
+[State 3107, PlaySnd]
+type = PlaySnd
+trigger1 = !Time
+value = S3100,6
+volume = 255
+channel = 2
+
+[State 3107, PlaySnd]
+type = PlaySnd
+trigger1 = Animelem = 13
+value = S1000,0
+volume = 0
+channel = 1
+
+[State 3107, DestroySelf]
+type = DestroySelf
+trigger1 = Animtime = 0

@@ -1,0 +1,52 @@
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;Kunai
+[Statedef 421]
+type    = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 420
+poweradd = 0
+sprpriority = 2
+
+[State 200, 1]
+type = HitDef
+trigger1 = time = 1
+attr = S, NA
+damage = 7, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 12
+sparkno = 10
+sparkxy = -10, -5
+hitsound = S751, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 10
+ground.velocity = -.5,0
+airguard.velocity = -.5,0
+air.type = High
+air.velocity = -.5,0
+air.hittime = 12
+
+[State 0, VelSet]
+type = VelSet
+trigger1 = 1
+x = 10
+y = 0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = time = 1
+value = 2, 0
+
+[State 0, DestroySelf]
+type = DestroySelf
+trigger1 = movecontact
+trigger2 = time = 70
