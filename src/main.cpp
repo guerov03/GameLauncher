@@ -6,6 +6,8 @@
 #include <algorithm>
 #include "Game.h"
 #include "DataStructures.h"
+#include <unordered_map>
+#include <unordered_set>
 
 using namespace std;
 
@@ -139,6 +141,8 @@ games.push_back(Game(
     queue<string> installQueue;
     BST bst;
     Graph graph;
+    unordered_map<string, vector<int>> hashIndex;
+
     // Build graph based on matching genres
 for (int i = 0; i < games.size(); i++) {
     for (int j = i + 1; j < games.size(); j++) {
@@ -150,6 +154,23 @@ for (int i = 0; i < games.size(); i++) {
 
     for (int i = 0; i < games.size(); i++)
         bst.root = bst.insert(bst.root, games[i].title, i);
+
+        // Build hash index for case-insensitive prefix search
+for (int i = 0; i < games.size(); i++) {
+    string key = games[i].title;
+
+    // lowercase base key
+    transform(key.begin(), key.end(), key.begin(), ::tolower);
+
+    // insert full lowercase word
+    hashIndex[key].push_back(i);
+
+    // insert all prefixes (progressive)
+    for (int len = 1; len <= key.length(); len++) {
+        hashIndex[key.substr(0, len)].push_back(i);
+    }
+}
+
 
     while (true) {
         cout << "\n=========== RETRO GAME LAUNCHER ===========\n";
@@ -189,22 +210,29 @@ for (int i = 0; i < games.size(); i++) {
         }
         
         else if (choice == 3) {
-            string t;
-            cout << "Enter title: ";
-            cin >> t;
+    string t;
+    cout << "Enter title: ";
+    cin >> t;
 
-            bool found = false;
-            for (int i = 0; i < games.size(); i++) {
-                if (games[i].title == t) {
-                    cout << "Press 2 to launch, then press " << i << ": "
-                         << games[i].title
-                         << " (" << games[i].genre << ")\n";
-                    found = true;
-                }
-            }
-            if (!found)
-                cout << "Not found.\n";
-        }
+    // lowercase input
+    transform(t.begin(), t.end(), t.begin(), ::tolower);
+
+    if (hashIndex.find(t) != hashIndex.end()) {
+        cout << "\nMatches:\n";
+unordered_set<int> printed; 
+for (int idx : hashIndex[t]) {
+    if (!printed.count(idx)) {      // if not printed yet
+        cout << idx << ". " << games[idx].title 
+             << " (" << games[idx].genre << ")\n";
+        printed.insert(idx);        // mark as printed
+    }
+}
+
+    } else {
+        cout << "No matches found.\n";
+    }
+}
+
 
         else if (choice == 4) {
             cout << "\nSorted game titles:\n";

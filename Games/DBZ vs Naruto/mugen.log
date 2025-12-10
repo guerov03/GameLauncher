@@ -60,7 +60,7 @@ Set up graphics...timer...OK
 Playing storyboard Logo.def: scene
 attempting load and start...attempting load of data/logo.mp3...Couldn't open BGM file data/logo.mp3!
 error 1!
-Storyboard playback canceled by Esc
+Storyboard playback finished OK
 Finished playing storyboard Logo.def: scene
 Initializing character info...OK
 Initializing select screen...finding characters...
@@ -435,11 +435,636 @@ Storyboard file not found: introZ.defEntering character select.
 attempting load and start...attempting load of sound/confrontment.ogg...hooking mixer callback...
 success!
 starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Jiraiya/Jiraiya.def...
+  Loading info...OK
+  Loading cmd command set Jiraiya.cmd...OK
+  Loading cns Jiraiya.cns...OK
+  Loading cmd state entry Jiraiya.cmd...OK
+  Loading common states common.cns...OK
+  Unloading command names...OK
+  Loading sff Jiraiya.sff...OK
+  Loading anim Jiraiya.air...OK
+  Loading snd Jiraiya.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  2274 expressions (918 on trigger lines)
+Character Jiraiya.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Gohan/Gohan.def...
+  Loading info...OK
+  Loading cmd command set Gohan.cmd...OK
+  Loading cns Gohan.cns...OK
+  Loading cns basic.cns...OK
+  Loading cns helpers.cns...OK
+  Loading cns specials.cns...OK
+  Loading cns gethits.cns...OK
+  Loading cns supers.cns...OK
+  Loading cmd state entry Gohan.cmd...OK
+  Loading common states common.cns...OK
+  Unloading command names...OK
+  Loading sff Gohan.sff...OK
+  Loading anim Gohan.air...OK
+  Loading snd Gohan.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)OK
+  SFF v1.01 palette hack engaged.
+  6693 expressions (1885 on trigger lines)
+Character Gohan.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Yamcha/Yamcha.def...
+  Loading info...OK
+  Loading cmd command set YamchaCMD.cmd...OK
+  Loading cns YamchaCNS.cns...OK
+  Loading cns Puar.cns...OK
+  Loading cns Puar.cns...OK
+  Loading cns Puar.cns...OK
+  Loading cmd state entry YamchaCMD.cmd...OK
+  Loading common states common.cns...OK
+  Unloading command names...OK
+  Loading sff YamchaSFF.sff...OK
+  Loading anim YamchaAIR.air...OK
+  Loading snd YamchaSND.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  8490 expressions (2425 on trigger lines)
+Character Yamcha.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+Options Screen
+Return from Options Screen
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Mystic Gohan/Mystic Gohan.def...
+  Loading info...OK
+  Loading cmd command set gohan.cmd...OK
+  Loading cns gohan.cns...OK
+  Loading cmd state entry gohan.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff gohan.sff...OK
+  Loading anim gohan.air...OK
+  Loading snd gohan.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  9994 expressions (2945 on trigger lines)
+Character Mystic Gohan.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Goku/Goku.def...
+  Loading info...OK
+  Loading cmd command set kakarotto.cmd...OK
+  Loading cns kakarotto.cns...OK
+  Loading cmd state entry kakarotto.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff kakarotto.sff...OK
+  Loading anim kakarotto.air...OK
+  Loading snd kakarotto.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  13572 expressions (2870 on trigger lines)
+Character Goku.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Supreme Kai/Supreme Kai.def...
+  Loading info...OK
+  Loading cmd command set Kaioshin.cmd...OK
+  Loading cns Kaioshin.cns...OK
+  Loading cns Normal.cns...OK
+  Loading cns Hypers.cns...OK
+  Loading cns Helpers.cns...OK
+  Loading cmd state entry Kaioshin.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff Kaioshin.sff...OK
+  Loading anim Kaioshin.air...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  5683 expressions (1302 on trigger lines)
+Character Supreme Kai.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Rock Lee teen/Rock Lee teen.def...
+  Loading info...OK
+  Loading cmd command set RockLee.cmd...OK
+  Loading cns RockLee.cns...OK
+  Loading cmd state entry RockLee.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff RockLee.sff...OK
+  Loading anim RockLee.air...OK
+  Loading snd RockLee.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  4022 expressions (1275 on trigger lines)
+Character Rock Lee teen.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Rock Lee/Rock Lee.def...
+  Loading info...OK
+  Loading cmd command set lee.cmd...OK
+  Loading cns lee.cns...OK
+  Loading cns -3.cns...OK
+  Loading cns jump.cns...OK
+  Loading cns power.cns...OK
+  Loading cns striker.cns...OK
+  Loading cns away.cns...OK
+  Loading cns airdash.cns...OK
+  Loading cmd state entry lee.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff lee.sff...OK
+  Loading anim lee.air...OK
+  Loading snd lee.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  3360 expressions (1158 on trigger lines)
+Character Rock Lee.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+Options Screen
+Config keys menu
+Setting up input
+Remapping keys...OK
+Reinitializing input engine...OK
+Return from config keys menu
+Return from Options Screen
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+Options Screen
+Config keys menu
+Setting up input
+Remapping keys...OK
+Reinitializing input engine...OK
+Return from config keys menu
+Config keys menu
+Setting up input
+Remapping keys...OK
+Reinitializing input engine...OK
+Return from config keys menu
+Return from Options Screen
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Itachi/Itachi.def...
+  Loading info...OK
+  Loading cmd command set i.cmd...OK
+  Loading cns i.cns...OK
+  Loading cmd state entry i.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff i.sff...OK
+  Loading anim i.air...OK
+  Loading snd i.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  9067 expressions (1965 on trigger lines)
+Character Itachi.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+Options Screen
+Config keys menu
+Setting up input
+Remapping keys...OK
+Reinitializing input engine...OK
+Return from config keys menu
+Return from Options Screen
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Mystic Gohan/Mystic Gohan.def...
+  Loading info...OK
+  Loading cmd command set gohan.cmd...OK
+  Loading cns gohan.cns...OK
+  Loading cmd state entry gohan.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff gohan.sff...OK
+  Loading anim gohan.air...OK
+  Loading snd gohan.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  9994 expressions (2945 on trigger lines)
+Character Mystic Gohan.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Jiraiya/Jiraiya.def...
+  Loading info...OK
+  Loading cmd command set Jiraiya.cmd...OK
+  Loading cns Jiraiya.cns...OK
+  Loading cmd state entry Jiraiya.cmd...OK
+  Loading common states common.cns...OK
+  Unloading command names...OK
+  Loading sff Jiraiya.sff...OK
+  Loading anim Jiraiya.air...OK
+  Loading snd Jiraiya.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  2274 expressions (918 on trigger lines)
+Character Jiraiya.def loaded OK
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
+Options Screen
+Config keys menu
+Setting up input
+Remapping keys...OK
+Reinitializing input engine...OK
+Return from config keys menu
+Return from Options Screen
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Android 17/Android 17.def...
+  Loading info...OK
+  Loading cmd command set coding/17CMD.cmd...OK
+  Loading cns coding/17CNS.cns...OK
+  Loading cns coding/helperCNS.cns...OK
+  Loading cns coding/helperCNS.cns...OK
+  Loading cmd state entry coding/17CMD.cmd...OK
+  Loading common states coding/commonCNS.cns...OK
+  Unloading command names...OK
+  Loading sff graphical/17SFF.sff...OK
+  Loading anim coding/17AIR.air...OK
+  Loading snd audio/17ENG.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  17765 expressions (4150 on trigger lines)
+Character Android 17.def loaded OK
+Loading character chars/Sakura teen/Sakura teen.def...
+  Loading info...OK
+  Loading cmd command set BTSSakura.cmd...OK
+  Loading cns BTSSakura.cns...OK
+  Loading cns AI.cns...OK
+  Loading cmd state entry BTSSakura.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff BTSSakura.sff...OK
+  Loading anim BTSSakura.air...OK
+  Loading snd BTSSakura.snd...attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  3854 expressions (1359 on trigger lines)
+Character Sakura teen.def loaded OK
+Initializing stage...
+  Loading BG...attempting load of sound\speed-skirmish.mp3...success!
+OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+prebuffering BGM...
+End of game loop
+Total time: 323.29s
+Total frames: 19400 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Rock Lee teen/Rock Lee teen.def...
+  Loading info...OK
+  Loading cmd command set RockLee.cmd...OK
+  Loading cns RockLee.cns...OK
+  Loading cmd state entry RockLee.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff RockLee.sff...OK
+  Loading anim RockLee.air...OK
+  Loading snd RockLee.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  4022 expressions (1275 on trigger lines)
+Character Rock Lee teen.def loaded OK
+Loading character chars/Broly/Broly.def...
+  Loading info...OK
+  Loading cmd command set BroliCMD.cmd...OK
+  Loading cns BroliCNS.cns...OK
+  Loading cmd state entry BroliCMD.cmd...OK
+  Loading common states BroliCNS.cns...OK
+  Unloading command names...OK
+  Loading sff BroliSFF.sff...OK
+  Loading anim BroliAIR.air...OK
+  Loading snd BroliSND.snd...attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  32150 expressions (5402 on trigger lines)
+Character Broly.def loaded OK
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+attempting load of sound/02_douten.ogg...success!
+prebuffering BGM...
+End of game loop
+Total time: 54.65s
+Total frames: 3281 	Skipped frames: 0
+Avg game rate: 60.04
+Avg frame rate: 60.04
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Janemba/Janemba.def...
+  Loading info...OK
+  Loading cmd command set janemba.cmd...OK
+  Loading cns janemba.cns...OK
+  Loading cmd state entry janemba.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff janemba.sff...OK
+  Loading anim janemba.air...OK
+  Loading snd janemba.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  11773 expressions (2707 on trigger lines)
+Character Janemba.def loaded OK
+attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+attempting load of sound/dbz_budokai3_ultimate_energy.mp3...success!
+prebuffering BGM...
+End of game loop
+Total time: 161.07s
+Total frames: 9666 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Itachi/Itachi.def...
+  Loading info...OK
+  Loading cmd command set i.cmd...OK
+  Loading cns i.cns...OK
+  Loading cmd state entry i.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff i.sff...OK
+  Loading anim i.air...OK
+  Loading snd i.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  9067 expressions (1965 on trigger lines)
+Character Itachi.def loaded OK
+Loading character chars/Super Buu/Super Buu.def...
+  Loading info...OK
+  Loading cmd command set Super_Buu.cmd...OK
+  Loading cns Super_Buu.cns...OK
+  Loading cns Specials.cns...OK
+  Loading cns Ki.cns...OK
+  Loading cns Supers.cns...OK
+  Loading cns Super_Buu_IA.cns...OK
+  Loading cmd state entry Super_Buu.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff Super_Buu.sff...OK
+  Loading anim Super_Buu.air...OK
+  Loading snd Super_Buu.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  11706 expressions (3255 on trigger lines)
+Character Super Buu.def loaded OK
+attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+attempting load of sound/20_flight_in_the_dark_side.ogg...success!
+Start of game loop
+prebuffering BGM...
+End of game loop
+Total time: 121.67s
+Total frames: 7301 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+Initializing stage...
+  Loading BG...attempting load of sound/dragon theme.mp3...success!
+OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+prebuffering BGM...
+End of game loop
+Total time: 124.54s
+Total frames: 7474 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Madara/Madara.def...
+  Loading info...OK
+  Loading cmd command set SHMadara'O.cmd...OK
+  Loading cns SHMadara'O.cns...OK
+  Loading cns bunshin.cns...OK
+  Loading cmd state entry SHMadara'O.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff SHMadara'O.sff...OK
+  Loading anim SHMadara'O.air...OK
+  Loading snd SHMadara'O.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  7844 expressions (1731 on trigger lines)
+Character Madara.def loaded OK
+attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+Initializing stage...
+  Loading BG...attempting load of sound/dbz_goku_vs_tien.mp3...success!
+OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+prebuffering BGM...
+End of game loop
+Total time: 449.12s
+Total frames: 26949 	Skipped frames: 0
+Avg game rate: 60.00
+Avg frame rate: 60.00
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Yondaime/Yondaime.def...
+  Loading info...OK
+  Loading cmd command set U'Yondaime.cmd...OK
+  Loading cns U'Yondaime.cns...OK
+  Loading cns AI.cns...OK
+  Loading cmd state entry U'Yondaime.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff U'Yondaime.sff...OK
+  Loading anim U'Yondaime.air...OK
+  Loading snd U'Yondaime.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  3108 expressions (1002 on trigger lines)
+Character Yondaime.def loaded OK
+Loading character chars/Gai/Gai.def...
+  Loading info...OK
+  Loading cmd command set PRgai.cmd...OK
+  Loading cns PRgai.cns...OK
+  Loading cns speciais.cns...OK
+  Loading cmd state entry PRgai.cmd...OK
+  Loading common states common.cns...OK
+  Unloading command names...OK
+  Loading sff PRgai.sff...OK
+  Loading anim PRgai.air...OK
+  Loading snd PRgai.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  7461 expressions (1784 on trigger lines)
+Character Gai.def loaded OK
+attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+attempting load of sound/20_flight_in_the_dark_side.ogg...success!
+prebuffering BGM...
+End of game loop
+Total time: 62.42s
+Total frames: 3747 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Yamato/Yamato.def...
+  Loading info...OK
+  Loading cmd command set U'Yamato.cmd...OK
+  Loading cns U'Yamato.cns...OK
+  Loading cns Projectile.cns...OK
+  Loading cns Specials.cns...OK
+  Loading cns MokuBunshin.cns...OK
+  Loading cmd state entry U'Yamato.cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff U'Yamato.sff...OK
+  Loading anim U'Yamato.air...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  3142 expressions (914 on trigger lines)
+Character Yamato.def loaded OK
+Loading character chars/Konohamaru/Konohamaru.def...
+  Loading info...OK
+  Loading cmd command set Konohamaru(Deidara-Rap).cmd...OK
+  Loading cns Konohamaru(Deidara-Rap).cns...OK
+  Loading cmd state entry Konohamaru(Deidara-Rap).cmd...OK
+  Loading common states common1.cns...OK
+  Unloading command names...OK
+  Loading sff Konohamaru(Deidara-Rap).sff...OK
+  Loading anim Konohamaru(Deidara-Rap).air...OK
+  Loading snd Konohamaru(Deidara-Rap).snd...OK
+  Loading pals...(1,1)(1,2)OK
+  2675 expressions (829 on trigger lines)
+Character Konohamaru.def loaded OK
+attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+Initializing stage...
+  Loading BG...attempting load of sound/sasuke_destiny.mp3...OK
+  Allocating helpers...success!
+OK
+Stage initialized OK
+Start of game loop
+prebuffering BGM...
+End of game loop
+Total time: 172.70s
+Total frames: 10365 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Loading character chars/Broly/Broly.def...
+  Loading info...OK
+  Loading cmd command set BroliCMD.cmd...OK
+  Loading cns BroliCNS.cns...OK
+  Loading cmd state entry BroliCMD.cmd...OK
+  Loading common states BroliCNS.cns...OK
+  Unloading command names...OK
+  Loading sff BroliSFF.sff...OK
+  Loading anim BroliAIR.air...OK
+  Loading snd BroliSND.snd...OK
+  Loading pals...(1,1)(1,2)OK
+  SFF v1.01 palette hack engaged.
+  32150 expressions (5402 on trigger lines)
+Character Broly.def loaded OK
+attempting load and start...attempting load of sound/vs.ogg...success!
+starting BGM...
+Initializing stage...
+  Loading BG...OK
+  Allocating helpers...OK
+Stage initialized OK
+Start of game loop
+attempting load of sound/track25.mp3...success!
+prebuffering BGM...
+End of game loop
+Total time: 77.38s
+Total frames: 4645 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
+
+attempting load and start...attempting load of sound/select.ogg...success!
+starting BGM...
+Entering character select.
+attempting load and start...attempting load of sound/confrontment.ogg...success!
+starting BGM...
 Returned from main loop
 Deinitializing...
-Frames      : 0
-Time elapsed: 4.110 sec
-ticks: 411, tps: 100, start 30, end 441
+Frames      : 92828
+Time elapsed: 2895.870 sec
+ticks: 289587, tps: 100, start 30, end 289617
 
 Clearing player cache...OK
 Freeing character info...OK
@@ -453,11 +1078,11 @@ Deintializing timer...OK
 Deinitializing graphics...OK
 Deinitializing BGM...Cleaning up mixer callback...unhooking mixer callback...
 
-Mixer callback was entered 15 times
-Mixer callback timing stats (last 15 calls):
-	8.000000 median, 8.333333 avg, 1.711307 sample std. dev.
-Top 7 slowest times:	13 (1), 10 (1), 9 (5), 8 (4), 7 (2), 6 (1), 5 (1)
-Top 7 fastest times:	5 (1), 6 (1), 7 (2), 8 (4), 9 (5), 10 (1), 13 (1)
+Mixer callback was entered 62262 times
+Mixer callback timing stats (last 62262 calls):
+	8.000000 median, 7.933940 avg, 3.427214 sample std. dev.
+Top 10 slowest times:	255 (1), 243 (1), 215 (1), 209 (1), 168 (1), 166 (1), 165 (1), 143 (1), 142 (1), 141 (1)
+Top 10 fastest times:	2 (12), 3 (310), 4 (466), 5 (4189), 6 (11125), 7 (14975), 8 (11223), 9 (8620), 10 (5764), 11 (2586)
 OK
 Deinitializing sound...OK
 Successful program termination.

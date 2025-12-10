@@ -1,4 +1,4 @@
-######## start logging: 20251206_16.41.21
+######## start logging: 20251206_16.45.08
 parsing commandline argument 1: "--home=profile"
 Using home directory: profile\
 parsing commandline argument 2: "--init"
@@ -23,16 +23,16 @@ could not read "config/favourites.cfg"
 init: models
 init: docs
 init: localconnect
-own IP: 0.0.0.0, censored own IP: 0.0.0.0, --, clock offset -490296 hours -41 minutes
-auth challenge: SERVINFOCHALLENGE<(0) cn: 0 c: 0.0.0.0 (--) s: 0.0.0.0:0 3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da29 st: 0 ct: 29417801 (-2055123490)>
+own IP: 0.0.0.0, censored own IP: 0.0.0.0, --, clock offset -490296 hours -45 minutes
+auth challenge: SERVINFOCHALLENGE<(0) cn: 0 c: 0.0.0.0 (--) s: 0.0.0.0:0 3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da29 st: 0 ct: 29417805 (1592111060)>
 init: mainloop
 could not read "private/authprivate.cfg"
 successfully pinged 0 media servers, 0 failures, 0 disabled
-read map packages\maps\official\ac_origin.cgz rev 123 (2 milliseconds)
-ac_origin by DaylixX
-loaded textures (46 milliseconds)
-loaded mapmodels (66 milliseconds)
-loaded mapsounds (54 milliseconds)
+read map packages\maps\official\ac_edifice.cgz rev 54 (2 milliseconds)
+Edifice by Bukz and optus
+loaded textures (45 milliseconds)
+loaded mapmodels (76 milliseconds)
+loaded mapsounds (23 milliseconds)
 game mode is "TDM"
 writing to file: profile\config\init.cfg
 writing to file: profile\config\servers.cfg

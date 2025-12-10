@@ -1,4 +1,4 @@
-######## start logging: 20251206_22.31.07
+######## start logging: 20251208_21.39.54
 parsing commandline argument 1: "--home=profile"
 Using home directory: profile\
 parsing commandline argument 2: "--init"
@@ -23,16 +23,16 @@ could not read "config/favourites.cfg"
 init: models
 init: docs
 init: localconnect
-own IP: 0.0.0.0, censored own IP: 0.0.0.0, --, clock offset -490302 hours -31 minutes
-auth challenge: SERVINFOCHALLENGE<(0) cn: 0 c: 0.0.0.0 (--) s: 0.0.0.0:0 3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da29 st: 0 ct: 29418151 (-649463794)>
+own IP: 0.0.0.0, censored own IP: 0.0.0.0, --, clock offset -490349 hours -39 minutes
+auth challenge: SERVINFOCHALLENGE<(0) cn: 0 c: 0.0.0.0 (--) s: 0.0.0.0:0 3b6a27bcceb6a42d62a3a8d02a6f0d73653215771de243a63ac048a18b59da29 st: 0 ct: 29420979 (350424994)>
 init: mainloop
 could not read "private/authprivate.cfg"
 successfully pinged 0 media servers, 0 failures, 0 disabled
-read map packages\maps\official\ac_aqueous.cgz rev 41 (2 milliseconds)
-Aqueous - By RandumKiwi
-loaded textures (53 milliseconds)
-loaded mapmodels (105 milliseconds)
-loaded mapsounds (138 milliseconds)
+read map packages\maps\official\ac_rattrap.cgz rev 50 (1 milliseconds)
+Filthy RatTrap by RatBoy
+loaded textures (68 milliseconds)
+loaded mapmodels (580 milliseconds)
+loaded mapsounds (100 milliseconds)
 game mode is "TDM"
 writing to file: profile\config\init.cfg
 writing to file: profile\config\servers.cfg
