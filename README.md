@@ -14,25 +14,25 @@ This project includes:
 
 ---
 
-## 🚀 Features
+##  Features
 
-### ✔ View Game Library
+###  View Game Library
 All games are listed visually in the browser UI with clickable cards.
 
-### ✔ Launch Games (C++ → Windows Process)
+###  Launch Games (C++ → Windows Process)
 Clicking a game launches its `.exe` or `.bat` using `CreateProcessA`.
 
-### ✔ Sorting
+###  Sorting
 Implemented directly on the backend:
 
 - A–Z Sort (BST in-order traversal)  
 - Newest First  
 - Oldest First  
 
-### ✔ Recommendations (Graph)
+###  Recommendations (Graph)
 Games are connected by genre. Selecting a game displays all related games using adjacency lists.
 
-### ✔ History (Stack)
+###  History (Stack)
 Every launched game is pushed onto a stack and can be viewed in reverse order.
 
 ---
