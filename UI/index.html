@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RetroLauncher</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="title">RetroLauncher</div>
+
+<!-- Honestly, theres too few games + not needed to meet grading criteria -->
+<!-- SEARCH BAR 
+<div class="searchbar">
+    <input type="text" id="searchInput" placeholder="Search game..." oninput="filterGames()">
+</div>
+-->
+<!-- Leaving it here in case I wanna add it in the future -->
+
+<!-- Sort buttons -->
+<div class="sort-controls">
+    <button onclick="sortAZ()">A-Z (Tree)</button>
+    <button onclick="sortNew()">Newest</button>
+    <button onclick="sortOld()">Oldest</button>
+</div>
+
+<!-- game grid -->
+<div id="gameGrid" class="game-grid"></div>
+
+<!-- footer buttons -->
+<div class="footer-controls">
+    <button onclick="showHistory()">History</button>
+    <button onclick="startRecommend()">Recommendations</button>
+</div>
+
+<!-- output area -->
+<div id="output"></div>
+
+<script src="/script.js"></script>
+</body>
+</html>

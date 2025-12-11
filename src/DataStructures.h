@@ -28,8 +28,7 @@ public:
     }
 };
 
-//  BST sorting (A-Z)
-
+// BST Sorting (A-Z)
 struct Node {
     string key;
     int index;
@@ -60,8 +59,7 @@ public:
     }
 };
 
-
-// Graph for recommendations
+//  recommendations grasph
 
 class Graph {
 public:
@@ -73,7 +71,7 @@ public:
     }
 
     void showRelated(string game) {
-    // check if game exists in graph
+    // check if game exists in graph at all
     if (edges.find(game) == edges.end()) {
         cout << "No recommendations available.\n";
         return;
