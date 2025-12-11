@@ -9,9 +9,6 @@
 #include <string>
 using namespace std;
 
-//
-// ===== Simple LIST wrapper
-//
 class GameList {
 public:
     vector<int> indices;
@@ -31,9 +28,8 @@ public:
     }
 };
 
-//
-// ===== BST FOR SORTING
-//
+//  BST sorting (A-Z)
+
 struct Node {
     string key;
     int index;
@@ -64,9 +60,9 @@ public:
     }
 };
 
-//
-// ===== GRAPH FOR RECOMMENDATIONS
-//
+
+// Graph for recommendations
+
 class Graph {
 public:
     unordered_map<string, vector<string>> edges;
@@ -77,7 +73,7 @@ public:
     }
 
     void showRelated(string game) {
-    // check if game exists in graph at all
+    // check if game exists in graph
     if (edges.find(game) == edges.end()) {
         cout << "No recommendations available.\n";
         return;
