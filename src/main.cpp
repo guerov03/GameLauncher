@@ -11,9 +11,6 @@
 
 using namespace std;
 
-// ======================================================================
-// PORTABLE WINDOWS GAME LAUNCHER (WORKS FOR RELATIVE PATHS)
-// ======================================================================
 #include <filesystem>
 
 void launchGame(const string& path) {
@@ -21,27 +18,24 @@ void launchGame(const string& path) {
     PROCESS_INFORMATION pi{};
     si.cb = sizeof(si);
 
-    // Convert relative path to full absolute path based on current folder
     string fullPath = path;
     if (fullPath.rfind("./", 0) == 0) {
         fullPath = std::filesystem::current_path().string() + "\\" + fullPath.substr(2);
     }
 
-    // FIX: Determine proper working directory!
     string workingDir = fullPath.substr(0, fullPath.find_last_of("/\\"));
 
-    // Build final command (must use cmd to run BAT)
     string command = "cmd.exe /c \"" + fullPath + "\"";
 
     if (!CreateProcessA(
         NULL,
-        command.data(),       // <--- launching .bat correctly
+        command.data(), 
         NULL,
         NULL,
         FALSE,
-        CREATE_NO_WINDOW,     // don't open extra cmd window
+        CREATE_NO_WINDOW,
         NULL,
-        workingDir.c_str(),   // <--- MOST IMPORTANT FIX
+        workingDir.c_str(),
         &si,
         &pi
     )) {
@@ -143,7 +137,7 @@ games.push_back(Game(
     Graph graph;
     unordered_map<string, vector<int>> hashIndex;
 
-    // Build graph based on matching genres
+    //  graph based on matching genres
 for (int i = 0; i < games.size(); i++) {
     for (int j = i + 1; j < games.size(); j++) {
         if (games[i].genre == games[j].genre) {
@@ -155,7 +149,7 @@ for (int i = 0; i < games.size(); i++) {
     for (int i = 0; i < games.size(); i++)
         bst.root = bst.insert(bst.root, games[i].title, i);
 
-        // Build hash index for case-insensitive prefix search
+        //  hash index for case-insensitive prefix search
 for (int i = 0; i < games.size(); i++) {
     string key = games[i].title;
 
@@ -249,7 +243,7 @@ for (int idx : hashIndex[t]) {
         else if (choice == 6) {
             if (history.empty()) cout << "History empty.\n";
             else {
-                cout << "\nRecent played:\n";
+                cout << "\nRecently played:\n";
                 stack<string> temp = history;
                 while (!temp.empty()) {
                     cout << temp.top() << "\n";
