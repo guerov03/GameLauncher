@@ -121,8 +121,54 @@ int main() {
         recv(client, buf, sizeof(buf) - 1, 0);
         string req(buf);
 
+        if (req.find("GET /search?q=") != string::npos) {
+
+            size_t pos = req.find("q=");
+string q = req.substr(pos + 2);
+
+// stop at first space, & or newline (end of query value)
+size_t end = q.find_first_of(" &\r\n");
+if (end != string::npos) {
+    q = q.substr(0, end);
+}
+
+q = urlDecode(q);
+transform(q.begin(), q.end(), q.begin(), ::tolower);
+
+
+            string json = "[";
+
+            if (hashIndex.find(q) != hashIndex.end()) {
+
+                unordered_set<int> seen;
+
+                for (int idx : hashIndex[q]) {
+                    if (seen.count(idx)) continue;
+                    seen.insert(idx);
+
+                    json += "{";
+                    json += "\"id\":" + to_string(idx);
+                    json += ",\"title\":\"" + games[idx].title + "\"";
+                    json += ",\"year\":" + to_string(games[idx].year);
+                    json += ",\"genre\":\"" + games[idx].genre + "\"";
+                    json += "},";
+                }
+
+                if (json.back() == ',')
+                    json.pop_back();
+            }
+
+            json += "]";
+
+            string resp = httpResp(json, "application/json");
+            send(client, resp.c_str(), resp.size(), 0);
+            closesocket(client);
+            continue;
+        }
+
         // Serve HTML
-        if (req.find("GET / ") != string::npos) {
+        if (req.rfind("GET / ", 0) == 0 && req.find("GET /search") != 0)
+ {
             ifstream f("UI/index.html", ios::binary);
             string html((istreambuf_iterator<char>(f)), istreambuf_iterator<char>());
             string resp = httpResp(html, "text/html");
@@ -150,7 +196,6 @@ int main() {
             closesocket(client);
             continue;
         }
-
         
         //     /games  (JSON Full List)
 

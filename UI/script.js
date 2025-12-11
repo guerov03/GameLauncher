@@ -122,17 +122,33 @@ function startRecommend() {
     document.body.appendChild(wrapper);
 }
 
-async function recommendSearch() {
-    const q = document.getElementById("recInput").value.toLowerCase();
-    if (q.length < 1) return;
+async function backendPrefixSearch(prefix) {
+    const res = await fetch(`/search?q=${encodeURIComponent(prefix)}`);
+    return await res.json();
+}
 
-    const match = games.find(g => g.title.toLowerCase().startsWith(q));
-    if (!match) {
-        document.getElementById("recResults").textContent = "No such game.";
+async function recommendSearch() {
+    let q = document.getElementById("recInput").value.toLowerCase();
+    if (q.length === 0) {
+        document.getElementById("recResults").textContent = "";
         return;
     }
 
-    const res = await fetch(`/recommend?id=${match.id}`);
+    // use the hash table from backend
+    let matches = await backendPrefixSearch(q);
+
+    if (matches.length === 0) {
+        document.getElementById("recResults").textContent = "No game found.";
+        return;
+    }
+
+    // pick first match
+    let game = matches[0];
+
+    const res = await fetch(`/recommend?id=${game.id}`);
     const txt = await res.text();
+
     document.getElementById("recResults").textContent = txt;
 }
+
+
