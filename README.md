@@ -1,58 +1,38 @@
-# RetroLauncher — C++ Game Launcher (Data Structures Project)
+# RetroLauncher (Command-Line Version)
 
-RetroLauncher is a lightweight C++ game launcher that uses an internal HTTP server to display a simple browser-based UI.  
-The goal of the project is to demonstrate mastery of **core data structures** while building a functional real-world-style application.
+RetroLauncher is a C++ program that allows users to browse, search, sort, and launch games directly from the command line.  
+This branch contains the original terminal-based version of the project before any browser-based UI was added.
 
-This project includes:
-
-- **Binary Search Tree (BST)** for alphabetical sorting  
-- **Hash Table** for prefix-based searching  
-- **Graph** for game recommendations by genre  
-- **Stack** for launch history  
-- **Vector + custom structs** for game storage  
-- **Custom HTTP handler**, HTML/CSS/JS interface, and Windows process launching
+Goal: demonstrate the use of classical data structures in a practical application
 
 ---
 
-##  Features
+## Data Structures Used
 
-###  View Game Library
-All games are listed visually in the browser UI with clickable cards.
+The program incorporates the following data structures:
 
-###  Launch Games (C++ → Windows Process)
-Clicking a game launches its `.exe` or `.bat` using `CreateProcessA`.
+• Vector — stores the main list of all games  
+• Stack — tracks the user's game launch history  
+• Hash Table (unordered_map) — supports fast prefix-based searching  
+• Graph (Adjacency List) — provides game recommendations based on shared genre  
+• Binary Search Tree (BST) — used to sort games alphabetically  
+• std::sort() - for date sorting 
+• Custom Class — represents game information such as title, genre, path, and year  
 
-###  Sorting
-Implemented directly on the backend:
-
-- A–Z Sort (BST in-order traversal)  
-- Newest First  
-- Oldest First  
-
-###  Recommendations (Graph)
-Games are connected by genre. Selecting a game displays all related games using adjacency lists.
-
-###  History (Stack)
-Every launched game is pushed onto a stack and can be viewed in reverse order.
+Each structure contributes to a specific feature of the launcher.
 
 ---
 
-##  Data Structures Used (for grading)
+## BETA UI
 
-| Requirement       | Implementation |
-|------------------|----------------|
-| Linked structure | BST + Graph nodes |
-| Tree structure   | Binary Search Tree |
-| Graph structure  | Genre recommendation system |
-| Hash table       | Prefix search index |
-| Stack            | Launch history |
-| Vector/List      | Primary game storage |
-
-Each structure is directly used inside `main.cpp` and connected to UI actions.
-
----
-
-##  How to Run
-
-1. Download Zip file and extract
-2. Open the exe
+=========== RETRO GAME LAUNCHER ===========
+1. View all games
+2. Launch a game
+3. Search for a game
+4. Sort A-Z
+5. Recommendations
+6. Play history
+7. Sort newest to oldest
+8. Sort oldest to newest
+0. Exit
+Choose:
